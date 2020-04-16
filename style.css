@@ -167,9 +167,9 @@ a:hover { color: #ffffff; }
 }
 .content
 {
-	width:924px;
-	padding-left:13px;
-	padding-right:13px;
+	width:950px;
+	padding-left:px;
+	padding-right:px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:50px;
@@ -193,8 +193,8 @@ a:hover { color: #ffffff; }
 #top #maincontent
 {
 	float:left;
-	width:506px;
-	padding-right:22px;
+	width:525px;
+	padding-right:20px;
 }
 #top #subcontent
 {
@@ -499,7 +499,7 @@ header h2{
 #photogallery
 {
 	background:url(../../img/bg_photo.jpg) top left no-repeat;
-	height:184px;
+	height:265px;
 }
 #photogallery #photogallery_tolist
 {
@@ -509,49 +509,53 @@ header h2{
 }
 #photogallery #divbox
 {
-	width:449px;
-	padding-left:29px;
+	width:520px;
+	padding-left:10px;
 }
 #photogallery .divL198
 {
 	float:left;
-	width:180px;
-	padding-left:18px;
+	width:300px;
+	padding-left:px;
 }
 #photogallery .divR251
 {
 	float:right;
-	width:251px;
+	width:200px;
 	text-align:left;
+	padding-left:10px;
 }
 
 #movie
 {
 	background:url(../../img/bg_movie.jpg) top left no-repeat;
-	height:219px;
+	height:265px;
 }
 #movie #movie_tolist
 {
-	padding-left:135px;
-	padding-top:32px;
+	padding-left:210px;
+	padding-top:30px;
+	margin-bottom:10px;
 }
 #movie #divbox
 {
-	width:449px;
-	padding-left:29px;
-	padding-top:11px;
+	width:525px;
+	padding-left:10px;
+	padding-top:px;
 }
 #movie .divL198
 {
 	float:left;
-	width:180px;
-	padding-right:18px;
+	width:300px;
+	padding-right:px;
 }
 #movie .divR251
 {
 	float:right;
-	width:251px;
+	width:200px;
 	text-align:left;
+	padding-left:10px;
+	padding-top:10px;
 }
 #greeting
 {
