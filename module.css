@@ -37,7 +37,6 @@ nav#mainnavi
 	margin-left:auto;
 	margin-right:auto
 	margin-bottom:25px;
-	
 	background-image:url(../img/mainnavi.jpg);
 	background-position:top left;
 	background-repeat:no-repeat;
@@ -60,13 +59,13 @@ h1
 	background-repeat:no-repeat;
 	height:63px;
 	outline:none;
-	text-indent:px;
+	text-indent:-9999px;
 }
 #mainnavi li
 {
 	float:left;
 }
-#mainnavi li.list01 a{ background-position:0px top; width:130px}
+#mainnavi li.list01 a{ background-position:0px top; width:119px}
 #mainnavi li.list02 a{ background-position:-130px top; width:119px}
 #mainnavi li.list03 a{ background-position:-249px top; width:119px}
 #mainnavi li.list04 a{ background-position:-368px top; width:119px}
