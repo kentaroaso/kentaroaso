@@ -34,13 +34,13 @@ header
 nav#mainnavi
 {
 	width:970px;
-	margin-left:auto;
+	margin: 0 auto;
 	margin-right:auto
-	margin-bottom:25px;
-	background-image:url(../img/mainnavi.jpg);
+	/*margin-bottom:25px;*/
+	/*background-image:url(https://kentaroaso.github.io/kentaroaso/61pvsTwzCGL.jpeg);*/
 	background-position:top left;
 	background-repeat:no-repeat;
-	height:63px;
+	height:18px;
 	position:relative;
 }
 h1
@@ -54,12 +54,12 @@ h1
 {
 	display:block;
 	width:119px;
-	background-image:url(../img/mainnavi.jpg);
+	background-image:url();
 	background-position:top left;
 	background-repeat:no-repeat;
-	height:63px;
+	height:18px;
 	outline:none;
-	text-indent:-9999px;
+	/*text-indent:/-9999px;*/
 }
 #mainnavi li
 {
@@ -82,6 +82,20 @@ h1
 #mainnavi li.list06 a:hover,#mainnavi li.list06 a.selected{ background-position:-1576px top; width:119px}
 #mainnavi li.list07 a:hover,#mainnavi li.list07 a.selected{ background-position:-1695px top; width:119px}
 #mainnavi li.list08 a:hover,#mainnavi li.list08 a.selected{ background-position:-1814px top; width:126px}
+
+/*全部のボタンにカーソルが乗った時に適用している*/
+.btn
+{
+  color: white;
+  display: inline-block;
+  opacity: 0.7;
+  border-radius: 4px;
+}
+
+.btn:hover
+{
+  opacity: 1;
+}
 
 /*
 ----------------------------------------------------*/
