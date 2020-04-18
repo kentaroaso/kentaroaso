@@ -199,7 +199,8 @@ a:hover { color: #ffffff; }
 #top #subcontent
 {
 	float:right;
-	width:396px;
+	width:400px;
+	padding: 40px 10px;
 }
 
 /*下層設定*/
