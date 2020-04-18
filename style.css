@@ -167,7 +167,7 @@ a:hover { color: #ffffff; }
 }
 .content
 {
-	width:950px;
+	width:970px;
 	padding-left:px;
 	padding-right:px;
 	margin-left:auto;
@@ -557,19 +557,23 @@ header h2{
 	padding-left:10px;
 	padding-top:10px;
 }
+/*代表あいさつ*/
 #greeting
 {
-	background:url(../../img/bg_greeting.jpg) top left no-repeat;
-	height:174px;
+	background:url(/*元々は画像があった*/)top left no-repeat;
+	height:180px;
+	width: 396px;
+	padding: 20px 0;
 }
 #greeting p.lead{
 	padding-left:20px;
-	padding-top:60px;
+	padding-top:70px;
 }
 #about
 {
-	background:url(../../img/bg_about.jpg) top left no-repeat;
-	height:188px;
+	background:url(/*元々は画像があった*/) top left no-repeat;
+	height:180px;
+	padding: 20px 0;
 }
 #about p.lead{
 	padding-left:20px;
@@ -577,8 +581,9 @@ header h2{
 }
 #practice
 {
-	background:url(../../img/bg_practice.jpg) top left no-repeat;
-	height:187px;
+	background:url(/*元々は画像があった*/) top left no-repeat;
+	height:180px;
+	padding: 20px 0;
 }
 #practice p.lead{
 	padding-left:20px;
@@ -586,12 +591,13 @@ header h2{
 }
 #blog
 {
-	background:url(../../img/bg_blog.jpg) top left no-repeat;
-	height:184px;
+	background:url(/*元々は画像があった*/) top left no-repeat;
+	height:180px;
+	padding: 20px 0;
 }
 #blog p.lead{
 	padding-left:20px;
-	padding-top:80px;
+	padding-top:70px;
 }
 
 #totop{
@@ -605,25 +611,24 @@ header h2{
 
 #backin_access
 {
-	background:url(../../img/bg_footer.jpg) top left no-repeat;
+	background:url(/*元々は画像があった*/) top left no-repeat;
 	height:285px;
 	width:930px;
 	margin:0 auto;
 	border-top:3px solid #E4B76F;
 	line-height:2em;
-	padding-left:20px;
+	padding-left:10px;
 }
 #backin_access #boxL
 {
 	float:left;
-	width:408px;
+	width:300px;
 }
 #backin_access #boxR
 {
 	float:right;
 	width:510px;
 	text-align:left;
-	padding-top:15px;
 }
 #backin_access p#address
 {
@@ -633,6 +638,7 @@ header h2{
 {
 	font-size:11px;
 	display:inline-block;
+	padding: 20px;
 }
 #backin_access dt
 {
