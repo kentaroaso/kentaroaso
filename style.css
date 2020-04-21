@@ -19,7 +19,7 @@ html {
 }
 
 body {
-	font: 75%/18px "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font: 100%/50px "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 	color:#fff;
 	background-color:#000;
 
@@ -212,7 +212,7 @@ a:hover { color: #ffffff; }
 */
 #low .maincontent
 {
-	width:582px;
+	width:970px;
 	background:url(../img/mainback_top_low.jpg) right 60px no-repeat #FFF;
 	color:#000000;
 	float:left;
@@ -444,7 +444,7 @@ header h2{
 }
 .large
 {
-	font-size:160%;
+	font-size:100%;
 	font-weight:bold;
 	line-height:140%;
 }
@@ -467,7 +467,7 @@ header h2{
 #topnews
 {
 	background:url(../../img/bg_whatsnew.jpg) top left no-repeat;
-	height:321px;
+	height:530px;
 	margin-bottom:14px;
 }
 #topnews #topnews_tolist
@@ -478,13 +478,10 @@ header h2{
 #topnews #topnews_topiclist
 {
 	width:444px;
-	padding-top:30px;
-	padding-left:34px;
 	overflow: hidden;
-	height: 226px;
+	height: 470px;
 }
 #topnews dl dt {
-	float: left;
 	width: 85px;
 	padding-left:15px;
 	background-image:url(../img/list_trip.png);
@@ -493,7 +490,7 @@ header h2{
 }
 #topnews dl dd {
 	padding-bottom:10px;
-	padding-left:100px;
+	padding-left:30px;
 	background:url(../../img/line_news_li.png) left bottom no-repeat;
 	margin-bottom:10px;
 }
@@ -506,7 +503,6 @@ header h2{
 {
 	padding-left:210px;
 	padding-top:22px;
-	margin-bottom:20px;
 }
 #photogallery #divbox
 {
@@ -535,8 +531,7 @@ header h2{
 #movie #movie_tolist
 {
 	padding-left:210px;
-	padding-top:30px;
-	margin-bottom:10px;
+	padding-top:22px;
 }
 #movie #divbox
 {
