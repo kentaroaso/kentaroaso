@@ -467,7 +467,7 @@ header h2{
 #topnews
 {
 	background:url(../../img/bg_whatsnew.jpg) top left no-repeat;
-	height:530px;
+	height:460px;
 	margin-bottom:14px;
 }
 #topnews #topnews_tolist
@@ -502,7 +502,6 @@ header h2{
 #photogallery #photogallery_tolist
 {
 	padding-left:210px;
-	padding-top:22px;
 }
 #photogallery #divbox
 {
