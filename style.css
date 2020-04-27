@@ -132,6 +132,8 @@ a:hover { color: #ffffff; }
 {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	margin-left:220px;
+	height: 200px;
 }
 .bt35{	margin-bottom:35px;}
 .bt40{	margin-bottom:40px;}
@@ -881,8 +883,4 @@ ul.bnrlist li.last{
 .mrl220
 {
 	margin-left:220px;
-}
-.bt30
-{
-    margin-left:220px;
 }
