@@ -83,6 +83,8 @@ a:hover { color: #ffffff; }
 .tC,
 .btn {
 	text-align: center;
+	background-color: green;
+	color: black;
 }
 
 .tR,
