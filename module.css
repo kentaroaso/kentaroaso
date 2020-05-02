@@ -34,8 +34,8 @@ header
 nav#mainnavi
 {
 	width:950px;
-	margin: 0 auto;
-	height:40px;
+	margin:auto;
+	height:auto;
 	position:relative;
 }
 h1
@@ -48,31 +48,32 @@ h1
 #mainnavi a
 {
 	display:block;
-	width:119px;
+	width:auto;
 	background-position:top left;
 	background-repeat:no-repeat;
-	height:40px;
+	height:30px;
 	outline:none;
 	/*text-indent:/-9999px;*/
 }
 #mainnavi li
 {
 	float:left;
-	padding:5px 19px;
+	padding:10px 26px;
+	line-height:30px;
 }
-#mainnavi li.list01 a{ background-position:0px top; width:160px}
-#mainnavi li.list02 a{ background-position:-130px top; width:160px}
-#mainnavi li.list03 a{ background-position:-249px top; width:50px}
-#mainnavi li.list04 a{ background-position:-368px top; width:160px}
-#mainnavi li.list05 a{ background-position:-487px top; width:50px}
-#mainnavi li.list06 a{ background-position:-800px top; width:119px}
+#mainnavi li.list01 a{width:120px}
+#mainnavi li.list02 a{width:120px}
+#mainnavi li.list03 a{width:40px}
+#mainnavi li.list04 a{width:140px}
+#mainnavi li.list05 a{width:40px}
+#mainnavi li.list06 a{width:90px}
 
-#mainnavi li.list01 a:hover,#mainnavi li.list01 a.selected{ background-position:-950px top;　width:160px}
-#mainnavi li.list02 a:hover,#mainnavi li.list02 a.selected{ background-position:-1100px top; width:160px}
-#mainnavi li.list03 a:hover,#mainnavi li.list03 a.selected{ background-position:-1219px top; width:50px}
-#mainnavi li.list04 a:hover,#mainnavi li.list04 a.selected{ background-position:-1338px top; width:160px}
-#mainnavi li.list05 a:hover,#mainnavi li.list05 a.selected{ background-position:-1457px top; width:50px}
-#mainnavi li.list06 a:hover,#mainnavi li.list06 a.selected{ background-position:-1500px top; width:119px}
+#mainnavi li.list01 a:hover,#mainnavi li.list01 a.selected{width:120px}
+#mainnavi li.list02 a:hover,#mainnavi li.list02 a.selected{width:120px}
+#mainnavi li.list03 a:hover,#mainnavi li.list03 a.selected{width:40px}
+#mainnavi li.list04 a:hover,#mainnavi li.list04 a.selected{width:140px}
+#mainnavi li.list05 a:hover,#mainnavi li.list05 a.selected{width:40px}
+#mainnavi li.list06 a:hover,#mainnavi li.list06 a.selected{width:90px}
 
 /*全部のボタンにカーソルが乗った時に適用している*/
 .btn
@@ -146,6 +147,7 @@ footer ul li {
 	line-height: 2;
 	background:url(../img/int_list_submenu.png) left 4px no-repeat;
 	padding-left:15px;
+	line-height:30px;
 }
 *:first-child + html footer ul li {
 	float:left;
