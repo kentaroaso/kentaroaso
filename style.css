@@ -22,7 +22,7 @@ body {
 	font: 100%/50px "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 	color:#fff;
 	background-color:#000;
-
+	line-height:30px;
 }
 
 input, textarea {
@@ -82,9 +82,17 @@ a:hover { color: #ffffff; }
 
 .tC,
 .btn {
-	text-align: center;
-	background-color: green;
-	color: black;
+  display: inline-block;
+  padding: 0.1em 0.2em;
+  text-decoration: none;
+  color: #ffe267;
+  border: solid 2px #ffe267;
+  border-radius: 3px;
+  transition: .4s;
+}
+.btn:hover {
+  background: #ffe267;
+  color: #060606;
 }
 
 .tR,
@@ -390,6 +398,7 @@ header h2{
 }
 #subcontent .right a{
 	margin-left:auto;
+	margin-right: 10px;
 }
 
 #subcontent .sidebanner{
@@ -475,13 +484,14 @@ header h2{
 #topnews
 {
 	background:url(../../img/bg_whatsnew.jpg) top left no-repeat;
-	height:460px;
+	height:370px;
 	margin-bottom:14px;
 }
 #topnews #topnews_tolist
 {
 	padding-left:205px;
-	padding-top:26px;
+	padding-top:35px;
+	line-height:30px;
 }
 #topnews #topnews_topiclist
 {
