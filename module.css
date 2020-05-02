@@ -135,10 +135,11 @@ footer ul li
     text-align: center;
 }
 footer ul {
-	width: 850px;
+	width: 950px;
 	text-align:center;
 	color:#FFFFCC;
 	padding-bottom:10px;
+	padding-top: 10px;
 }
 footer ul li {
 	display: inline;
