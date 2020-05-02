@@ -89,7 +89,7 @@ a:hover { color: #ffffff; }
   border: solid 2px #ffe267;
   border-radius: 3px;
   transition: .4s;
-	text-align: center;
+  text-align: center;
 }
 .btn:hover {
   background: #ffe267;
