@@ -89,7 +89,7 @@ a:hover { color: #ffffff; }
   border: solid 2px #ffe267;
   border-radius: 3px;
   transition: .4s;
-  text-align: center;
+	text-align: center;
 }
 .btn:hover {
   background: #ffe267;
@@ -627,11 +627,11 @@ header h2{
 {
 	background:url(/*元々は画像があった*/) top left no-repeat;
 	height:285px;
-	width:930px;
+	width: 950px;
 	margin:0 auto;
 	border-top:3px solid #E4B76F;
-	line-height:2em;
-	padding-left:10px;
+	/* line-height:2em; */
+	padding: 10px;
 }
 #backin_access #boxL
 {
@@ -641,7 +641,6 @@ header h2{
 #backin_access #boxR
 {
 	float:right;
-	width:510px;
 	text-align:left;
 }
 #backin_access p#address
@@ -881,8 +880,6 @@ ul.bnrlist li.last{
 {
 	border-right:none;
 }
-
-
 .bold
 {
 	font-weight:bold;
@@ -896,4 +893,10 @@ ul.bnrlist li.last{
 .mrl220
 {
 	margin-left:220px;
+}
+
+form
+{
+	float:left;
+	padding:0 80px 0 80px
 }
