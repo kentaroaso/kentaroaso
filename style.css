@@ -85,7 +85,8 @@ a:hover { color: #ffffff; }
   display: inline-block;
   padding: 0.1em 0.2em;
   text-decoration: none;
-  color: #ffe267;
+	background-color: #0e0e0e;;
+  color: #eee;
   border: solid 2px #ffe267;
   border-radius: 3px;
   transition: .4s;
@@ -95,7 +96,12 @@ a:hover { color: #ffffff; }
   background: #ffe267;
   color: #060606;
 }
-
+input.btn
+{
+	width:100px;
+	height:40px;
+	font-size:20px;
+}
 .tR,
 .sign {
 	text-align: right;
@@ -638,6 +644,11 @@ header h2{
 	float:left;
 	width:300px;
 }
+#backin_access #box
+{
+	float:left;
+	padding:0 80px 0 90px
+}
 #backin_access #boxR
 {
 	float:right;
@@ -893,10 +904,4 @@ ul.bnrlist li.last{
 .mrl220
 {
 	margin-left:220px;
-}
-
-form
-{
-	float:left;
-	padding:0 80px 0 80px
 }
