@@ -151,6 +151,7 @@ input.btn
 	margin-bottom: 30px;
 	margin-left:220px;
 	height: 200px;
+	font-size: 25px;
 }
 .bt35{	margin-bottom:35px;}
 .bt40{	margin-bottom:40px;}
@@ -309,6 +310,7 @@ header h2{
 	font-size:120%;
 	font-weight:bold;
 	padding-top:2px;
+	font-size: 25px;
 }
 #subcontent h5
 {
@@ -471,6 +473,7 @@ header h2{
 	font-size:100%;
 	font-weight:bold;
 	line-height:140%;
+	font-size: 25px;
 }
 .darkyellow{
 	color: #333300;
