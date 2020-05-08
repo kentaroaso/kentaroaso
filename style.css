@@ -87,22 +87,23 @@ a:hover { color: #ffffff; }
   text-decoration: none;
 	background-color: #0e0e0e;;
   color: #eee;
-  border: solid 2px #ffe267;
   border-radius: 3px;
   transition: .4s;
 	text-align: center;
+	opacity: 0.7;
 }
 .btn:hover {
   background: #ffe267;
   color: #060606;
+	opacity: 1;
 }
-input.btn
+/*input.btn
 {
 	width:100px;
 	height:40px;
 	font-size:20px;
 	text-align: center
-}
+}*/
 .tR,
 .sign {
 	text-align: right;
@@ -258,8 +259,13 @@ input.btn
 /*----------------------------------------------------
 	#header（ヘッダー）トップ
 ----------------------------------------------------*/
+header h1{
+	font-style: italic;
+}
+
 header h2{
-	margin: 0 0 0 15px;
+	color: rgba(18, 5, 226, 0.5);
+	font-style: oblique;
 }
 /*----------------------------------------------------
 	#header（ヘッダー）下層
@@ -283,7 +289,7 @@ header h2{
 }
 .btnpagetop a:hover
 {
-	text-decoration:underline;
+	text-decoration:none;
 }
 .btnpagetop a:hover img
 {
