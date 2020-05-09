@@ -58,30 +58,9 @@ h1
 #mainnavi li
 {
 	float:left;
-	padding:10px 26px;
+	padding:20px 30px;
 	line-height:30px;
 	text-align: center;
-}
-#mainnavi li.list01 a{width:120px}
-#mainnavi li.list02 a{width:120px}
-#mainnavi li.list03 a{width:40px}
-#mainnavi li.list04 a{width:140px}
-#mainnavi li.list05 a{width:40px}
-#mainnavi li.list06 a{width:90px}
-
-#mainnavi li.list01 a:hover,#mainnavi li.list01 a.selected{width:120px}
-#mainnavi li.list02 a:hover,#mainnavi li.list02 a.selected{width:120px}
-#mainnavi li.list03 a:hover,#mainnavi li.list03 a.selected{width:40px}
-#mainnavi li.list04 a:hover,#mainnavi li.list04 a.selected{width:140px}
-#mainnavi li.list05 a:hover,#mainnavi li.list05 a.selected{width:40px}
-#mainnavi li.list06 a:hover,#mainnavi li.list06 a.selected{width:90px}
-
-/*全部のボタンにカーソルが乗った時に適用している*/
-.btn
-{
-  color: white;
-  display: inline-block;
-  border-radius: 4px;
 }
 
 /*
