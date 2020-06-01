@@ -28,6 +28,16 @@ header
 	position:relative;
 }
 
+@media screen and ( max-width:479px )
+{
+	header
+	{
+	max-width: 479px;
+	height: 130px;
+	margin: 0;
+	padding: 0;
+	}
+}
 
 /* グローバルナビゲーション
 ----------------------------------------------------*/
@@ -38,6 +48,21 @@ nav#mainnavi
 	height:auto;
 	position:relative;
 }
+
+@media screen and ( max-width:479px )
+{
+	nav#mainnavi
+	{
+		flex-direction: column;
+		float: none;
+		flex-wrap: wrap;
+		text-align: center;
+		display:block;
+		outline:none;
+		max-width: 479px ;			/* 最大の横幅 */
+	}
+}
+
 h1
 {
 	position:absolute;
@@ -45,6 +70,23 @@ h1
 	/right:29px;
 	top:63px;
 }
+
+@media screen and ( max-width:479px )
+{
+	h1
+	{
+		position: unset;
+		text-align: center;
+		max-width: 479px ;			/* 最大の横幅 */
+	}
+
+	h2 a img
+	{
+		text-align: center;
+		width: 100%;
+	}
+}
+
 #mainnavi a
 {
 	display:block;
@@ -55,6 +97,17 @@ h1
 	outline:none;
 	/*text-indent:/-9999px;*/
 }
+
+@media screen and ( max-width:479px )
+{
+	#mainnavi a
+	{
+		flex-direction: column;
+		flex-wrap: wrap;
+		text-decoration: none;
+	}
+}
+
 #mainnavi li
 {
 	float:left;
@@ -103,6 +156,17 @@ footer ul li
 	color:#999999;
 }
 
+@media screen and ( max-width:479px )
+{
+	#copyright p
+	{
+				flex-direction: column;
+				text-align: center;
+				margin: 1rem auto;
+				flex-wrap: wrap;
+	}
+}
+
 #copyright_low p
 {
 	line-height: 50px;
@@ -115,6 +179,16 @@ footer ul {
 	padding-bottom:10px;
 	padding-top: 10px;
 }
+
+@media screen and ( max-width:479px )
+{
+	footer ul
+	{
+		margin: 1rem auto;
+		max-width: 479px;
+	}
+}
+
 footer ul li {
 	display: inline;
 	margin-right: 10px;
@@ -123,9 +197,21 @@ footer ul li {
 	padding-left:15px;
 	line-height:30px;
 }
+
+@media screen and ( max-width:479px )
+{
+	footer ul li
+	{
+		padding: 15px;
+		margin: 0;
+		line-height: 30px;
+	}
+}
+
 *:first-child + html footer ul li {
 	float:left;
 }
+
 * html footer ul {
 	overflow: hidden;
 }
