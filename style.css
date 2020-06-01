@@ -18,10 +18,18 @@ html {
 	overflow-y: scroll;
 }
 
+@media screen and ( max-width:479px )
+{
+	#mainimage
+	{
+		display: none;
+	}
+}
+
 body {
 	font: 100%/50px "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
-	color:#fff;
-	background-color:#000;
+	color: black;
+	background-color: white;
 	line-height:30px;
 }
 
@@ -38,11 +46,19 @@ input, textarea {
 }
 /* リンク
 ----------------------------------------------------*/
-a { color: #FFFFFF; }
-a:visited { color: #ffffff; }
-a:hover { color: #ffffff; }
+a { text-decoration: none; color: black; }
+a:visited { text-decoration: none; }
+a:hover { color: red; }
 
-
+@media screen and ( max-width:479px )
+{
+	p
+	{
+		max-width: 479px;
+		margin: 0;
+		padding: 0;
+	}
+}
 
 /* よく使いそうなCSS3
 ----------------------------------------------------*/
@@ -189,17 +205,26 @@ a:hover { color: #ffffff; }
 
 #top
 {
-	color:#fff;
+	color: black;
 }
 .content
 {
 	width:970px;
-	padding-left:px;
-	padding-right:px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:auto;
 }
+
+@media screen and ( max-width:479px )
+{
+	.content
+	{
+		max-width: 479px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 .content:after{
 	content:".";
 	display:block;
@@ -222,11 +247,34 @@ a:hover { color: #ffffff; }
 	width:525px;
 	padding-right:20px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#top #maincontent
+	{
+		float: none;
+		padding: 0;
+		margin: 0;
+		max-width: 479px;
+	}
+}
+
 #top #subcontent
 {
 	float:right;
 	width:400px;
 	padding: 40px 10px;
+}
+
+@media screen and ( max-width:479px )
+{
+	#top #subcontent
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
 }
 
 /*下層設定*/
@@ -240,7 +288,7 @@ a:hover { color: #ffffff; }
 {
 	width:970px;
 	background:url(../img/mainback_top_low.jpg) right 60px no-repeat #FFF;
-	color:#000000;
+	color: white;
 	float:left;
 }
 #low aside#subcontent
@@ -254,7 +302,7 @@ a:hover { color: #ffffff; }
 }
 #low .maincontent h3
 {
-	background-color:#000;
+	background-color: white;
 }
 /*----------------------------------------------------
 	#header（ヘッダー）トップ
@@ -262,12 +310,25 @@ a:hover { color: #ffffff; }
 header h1{
 	font-style: italic;
 }
+
+header h2{
+	margin: 0;
+}
+
+@media screen and ( max-width:479px )
+{
+	header h2	{
+		padding: 0;
+		margin: 0;
+		max-width: 479px;
+	}
+}
 /*----------------------------------------------------
 	#header（ヘッダー）下層
 ----------------------------------------------------*/
 #low .maincontent a { color: #333333; }
-#low .maincontent a:visited { color: #333333; }
-#low .maincontent a:hover { color: #666; }
+#low .maincontent a:visited { color: black; }
+#low .maincontent a:hover { color: black; }
 .btnpagetop img
 {
 	vertical-align:middle;
@@ -475,10 +536,10 @@ header h1{
 	font-size: 25px;
 }
 .darkyellow{
-	color: #333300;
+	color: black;
 }
 .underline{
-	color:#666666;
+	color: black;
 	font-weight: bold;
 	font-size: 14px;
 	padding-bottom:10px;
@@ -490,18 +551,41 @@ header h1{
 {
 	margin-bottom:20px;
 }
+
 #topnews
 {
 	background:url(../../img/bg_whatsnew.jpg) top left no-repeat;
 	height:370px;
 	margin-bottom:14px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#topnews
+	{
+		max-width: 479px;
+		margin: 0;
+	}
+}
+
 #topnews #topnews_tolist
 {
 	padding-left:205px;
 	padding-top:35px;
 	line-height:30px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#topnews #topnews_tolist
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+
 #topnews #topnews_topiclist
 {
 	width:444px;
@@ -535,6 +619,16 @@ header h1{
 	width:520px;
 	padding-left:10px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#photogallery #divbox
+	{
+		max-width: 479px;
+		padding: 0;
+	}
+}
+
 #photogallery .divL198
 {
 	float:left;
@@ -563,8 +657,16 @@ header h1{
 {
 	width:525px;
 	padding-left:10px;
-	padding-top:px;
 }
+@media screen and ( max-width:479px )
+{
+	#movie #divbox
+	{
+		max-width: 479px;
+		padding: 0;
+	}
+}
+
 #movie .divL198
 {
 	float:left;
@@ -630,7 +732,15 @@ header h1{
 	padding-bottom:5px;
 }
 
-
+@media screen and ( max-width:479px )
+{
+	#totop
+	{
+		max-width: 479px;
+		padding: 0;
+		margin: 0;
+	}
+}
 
 #backin_access
 {
@@ -639,13 +749,37 @@ header h1{
 	margin:0 auto;
 	border-top:3px solid #E4B76F;
 	padding: 10px;
-	font-family: 'Pacifico', cursive;
+	line-height: normal;
+	font-style: italic;
 }
+
+@media screen and ( max-width:479px )
+{
+	#backin_access
+	{
+		max-width: 479px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 #backin_access #boxL
 {
 	float:left;
 	width:300px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#backin_access #boxL
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+
 #backin_access #box
 {
 	float:left;
@@ -655,6 +789,14 @@ header h1{
 {
 	float:right;
 	text-align:left;
+}
+
+@media screen and ( max-width:479px )
+{
+	#backin_access #boxR
+	{
+		max-width: 479px;
+	}
 }
 #backin_access p#address
 {
@@ -712,7 +854,7 @@ header h1{
 
 #subcontent .sidebanner a{
 	display:block;
-	background-color:#FFF;
+	background-color: white;
 }
 
 .btndetail a:hover img,#subcontent .right a:hover img,#subcontent .sidebanner a:hover img{
@@ -754,7 +896,7 @@ div.ul01 li {
    left:-50%;
    float:left;
    margin-right:20px;
-   background-color:#FFF;
+   background-color: white;
 }
 #admissionlist li {
    margin-right:15px;
@@ -856,7 +998,7 @@ ul.bnrlist li.last{
 }
 .table01 th
 {
-	background-color:#E8E8E8;
+	background-color: white;
 	border-bottom:1px solid #ccc;
 	padding:10px;
 	vertical-align:middle;
@@ -873,7 +1015,7 @@ ul.bnrlist li.last{
 }
 .table02 th
 {
-	background-color:#E8E8E8;
+	background-color: white;
 	border-bottom:1px solid #ccc;
 	border-right:1px solid #ccc;
 	padding:10px;
