@@ -46,9 +46,9 @@ input, textarea {
 }
 /* リンク
 ----------------------------------------------------*/
-a { text-decoration: none; color: black; }
+a { text-decoration: none; color: #67c5ff; }
 a:visited { text-decoration: none; }
-a:hover { color: red; }
+a:hover { color: black; background-color: white;}
 
 @media screen and ( max-width:479px )
 {
@@ -57,6 +57,13 @@ a:hover { color: red; }
 		max-width: 479px;
 		margin: 0;
 		padding: 0;
+	}
+
+	a:hover
+	{
+		text-decoration: none;
+		color: #67c5ff;
+		background-color: white;
 	}
 }
 
@@ -99,19 +106,32 @@ a:hover { color: red; }
 .tC,
 .btn {
   display: inline-block;
-  padding: 0.1em 0.2em;
+  padding: 0.3em 1em;
   text-decoration: none;
-	background-color: #0e0e0e;;
-  color: #eee;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
   border-radius: 3px;
   transition: .4s;
-	text-align: center;
-	opacity: 0.7;
 }
+
 .btn:hover {
-  background: #ffe267;
-  color: #060606;
-	opacity: 1;
+  background: #67c5ff;
+  color: white;
+}
+
+@media screen and ( max-width:479px )
+{
+	.btn:hover
+	{
+		display: inline-block;
+		padding: 0.3em 1em;
+		text-decoration: none;
+		color: #67c5ff;
+		border: solid 2px #67c5ff;
+		border-radius: 3px;
+		transition: .4s;
+		background-color: white;
+	}
 }
 /*input.btn
 {
@@ -243,9 +263,8 @@ a:hover { color: red; }
 
 #top #maincontent
 {
-	float:left;
-	width:525px;
-	padding-right:20px;
+	padding-top: 200px;
+	text-align: center;
 }
 
 @media screen and ( max-width:479px )
@@ -256,14 +275,15 @@ a:hover { color: red; }
 		padding: 0;
 		margin: 0;
 		max-width: 479px;
+		padding-top: 300px;
+		text-align: center;
 	}
 }
 
 #top #subcontent
 {
 	float:right;
-	width:400px;
-	padding: 40px 10px;
+	padding-top: 300px;
 }
 
 @media screen and ( max-width:479px )
@@ -555,7 +575,6 @@ header h2{
 #topnews
 {
 	background:url(../../img/bg_whatsnew.jpg) top left no-repeat;
-	height:370px;
 	margin-bottom:14px;
 }
 
@@ -570,9 +589,6 @@ header h2{
 
 #topnews #topnews_tolist
 {
-	padding-left:205px;
-	padding-top:35px;
-	line-height:30px;
 }
 
 @media screen and ( max-width:479px )
@@ -588,10 +604,20 @@ header h2{
 
 #topnews #topnews_topiclist
 {
-	width:444px;
+	width: 950px;
 	overflow: hidden;
 	height: 470px;
+	text-align: left;
 }
+
+@media screen and ( max-width:479px )
+{
+	#topnews #topnews_topiclist
+	{
+		max-width:479px;
+	}
+}
+
 #topnews dl dt {
 	width: 85px;
 	padding-left:15px;
@@ -600,24 +626,21 @@ header h2{
 	background-repeat:no-repeat;
 }
 #topnews dl dd {
-	padding-bottom:10px;
-	padding-left:30px;
-	background:url(../../img/line_news_li.png) left bottom no-repeat;
-	margin-bottom:10px;
+	padding: 10px 10px 10px 40px;
 }
 #photogallery
 {
 	background:url(../../img/bg_photo.jpg) top left no-repeat;
-	height:265px;
+	height:450px;
 }
 #photogallery #photogallery_tolist
 {
-	padding-left:210px;
+	padding: 10px;
 }
 #photogallery #divbox
 {
-	width:520px;
-	padding-left:10px;
+	width: 950px;
+	padding: 10px;
 }
 
 @media screen and ( max-width:479px )
@@ -631,32 +654,28 @@ header h2{
 
 #photogallery .divL198
 {
-	float:left;
-	width:300px;
-	padding-left:px;
 }
 #photogallery .divR251
 {
-	float:right;
-	width:200px;
-	text-align:left;
-	padding-left:10px;
+  width: auto;
+  text-align: left;
+  padding: 10px;
 }
 
 #movie
 {
 	background:url(../../img/bg_movie.jpg) top left no-repeat;
-	height:265px;
+	height:450px;
 }
 #movie #movie_tolist
 {
-	padding-left:210px;
-	padding-top:22px;
+	padding-top: 50px;
+  padding-bottom: 10px;
 }
 #movie #divbox
 {
-	width:525px;
-	padding-left:10px;
+	width: 950px;
+	padding: 10px;
 }
 @media screen and ( max-width:479px )
 {
@@ -669,17 +688,12 @@ header h2{
 
 #movie .divL198
 {
-	float:left;
-	width:300px;
-	padding-right:px;
 }
 #movie .divR251
 {
-	float:right;
-	width:200px;
-	text-align:left;
-	padding-left:10px;
-	padding-top:10px;
+  width: auto;
+  text-align: left;
+  padding: 10px;
 }
 /*代表あいさつ*/
 #greeting
@@ -691,7 +705,6 @@ header h2{
 }
 #greeting p.lead{
 	padding-left:20px;
-	padding-top:70px;
 }
 #about
 {
@@ -701,7 +714,6 @@ header h2{
 }
 #about p.lead{
 	padding-left:20px;
-	padding-top:70px;
 }
 #practice
 {
@@ -711,7 +723,6 @@ header h2{
 }
 #practice p.lead{
 	padding-left:20px;
-	padding-top:70px;
 }
 #blog
 {
@@ -721,7 +732,6 @@ header h2{
 }
 #blog p.lead{
 	padding-left:20px;
-	padding-top:70px;
 }
 
 #totop{
