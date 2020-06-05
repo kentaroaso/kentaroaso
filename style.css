@@ -215,6 +215,17 @@ a:hover { color: black; background-color: white;}
 {
 	float:right;
 }
+
+@media screen and ( max-width:479px )
+{
+	.divR
+	{
+		max-width: 479px;
+		margin: 0;
+		padding: 0;
+	}
+}
+
 .cen{
 	margin:0 auto;
 }
@@ -282,8 +293,7 @@ a:hover { color: black; background-color: white;}
 
 #top #subcontent
 {
-	float:right;
-	padding-top: 300px;
+	padding-top: 80px;
 }
 
 @media screen and ( max-width:479px )
@@ -485,12 +495,11 @@ header h2{
 }
 #subcontent .right
 {
-	margin-top:10px;
-	margin-left:auto;
+padding: 20px 0;
+text-align: center;
 }
 #subcontent .right a{
 	margin-left:auto;
-	margin-right: 10px;
 }
 
 #subcontent .sidebanner{
@@ -669,14 +678,16 @@ header h2{
 }
 #movie #movie_tolist
 {
-	padding-top: 50px;
+	padding-top: 80px;
   padding-bottom: 10px;
 }
 #movie #divbox
 {
 	width: 950px;
+	height: auto;
 	padding: 10px;
 }
+
 @media screen and ( max-width:479px )
 {
 	#movie #divbox
@@ -698,40 +709,131 @@ header h2{
 /*代表あいさつ*/
 #greeting
 {
-	background:url(/*元々は画像があった*/)top left no-repeat;
-	height:180px;
-	width: 396px;
-	padding: 20px 0;
+	height:200px;
+	width: 950px;
+	padding: 80px 10px;
 }
-#greeting p.lead{
-	padding-left:20px;
+
+@media screen and ( max-width:479px )
+{
+	#greeting
+	{
+		max-width: 479px;
+		height: 330px;
+		padding: 80px 0 0 0;
+		text-align: center;
+	}
 }
+
+#greeting p.lead
+{
+	padding: 0 10px;
+	width: 740px;
+	text-align: left;
+}
+
+@media screen and ( max-width:479px )
+{
+	#greeting p.lead
+	{
+		max-width: 459px;
+	}
+}
+
 #about
 {
-	background:url(/*元々は画像があった*/) top left no-repeat;
-	height:180px;
-	padding: 20px 0;
+	height:200px;
+	width: 950px;
+	padding: 80px 10px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#about
+	{
+		max-width: 479px;
+		height: 330px;
+		padding: 80px 0 0 0;
+		text-align: center;
+	}
+}
+
 #about p.lead{
-	padding-left:20px;
+	padding: 0 10px;
+	width: 740px;
+	text-align: left;
 }
+
+@media screen and ( max-width:479px )
+{
+	#about p.lead
+	{
+		max-width: 459px;
+	}
+}
+
 #practice
 {
-	background:url(/*元々は画像があった*/) top left no-repeat;
-	height:180px;
-	padding: 20px 0;
+	height:200px;
+	width: 950px;
+	padding: 80px 10px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#practice
+	{
+		max-width: 479px;
+		height: 330px;
+		padding: 80px 0 0 0;
+		text-align: center;
+	}
+}
+
 #practice p.lead{
-	padding-left:20px;
+	padding: 0 10px;
+	width: 740px;
+	text-align: left;
 }
+
+@media screen and ( max-width:479px )
+{
+	#practice p.lead
+	{
+		max-width: 459px;
+	}
+}
+
 #blog
 {
-	background:url(/*元々は画像があった*/) top left no-repeat;
-	height:180px;
-	padding: 20px 0;
+	height:200px;
+	width: 950px;
+	padding: 80px 10px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#blog
+	{
+		max-width: 479px;
+		height: 330px;
+		padding: 80px 0 0 0;
+		text-align: center;
+	}
+}
+
 #blog p.lead{
-	padding-left:20px;
+	padding: 0 10px;
+	width: 740px;
+	text-align: left;
+}
+
+@media screen and ( max-width:479px )
+{
+	#blog p.lead
+	{
+		max-width: 459px;
+	}
 }
 
 #totop{
