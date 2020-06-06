@@ -885,10 +885,7 @@ text-align: center;
 {
 	#backin_access #boxL
 	{
-		flex-direction: column;
 		float: none;
-		margin: 1rem auto;
-		flex-wrap: wrap;
 	}
 }
 
@@ -900,7 +897,7 @@ text-align: center;
 #backin_access #boxR
 {
 	float:right;
-	text-align:left;
+	text-align: center;
 }
 
 @media screen and ( max-width:479px )
@@ -908,6 +905,7 @@ text-align: center;
 	#backin_access #boxR
 	{
 		max-width: 479px;
+		text-align: center;
 	}
 }
 #backin_access p#address
