@@ -9,7 +9,19 @@ fonts
  22px = 167%    23px = 174%    24px = 182%    25px = 189%
  26px = 197%
 =================================================================== */
-
+/*
+モデルコードです
+@media screen and ( max-width:479px )
+{
+	#
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+*/
 /*----------------------------------------------------
 	共通
 ----------------------------------------------------*/
@@ -191,6 +203,18 @@ a:hover { color: black; background-color: white;}
 	height: 200px;
 	font-size: 25px;
 }
+
+@media screen and ( max-width:479px )
+{
+	.bt30
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+
 .bt35{	margin-bottom:35px;}
 .bt40{	margin-bottom:40px;}
 .bt50{	margin-bottom:50px;}
@@ -211,6 +235,16 @@ a:hover { color: black; background-color: white;}
 {
 	float:left;
 }
+
+@media screen and ( max-width:479px )
+{
+	.divL
+	{
+		max-width: 479px;
+		float: none;
+	}
+}
+
 .divR
 {
 	float:right;
@@ -317,10 +351,21 @@ a:hover { color: black; background-color: white;}
 #low .maincontent
 {
 	width:970px;
-	background:url(../img/mainback_top_low.jpg) right 60px no-repeat #FFF;
 	color: black;
 	float:left;
 }
+
+@media screen and ( max-width:479px )
+{
+	#low .maincontent
+	{
+		float: none;
+    max-width: 479px;
+    padding-top: 300px;
+    text-align: center;
+	}
+}
+
 #low aside#subcontent
 {
 	width:300px;
@@ -398,13 +443,23 @@ header h2{
 }
 #low .maincontent h4
 {
-	background-position:left center;
-	background-repeat:no-repeat;
 	font-size:120%;
 	font-weight:bold;
 	padding-top:2px;
 	font-size: 25px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#low .maincontent h4
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+
 #subcontent h5
 {
 	margin-bottom:10px;
@@ -1047,8 +1102,8 @@ ul.bnrlist li.last{
 .inner
 {
 	padding:20px;
-	background:url(../img/mainback_under_low.jpg) left bottom no-repeat;
 }
+
 .inner:after{
 	content:".";
 	display:block;
@@ -1153,6 +1208,18 @@ ul.bnrlist li.last{
 	margin-right:30px;
 	float: left;
 }
+
+@media screen and ( max-width:479px )
+{
+	.leftimg
+	{
+		flex-direction: column;
+		float: none;
+		margin: 1rem auto;
+		flex-wrap: wrap;
+	}
+}
+
 .mrl220
 {
 	margin-left:220px;
