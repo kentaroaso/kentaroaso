@@ -41,7 +41,7 @@ html {
 body {
 	font: 100%/50px "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 	color: black;
-	background-color: white;
+	background-color: #FCF9E3;
 	line-height:30px;
 }
 
@@ -60,7 +60,7 @@ input, textarea {
 ----------------------------------------------------*/
 a { text-decoration: none; color: #67c5ff; }
 a:visited { text-decoration: none; }
-a:hover { color: black; background-color: white;}
+a:hover { color: black;}
 
 @media screen and ( max-width:479px )
 {
@@ -638,8 +638,8 @@ text-align: center;
 
 #topnews
 {
-	background:url(../../img/bg_whatsnew.jpg) top left no-repeat;
-	margin-bottom:14px;
+	background-color: #FFFFE9;
+	margin:10px;
 }
 
 @media screen and ( max-width:479px )
@@ -653,6 +653,7 @@ text-align: center;
 
 #topnews #topnews_tolist
 {
+	padding-top: 10px;
 }
 
 @media screen and ( max-width:479px )
@@ -694,8 +695,10 @@ text-align: center;
 }
 #photogallery
 {
-	background:url(../../img/bg_photo.jpg) top left no-repeat;
 	height:450px;
+	margin: 10px;
+	background-color: #FFFFE9;
+
 }
 #photogallery #photogallery_tolist
 {
@@ -728,8 +731,10 @@ text-align: center;
 
 #movie
 {
-	background:url(../../img/bg_movie.jpg) top left no-repeat;
 	height:450px;
+	margin: 10px;
+	background-color: #FFFFE9;
+
 }
 #movie #movie_tolist
 {
@@ -767,6 +772,8 @@ text-align: center;
 	height:200px;
 	width: 950px;
 	padding: 80px 10px;
+	margin: 10px;
+	background-color: #FFFFE9;
 }
 
 @media screen and ( max-width:479px )
@@ -800,6 +807,9 @@ text-align: center;
 	height:200px;
 	width: 950px;
 	padding: 80px 10px;
+	margin: 10px;
+	background-color: #FFFFE9;
+
 }
 
 @media screen and ( max-width:479px )
@@ -832,6 +842,9 @@ text-align: center;
 	height:200px;
 	width: 950px;
 	padding: 80px 10px;
+	margin: 10px;
+	background-color: #FFFFE9;
+
 }
 
 @media screen and ( max-width:479px )
@@ -864,6 +877,9 @@ text-align: center;
 	height:200px;
 	width: 950px;
 	padding: 80px 10px;
+	margin: 10px;
+	background-color: #FFFFE9;
+
 }
 
 @media screen and ( max-width:479px )
