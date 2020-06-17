@@ -68,7 +68,7 @@ a:hover { color: black;}
 	{
 		max-width: 479px;
 		margin: 0;
-		padding: 0;
+		padding: 0 10px;
 	}
 
 	a:hover
@@ -308,7 +308,7 @@ a:hover { color: black;}
 
 #top #maincontent
 {
-	padding-top: 200px;
+	padding-top: 20px;
 	text-align: center;
 }
 
@@ -317,17 +317,16 @@ a:hover { color: black;}
 	#top #maincontent
 	{
 		float: none;
-		padding: 0;
+		padding: 20px 0 0 0;
 		margin: 0;
 		max-width: 479px;
-		padding-top: 300px;
 		text-align: center;
 	}
 }
 
 #top #subcontent
 {
-	padding-top: 80px;
+	padding-top: 10px;
 }
 
 @media screen and ( max-width:479px )
@@ -695,11 +694,20 @@ text-align: center;
 }
 #photogallery
 {
-	height:450px;
+	height: auto;
 	margin: 10px;
 	background-color: #FFFFE9;
-
 }
+
+@media screen and ( max-width:479px )
+{
+	#photogallery
+	{
+		max-width:479px;
+		margin: 10px 0 0 0;
+	}
+}
+
 #photogallery #photogallery_tolist
 {
 	padding: 10px;
@@ -729,16 +737,34 @@ text-align: center;
   padding: 10px;
 }
 
+@media screen and ( max-width:479px )
+{
+	#photogallery .divR251
+	{
+		max-width: 479px;
+		padding: 0;
+	}
+}
+
 #movie
 {
-	height:450px;
+	height: auto;
 	margin: 10px;
 	background-color: #FFFFE9;
-
 }
+
+@media screen and ( max-width:479px )
+{
+	#movie
+	{
+		max-width:479px;
+		margin: 10px 0 0 0;
+	}
+}
+
 #movie #movie_tolist
 {
-	padding-top: 80px;
+	padding-top: 10px;
   padding-bottom: 10px;
 }
 #movie #divbox
@@ -766,12 +792,21 @@ text-align: center;
   text-align: left;
   padding: 10px;
 }
+
+@media screen and ( max-width:479px )
+{
+	#movie .divR251
+	{
+		max-width: 479px;
+		padding: 0;
+	}
+}
+
 /*代表あいさつ*/
 #greeting
 {
 	height:200px;
 	width: 950px;
-	padding: 80px 10px;
 	margin: 10px;
 	background-color: #FFFFE9;
 }
@@ -782,7 +817,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		height: 330px;
-		padding: 80px 0 0 0;
+		margin: 10px 0 0 0;
 		text-align: center;
 	}
 }
@@ -806,7 +841,6 @@ text-align: center;
 {
 	height:200px;
 	width: 950px;
-	padding: 80px 10px;
 	margin: 10px;
 	background-color: #FFFFE9;
 
@@ -818,7 +852,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		height: 330px;
-		padding: 80px 0 0 0;
+		margin: 10px 0 0 0;
 		text-align: center;
 	}
 }
@@ -841,7 +875,6 @@ text-align: center;
 {
 	height:200px;
 	width: 950px;
-	padding: 80px 10px;
 	margin: 10px;
 	background-color: #FFFFE9;
 
@@ -853,7 +886,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		height: 330px;
-		padding: 80px 0 0 0;
+		margin: 10px 0 0 0;
 		text-align: center;
 	}
 }
@@ -876,7 +909,6 @@ text-align: center;
 {
 	height:200px;
 	width: 950px;
-	padding: 80px 10px;
 	margin: 10px;
 	background-color: #FFFFE9;
 
@@ -888,7 +920,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		height: 330px;
-		padding: 80px 0 0 0;
+		margin: 10px 0 0 0;
 		text-align: center;
 	}
 }
