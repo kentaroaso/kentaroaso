@@ -45,7 +45,7 @@ nav#mainnavi
 {
 	width:950px;
 	margin:auto;
-	height:auto;
+	height: 200px;
 	position:relative;
 }
 
@@ -59,7 +59,7 @@ nav#mainnavi
 		text-align: center;
 		display:block;
 		outline:none;
-		max-width: 479px ;			/* 最大の横幅 */
+		max-width: 479px ;
 	}
 }
 
@@ -152,7 +152,6 @@ footer ul li
 {
 	text-align:left;
 	line-height:50px;
-	padding-left:20px;
 	color:#999999;
 }
 
