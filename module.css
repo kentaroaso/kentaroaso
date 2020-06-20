@@ -43,10 +43,12 @@ header
 ----------------------------------------------------*/
 nav#mainnavi
 {
-	width:950px;
-	margin:auto;
-	height: 200px;
-	position:relative;
+	width: 950px;
+  margin: auto;
+  height: 80px;
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media screen and ( max-width:479px )
@@ -54,12 +56,13 @@ nav#mainnavi
 	nav#mainnavi
 	{
 		flex-direction: column;
-		float: none;
-		flex-wrap: wrap;
-		text-align: center;
-		display:block;
-		outline:none;
-		max-width: 479px ;
+    float: none;
+    flex-wrap: wrap;
+    text-align: center;
+    display: block;
+    outline: none;
+    height: 150px;
+    max-width: 479px;
 	}
 }
 
@@ -111,7 +114,7 @@ h1
 #mainnavi li
 {
 	float:left;
-	padding: 10px;
+	padding: 10px 20px;
 	line-height:30px;
 	text-align: center;
 }
