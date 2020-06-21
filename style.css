@@ -1005,6 +1005,17 @@ text-align: center;
 	}
 }
 
+@media screen and ( max-width:479px )
+{
+	#totop p
+	{
+		max-width: 479px;
+	  margin: 0;
+	  padding: 0 10px;
+		text-align: right;
+	}
+}
+
 #backin_access
 {
 	height:285px;
@@ -1058,6 +1069,13 @@ text-align: center;
 		max-width: 479px;
 		text-align: center;
 	}
+
+	#backin_access #boxR p
+	{
+		max-width: 479px;
+		text-align: center;
+	}
+
 }
 #backin_access p#address
 {
