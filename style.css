@@ -243,6 +243,7 @@ a:hover { color: black;}
 	margin-left:220px;
 	height: 200px;
 	font-size: 25px;
+	text-align: left;
 }
 
 @media screen and ( max-width:479px )
@@ -254,6 +255,7 @@ a:hover { color: black;}
 		margin: 1rem auto;
 		flex-wrap: wrap;
 		text-align: left;
+		height: auto;
 	}
 }
 
@@ -402,7 +404,6 @@ a:hover { color: black;}
 	{
 		float: none;
     max-width: 479px;
-    padding-top: 300px;
     text-align: center;
 	}
 }
@@ -712,7 +713,7 @@ text-align: center;
 {
 	width: 950px;
 	overflow: hidden;
-	height: 470px;
+	height: auto;
 	text-align: left;
 }
 
@@ -1195,7 +1196,6 @@ ul.bnrlist li.last{
 }
 .inner
 {
-	padding:20px;
 }
 
 .inner:after{
