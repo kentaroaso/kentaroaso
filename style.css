@@ -73,6 +73,7 @@ a:hover { color: black;}
 		max-width: 479px;
 		margin: 0;
 		padding: 0 10px;
+		text-align: left;
 	}
 
 	a:hover
