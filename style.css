@@ -253,6 +253,7 @@ a:hover { color: black;}
 		float: none;
 		margin: 1rem auto;
 		flex-wrap: wrap;
+		text-align: left;
 	}
 }
 
@@ -775,7 +776,7 @@ text-align: center;
 {
 	width: 760px;
   margin: auto;
-  text-align: center;
+  text-align: left;
   padding: 10px;
 }
 
@@ -785,6 +786,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		padding: 0;
+		text-align: left;
 	}
 }
 
@@ -832,7 +834,7 @@ text-align: center;
 {
 	width: 760px;
   margin: auto;
-  text-align: center;
+	text-align: left;
   padding: 10px;
 }
 
@@ -842,6 +844,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		padding: 0;
+		text-align: left;
 	}
 }
 
