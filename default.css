@@ -109,6 +109,7 @@ ul
 img {
     border: medium none;
     vertical-align: top;
+		border-radius: 5px; 
 }
 /*
 Copyright (c) 2010, Yahoo! Inc. All rights reserved.
