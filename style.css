@@ -194,7 +194,7 @@ a:hover { color: black;}
 
 #topnews_topiclist .clearfix
 {
-	display:block;
+  display:block;
   margin: auto;
   width: 760px;
 }
@@ -683,6 +683,8 @@ text-align: center;
 {
 	background-color: #FFFFE9;
 	margin:10px;
+	background: url(https://kentaroaso.github.io/kentaroaso/tatazumi.jpeg);
+	background-size: cover;
 }
 
 @media screen and ( max-width:479px )
@@ -697,6 +699,7 @@ text-align: center;
 #topnews #topnews_tolist
 {
 	padding-top: 10px;
+	background: rgba(255, 255, 233,0.7);
 }
 
 @media screen and ( max-width:479px )
@@ -705,7 +708,6 @@ text-align: center;
 	{
 		flex-direction: column;
 		float: none;
-		margin: 1rem auto;
 		flex-wrap: wrap;
 	}
 }
@@ -716,6 +718,7 @@ text-align: center;
 	overflow: hidden;
 	height: auto;
 	text-align: left;
+	background: rgba(255, 255, 233,0.7);
 }
 
 @media screen and ( max-width:479px )
