@@ -73,7 +73,7 @@ a:hover { color: black;}
 		max-width: 479px;
 		margin: 0;
 		padding: 0 10px;
-		text-align: left;
+		text-align: center;
 	}
 
 	a:hover
@@ -774,14 +774,10 @@ text-align: center;
 	}
 }
 
-#photogallery .divL198
-{
-}
 #photogallery .divR251
 {
-	width: 760px;
   margin: auto;
-  text-align: left;
+  text-align: center;
   padding: 10px;
 }
 
@@ -791,7 +787,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		padding: 0;
-		text-align: left;
+		text-align: center;
 	}
 }
 
@@ -832,14 +828,10 @@ text-align: center;
 	}
 }
 
-#movie .divL198
-{
-}
 #movie .divR251
 {
-	width: 760px;
   margin: auto;
-	text-align: left;
+	text-align: center;
   padding: 10px;
 }
 
@@ -849,7 +841,7 @@ text-align: center;
 	{
 		max-width: 479px;
 		padding: 0;
-		text-align: left;
+		text-align: center;
 	}
 }
 
@@ -1215,9 +1207,6 @@ ul.bnrlist li.last{
 {
 	border:2px solid #424242;
 	padding:-4px;
-}
-.inner
-{
 }
 
 .inner:after{
