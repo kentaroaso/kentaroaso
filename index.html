@@ -1,176 +1,192 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta name="google-site-verification" content="YjCfhsKCAannrojGnKeqNKdzT4NU6ZM3___8cfVpP7w" />
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
     <title>幸せの四天王</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://kentaroaso.github.io/kentaroaso/medama.jpeg">
     <meta name="keywords" content="幸せの四天王">
-    <meta name="description" content="引き算の王、絶対的な王、直感の王、こだわらない王">
+    <meta name="description" content="引き算の王、絶対の王、直感の王、自由の王">
     <meta name="Abstract" content="人生のイシュー" >
     <meta name="author" content="クリティカルシンキング">
-    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" href="import.css" />
-    <link rel="index" href="/" />
-    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="RSS 2.0" />
-    <link href="shadowbox.css" type="text/css" rel="stylesheet" />
-    <style type="text/css">@import "kamome.css";</style>
-    <script type="text/javascript" src="kamome.js"></script>
-    <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
-    <style type="text/css">#top_slideshow{width:970px;height:500px;overflow:hidden;}</style>
-<script type="text/javascript" src="shadowbox.js"></script><!--lightbox風-->
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/product/">
 
-<script type="text/javascript">
-Shadowbox.init({
-    language: 'ja',
-    players:  ['img', 'html', 'iframe']
-});
-</script>
+    <!-- Bootstrap core CSS -->
+<link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
 
-</head>
-<body>
-    <header>
-    	<h1>幸せの四天王</h1>
-      <h2><a href="./"><img src="https://kentaroaso.github.io/kentaroaso/jinsei.jpeg" height="100" width="400"alt="幸せの四天王"/></a></h2>
-        <div id="mainimage">
-        <div class="slideshow" id="top_slideshow" >
-          	<ol>
-              <li><img src="https://kentaroaso.github.io/kentaroaso/kekkon.png" height="100%" width="100%" alt="メイン画像" /></li>
-	            <li><img src="https://kentaroaso.github.io/kentaroaso/tyurip.png" height="100%" width="100%" alt="メイン画像" /></li>
-            	<li><img src="https://kentaroaso.github.io/kentaroaso/donissue.png" height="100%" width="100%" alt="メイン画像" /></li>
-          	</ol>
-         </div>
-         </div>
-    </header>
-    <nav id="mainnavi">
-        <ul>
-            <li><a class="btn" href="https://www.youtube.com/embed/gjJJnpOc9iM">限られた時間</a></li>
-            <li><a class="btn" href="https://www.youtube.com/embed/KPVqKlq25nI?list=WL">最後のとき</a></li>
-            <li><a class="btn" href="https://www.youtube.com/embed/ke-MrK96tbg">チーム</a></li>
-            <li><a class="btn" href="https://www.youtube.com/embed/oCcimWXvUgo">問題の本質</a></li>
-            <li><a class="btn" href="https://www.youtube.com/embed/XtyCvA8eN18">倫理</a></li>
-         </ul>
-    </nav>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-        <!--
-        <div id="cam">
-                <ul>
-                	<li><img src="http://www.wolf-kickboxing.com/wordpress/wp-content/themes/wolf-kickboxing/img/cam1.jpg" height="280" width="924" class="borderimg" alt="キャンペーン" /></li>
-                </ul>
-         </div>
-         -->
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="#" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/embed/gjJJnpOc9iM">時間は有限</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/embed/KPVqKlq25nI?list=WL">最後のとき</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/embed/ke-MrK96tbg">チーム</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/embed/oCcimWXvUgo">問題の本質</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://kentaroaso.github.io/kentaroaso/wolf.html">工事中【k１ジムウルフ】</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/embed/fUaRrlH4J_k">イシュー</a>
+    <a class="py-2 d-none d-md-inline-block" href="https://www.youtube.com/embed/E0V5EcSh-0s">タバコ</a>
+  </div>
+</nav>
 
-    <div id="top" class="content">
-    	<div id="maincontent">
-        <div id="subcontent">
-          <div id="greeting"><img src="https://kentaroaso.github.io/kentaroaso/hasu.jpeg" height="170" width="190">
-              <div class="divL">
-              </div>
-              <div class="divR">
-                  <p class="right">2020.7.5</p>
-                  <p class="lead"><a href="https://kentaroaso.github.io/kentaroaso/greeting.html">「幸せの四天王」アップデートしました</a></p>
-              </div>
-          <!-- #greeting --></div>
-          <div id="about"><img src="https://kentaroaso.github.io/kentaroaso/yashi2.jpeg" height="170" width="190">
-              <div class="divL">
-              </div>
-              <div class="divR">
-                  <p class="right">2020.5.31</p>
-                  <p class="lead"><a href="https://kentaroaso.github.io/kentaroaso/wolf.html">工事中のサイト（K1ジムウルフ）</a></p>
-                </div>
-          <!-- #about --></div>
-          <div id="practice"><img src="https://kentaroaso.github.io/kentaroaso/hato.jpeg" height="170" width="190">
-              <div class="divL">
-              </div>
-              <div class="divR">
-                  <p class="right">2020.4.20</p>
-                  <p class="lead"><a href="https://kentaroaso.github.io/kentaroaso/greeting.html">「幸せの四天王」リリース</a></p>
-                </div>                  
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal">幸せの四天王</h1>
+    <p class="lead font-weight-normal">与えられた時間は有限です。</p>
+    <a class="btn btn-outline-secondary" href="https://kentaroaso.github.io/kentaroaso/greeting.html">詳しくみる</a>
+  </div>
+</div>
 
-                <!-- #topnews_topiclist --></div>
-            <!-- #topnews --></div>
-        	<div id="photogallery">
-	        	<div id="photogallery_tolist"><a href="https://www.youtube.com/embed/T65Q13b4d3c?list=WL" class="btn">「幸せ」とは何でしょう</a></div>
-	        	<div id="divbox" class="clearfix">
- 	               <div class="divL198">
- 	               <iframe width="460" height="300" src="https://www.youtube.com/embed/bWZCpaSKwZg?list=WL" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      	          </div>
- 	               <div class="divR251">
-    	            	<p>人生の「イシュー」を見つけるヒント</p>
-  	              </div>
-                </div>
-                <!--
-                <div class="ul01 clearfix">
-                <ul class="hover">
-                	<li><a href="img/topimage01L.jpg" rel="shadowbox[img]"><img src="img/topimage01.jpg" height="99" width="139" class="borderimg" alt="ギャラリー" /></a></li>
-                	<li><a href="img/topimage02L.jpg" rel="shadowbox[img]"><img src="img/topimage02.jpg" height="99" width="139" class="borderimg" alt="ギャラリー" /></a></li>
-                	<li class="last"><a href="img/topimage03L.jpg" rel="shadowbox[img]"><img src="img/topimage03.jpg" height="99" class="borderimg" width="139" alt="ギャラリー" /></a></li>
-                </ul>
-                </div>
-                -->
-            <!-- #photogallery --></div>
-        	<div id="movie" class="clearfix backin">
-	        	<div id="movie_tolist"><a href="https://www.youtube.com/embed/pf4eLy22ZCk" class="btn">「仮説」から始めましょう</a></div>
-	        	<div id="divbox" class="clearfix">
- 	               <div class="divL198">
-                 <iframe width="460" height="300" src="https://www.youtube.com/embed/fUaRrlH4J_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
- 	               <div class="divR251">
-    	            	<p>「イシュー」をわかりやすく説明してくれます</p>
-  	              </div>
-                </div>
-            <!-- #movie --></div>
-        <!-- #maincontets --></div>
-        <div id="subcontent">
-            <div id="practice"><img src="https://kentaroaso.github.io/kentaroaso/nosmoking.jpeg" height="170" width="190">
-            	<div class="divL">
-                </div>
-                <div class="divR">
-                  <p class="right"><a href="https://www.youtube.com/embed/E0V5EcSh-0s" class="btn">詳しくみる</a></p>
-                  <p class="lead">おタバコはいかがですか？</p>
-                </div>
-            </div>
-            <!-- #practice -->
-            <div id="blog" class="last"><img src="https://kentaroaso.github.io/kentaroaso/yagimojin.jpeg" height="170" width="190">
-            	<div class="divL">
-                </div>
-                <div class="divR">
-                  <p class="right"><a href="https://www.youtube.com/embed/ibnp95wQ2GQ" class="btn">詳しくみる</a></p>
-                  <p class="lead">議論好きな人は、問題解決がお気に召さないようです</p>
-                </div>
-            </div>
-          <!-- #subcontets --></div>
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">引き算の王</h2>
+      <p class="lead">人生は、引き算の考え方でより良くなります。
+        足し算の考え方は、「やりたいこと」全てに力を注ぎます。
+        これでは何が一番大切かを見失いがちです。
+        しかし、「やりたいこと」の中から「やるべきこと」を
+        一つだけ見つけて、その一点に力を集中してみてください。
+        きっと、今まで以上の成果をあげることができるでしょう。
+        あなたの「やるべきこと」は何ですか？</p>
     </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/asayake.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">絶対の王</h2>
+      <p class="lead">他人は他人。自分は自分。
+        他人と自分を比べて一喜一憂していると、いずれ不幸になります。
+        本当に比べるべきは、過去の自分です。
+        昨日、一週間前、一ヶ月前、一年前、あの頃の自分と今の自分はどちらが輝いていますか？</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/kumo.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+</div>
 
-    <footer>
-      <div id="totop">
-      	<p><a href="https://kentaroaso.github.io/kentaroaso/" class="btn">topへ</a></p>
-      <!-- #totop--></div>
-            <div id="backin_access">
-            	<div class="clearfix">
-            	<div id="boxL">
-          		  	<p><img src="https://kentaroaso.github.io/kentaroaso/issue.jpeg" width="350px" height="90px" /></p>
-        	        <dl>
-                    <dt>電話</dt><dd><strong>000-0000-0000</strong><br />（代表・麻生）</dd>
-                    <div class="mail"><dt>E-MAIL</dt><dd>@.com</dd></div>
-                	</dl>
-               <!-- #boxL --></div>
-               <div id="box">
-                 <form action="#" method="get">
-               	     <p>ご意見<br>
-               	       <textarea name="comment" cols="30" rows="7"></textarea></p>
-                       <p><input type="submit" value="確認する" class="btn"></p>
-                </form>
-              </div>
-              <div id="boxR">
-                <img src="https://kentaroaso.github.io/kentaroaso/twokutwoku.jpeg" width="150px" height="100px" />
-                <p><a class="btn" href="https://www.google.co.jp/maps/@36.4969984,139.870208,14z?hl=ja">交通案内</a></p>
-               <!-- #boxR --></div>
-               <!-- .clearfix --></div>
-        <div id="copyright">
-        	<p>2020 kentaroaso</p>
-        </div>
-        <!-- backin_access --></div>
-    </footer>
-</body>
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">直感の王</h2>
+      <p class="lead">ゴールを決めてからからコースを考えますか？
+        それとも、コースを決めてからゴールを決めますか？
+        失敗を恐れず行動して次々に問題を解決していく方が正解だったりします。
+        「ベストを求めて慎重になり、時間切れ」よりも「ベターで抑えて速い」方が価値があるように思えます。</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/banteji.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+  <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">自由の王</h2>
+      <p class="lead">「心の自由」と「体の自由」</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/kaidan.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">「幸せの四天王」アップデート</h2>
+      <p class="lead">2020.7.31</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/hato.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">工事中のサイト【k１ジムウルフ】</h2>
+      <p class="lead">2020.5.31</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/panti.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+</div>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 p-3">
+      <h2 class="display-5">「幸せの四天王」リリース</h2>
+      <p class="lead">2020.4.20</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/aruki.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+  <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Another headline</h2>
+      <p class="lead">And an even wittier subheading.</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/tomyam.jpeg" style="width: 100%; height: 300px; "></div>
+  </div>
+</div>
+
+<footer class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+      <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Features</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Cool stuff</a></li>
+        <li><a class="text-muted" href="#">Random feature</a></li>
+        <li><a class="text-muted" href="#">Team feature</a></li>
+        <li><a class="text-muted" href="#">Stuff for developers</a></li>
+        <li><a class="text-muted" href="#">Another one</a></li>
+        <li><a class="text-muted" href="#">Last time</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Resource</a></li>
+        <li><a class="text-muted" href="#">Resource name</a></li>
+        <li><a class="text-muted" href="#">Another resource</a></li>
+        <li><a class="text-muted" href="#">Final resource</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>Resources</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Business</a></li>
+        <li><a class="text-muted" href="#">Education</a></li>
+        <li><a class="text-muted" href="#">Government</a></li>
+        <li><a class="text-muted" href="#">Gaming</a></li>
+      </ul>
+    </div>
+    <div class="col-6 col-md">
+      <h5>About</h5>
+      <ul class="list-unstyled text-small">
+        <li><a class="text-muted" href="#">Team</a></li>
+        <li><a class="text-muted" href="#">Locations</a></li>
+        <li><a class="text-muted" href="#">Privacy</a></li>
+        <li><a class="text-muted" href="#">Terms</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script></body>
 </html>
