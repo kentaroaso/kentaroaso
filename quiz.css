@@ -16,6 +16,7 @@ body {
   display: flex;
   width: 100vw;
   height: 100vh;
+  font-size: 3rem;
   justify-content: center;
   align-items: center;
   background-color: hsl(var(--hue), 100%, 20%);
@@ -69,7 +70,7 @@ body.wrong {
 }
 
 .start-btn, .next-btn {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   padding: 10px 20px;
 }
