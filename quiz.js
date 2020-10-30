@@ -1,4 +1,4 @@
-  const startButton = document.getElementById('start-btn')
+const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
@@ -295,10 +295,136 @@ const questions = [
     ]
   },
   {
-    question: '',
+    question: 'ここで待て',
     answers: [
-      { text: '', correct: true },
-      { text: '', correct: false }
+      { text: 'wait here', correct: true },
+      { text: 'stay here', correct: false }
+    ]
+  },
+  {
+    question: '静かにしろ',
+    answers: [
+      { text: 'be quiet', correct: true },
+      { text: 'quiet it', correct: false }
+    ]
+  },
+  {
+    question: 'それを置け',
+    answers: [
+      { text: 'put it down', correct: true },
+      { text: 'stay down', correct: false }
+    ]
+  },
+  {
+    question: 'それを開けろ',
+    answers: [
+      { text: 'open it', correct: true },
+      { text: 'it is open', correct: false }
+    ]
+  },
+  {
+    question: 'それを見せろ',
+    answers: [
+      { text: 'show me that', correct: true },
+      { text: 'show me your hands', correct: false }
+    ]
+  },
+  {
+    question: 'ここから立ち去れ',
+    answers: [
+      { text: 'get out of here', correct: true },
+      { text: 'get off me', correct: false }
+    ]
+  },
+  {
+    question: '武器を捨てろ',
+    answers: [
+      { text: 'drop your weapon', correct: true },
+      { text: 'show me your hands', correct: false }
+    ]
+  },
+  {
+    question: '止まれ、止まらなければ撃つぞ',
+    answers: [
+      { text: 'stop or I will fire', correct: true },
+      { text: 'I am gonna shoot you', correct: false }
+    ]
+  },
+  {
+    question: '撃つぞ',
+    answers: [
+      { text: 'I am gonna shoot you', correct: true },
+      { text: 'stop or I will fire', correct: false }
+    ]
+  },
+  {
+    question: '捨てろ',
+    answers: [
+      { text: 'drop it', correct: true },
+      { text: 'drop your weapon', correct: false }
+    ]
+  },
+  {
+    question: '手を上げろ',
+    answers: [
+      { text: 'hans up', correct: true },
+      { text: 'show me your hands', correct: false }
+    ]
+  },
+  {
+    question: '両手を見せろ',
+    answers: [
+      { text: 'show me your hands', correct: true },
+      { text: 'hans up', correct: false }
+    ]
+  },
+  {
+    question: '出てこい',
+    answers: [
+      { text: 'come out', correct: true },
+      { text: 'come on', correct: false }
+    ]
+  },
+  {
+    question: 'その場に立て',
+    answers: [
+      { text: 'stand up', correct: true },
+      { text: 'attention', correct: false }
+    ]
+  },
+  {
+    question: 'ボディーサーチをする',
+    answers: [
+      { text: 'We will do body search', correct: true },
+      { text: 'I body search you', correct: false }
+    ]
+  },
+  {
+    question: '壁の方を向け',
+    answers: [
+      { text: 'face the wall', correct: true },
+      { text: 'hands on the wall', correct: false }
+    ]
+  },
+  {
+    question: '壁に手をつけ',
+    answers: [
+      { text: 'hands on the wall', correct: true },
+      { text: 'face the wall', correct: false }
+    ]
+  },
+  {
+    question: '手を頭の上におけ',
+    answers: [
+      { text: 'hands on your head', correct: true },
+      { text: 'on the ground', correct: false }
+    ]
+  },
+  {
+    question: 'うつ伏せになれ',
+    answers: [
+      { text: 'on the ground', correct: true },
+      { text: 'hands on your head', correct: false }
     ]
   },
 
