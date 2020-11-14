@@ -54,6 +54,7 @@ body.wrong {
   padding: 5px 10px;
   color: white;
   outline: none;
+  font-size: 2rem;
 }
 
 .btn:hover {
