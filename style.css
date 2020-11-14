@@ -79,8 +79,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin-top: 0;
   margin-bottom: 1rem;
+  font-size: x-large;
 }
 
 abbr[title],
@@ -362,6 +362,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
   font-size: 2.5rem;
+  margin-top: revert;
 }
 
 h2, .h2 {
@@ -8394,6 +8395,7 @@ button.bg-dark:focus {
 .pt-5,
 .py-5 {
   padding-top: 3rem !important;
+  height: 600px;
 }
 
 .pr-5,
@@ -9979,9 +9981,9 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
-  background-image: url(https://kentaroaso.github.io/kentaroaso/yuhi.jpg);
+  background-image: url(https://github.com/kentaroaso/kentaroaso/blob/master/fuji.jpeg?raw=true);
   background-blend-mode: lighten;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.3);
   background-size: cover;
 }
 
