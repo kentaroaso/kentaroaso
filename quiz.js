@@ -144,7 +144,7 @@ const questions = [
     question: '救急車をよんでください',
     answers: [
       { text: 'please call an ambulanse', correct: true },
-      { text: '', correct: false }
+      { text: 'please call an ambulanse', correct: true },
     ]
   },
   {
