@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 {
   font-size: 2.5rem;
-  margin-top: revert;
+  margin-top: 5rem;
 }
 
 h2, .h2 {
@@ -4309,16 +4309,15 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
+  background:#fff; /背景を白色に/
+  box-shadow:0 2px 8px rgba(30,30,80,.3); /影。不要なら削除/
+  left:0;
+  line-height:1;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+  padding:1rem;
 }
 
 .navbar .container,
