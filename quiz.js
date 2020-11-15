@@ -454,7 +454,7 @@ const questions = [
 ]
 
 $(function() {
-  $('.navbar-toggler collapsed').click(function() {
+  $('.navbar-toggler').click(function() {
     $('.type-lead').fadeIn();
   });  
 });
