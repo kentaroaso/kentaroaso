@@ -452,8 +452,9 @@ const questions = [
     ]
   }
 ]
+
 $(function() {
-  $('.navbar-toggler').click(function() {
+  $('.navbar-toggler collapsed').click(function() {
     $('.type-lead').fadeIn();
   });  
 });
