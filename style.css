@@ -9988,6 +9988,11 @@ button.bg-dark:focus {
   background-blend-mode: lighten;
   background-color: rgba(255,255,255,0.3);
   background-size: cover;
+  background-position:center center;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+	height: 100vh;
 }
 
 @media (min-width: 576px) {
