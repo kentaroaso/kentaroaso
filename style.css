@@ -9984,15 +9984,14 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
-  background-image: url(https://github.com/kentaroaso/kentaroaso/blob/master/fuji.jpeg?raw=true);
   background-blend-mode: lighten;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.9);
   background-size: cover;
   background-position:center center;
   align-items: center;
   justify-content: center;
   width: 100vw;
-	height: 100vh;
+  height: 100vw;
 }
 
 @media (min-width: 576px) {
