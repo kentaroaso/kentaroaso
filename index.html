@@ -26,7 +26,6 @@
         images: [
           'https://kentaroaso.github.io/kentaroaso/jiyu.jpg',
           'https://kentaroaso.github.io/kentaroaso/yuuki.jpg',
-
           'https://kentaroaso.github.io/kentaroaso/akunin.jpg', 
           'https://kentaroaso.github.io/kentaroaso/nbc.jpg', 
           'https://raw.githubusercontent.com/kentaroaso/kentaroaso/master/taisetu.webp', 
@@ -34,10 +33,10 @@
         Interval: 3000, //切り替えの間隔 1000=1秒
         start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
         loop: true, //切り替えをループする
-        shuffle: false, //背景画像の順番をシャッフルする
+        shuffle: true, //背景画像の順番をシャッフルする
         effect: "fade", //エフェクトの種類 (fade / blind / clip / slide / drop / hide)
         duration: 3000, //エフェクトの時間 1000=1秒
-        easing: "swing", //エフェクトのイージング 
+        easing: "swing", //エフェクトのイージング
       });
     });
     </script>
@@ -134,7 +133,7 @@
     </div>
   </div>
 
-  <div class="py-5 text-center"><h3>お知らせ</h3></div>
+  <div class="py-5 text-center"><p>お知らせ</p></div>
 
   <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
