@@ -54,13 +54,13 @@
     </div>
     <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
       <div class="my-3 p-3">
-        <h2 class="display-5">あやふやな世界</h2>
-        <p class="lead">「察しろ、わかれ」<br>
-          「お前空気読めよ〜」なんて、どこかの島国の民族がよくいう言葉です。その「空気」などというものは、余計な気遣いの成れの果てです。そんなものは必要ありません。
-          「いいえ」という言葉が出せる人間になりましょう。そして、自己満足からくる「気遣い」という名の余計な真似はやめましょう。
-          </p>
+        <h2 class="display-5">やるべきことを見つける</h2>
+        <p class="lead">まず、全体を考える。<br>
+        最初にゴール（理想）を決めましょう。次にスタート（現状）位置、最後にコース（やるべきこと）を決めます。当たり前のことのように思えますが、これができる人は全体の３％です。
+        なぜならば、９７％の人は理想と現実を考えず、やるべきことに目を向けるからです。いつも理想を見失わず、現状を理解し、問題点を認識できたならば、その恩恵は計り知れません。
+        </p>
       </div>
-      <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/ambiguous.jpg" style="width: 100%; height: 300px; "></div>
+      <div class="bg-light shadow-sm mx-auto"> <img src="https://kentaroaso.github.io/kentaroaso/road.webp" style="width: 100%; height: 300px; "></div>
     </div>
   </div>
   
@@ -153,15 +153,15 @@
     jQuery(function($) {
     $('.text-center').bgSwitcher({
       images: [
-        'https://kentaroaso.github.io/kentaroaso/ambiguous.jpg',
+        'https://kentaroaso.github.io/kentaroaso/road.webp',
         'https://kentaroaso.github.io/kentaroaso/Serious.jpg',
         'https://kentaroaso.github.io/kentaroaso/badperson.jpg',
         'https://kentaroaso.github.io/kentaroaso/nbc.jpg'], // 切り替える背景画像
-      Interval: 3000, //切り替えの間隔 1000=1秒
+      Interval: 4000, //切り替えの間隔 1000=1秒
       start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
       loop: true, //切り替えをループする
       shuffle: true, //背景画像の順番をシャッフルする
-      effect: "fade", //エフェクトの種類 (fade / blind / clip / slide / drop / hide)
+      effect: "drop", //エフェクトの種類 (fade / blind / clip / slide / drop / hide)
       duration: 3000, //エフェクトの時間 1000=1秒
       easing: "swing", //エフェクトのイージング
     });
