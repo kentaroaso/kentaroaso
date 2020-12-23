@@ -67,6 +67,12 @@ body {
   outline: 0 !important;
 }
 
+#news {
+  text-align: center;
+  padding-top :30px;
+  padding-bottom: 30px;
+}
+
 hr {
   box-sizing: content-box;
   height: 0;
