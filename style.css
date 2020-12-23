@@ -35,6 +35,9 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+[code] * -webkit-transform-style: preserve-3d; [/code]
+
+
 *,
 *::before,
 *::after {
