@@ -4325,8 +4325,8 @@ input[type="button"].btn-block {
 }
 
 .navbar {
-  background:#fff; /背景を白色に/
-  box-shadow:0 2px 8px rgba(30,30,80,.3); /影。不要なら削除/
+  background:#fff; /*背景を白色に*/
+  box-shadow:0 2px 8px rgba(30,30,80,.3); /*影。不要なら削除*/
   left:0;
   line-height:1;
   position:fixed;
