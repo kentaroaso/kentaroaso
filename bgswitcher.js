@@ -564,7 +564,6 @@ jQuery(function($) {
       'https://kentaroaso.github.io/kentaroaso/shoes.jpg',
       'https://kentaroaso.github.io/kentaroaso/run.jpg',
       'https://kentaroaso.github.io/kentaroaso/javascript.jpg',
-      'https://kentaroaso.github.io/kentaroaso/yoga.webp',
       'https://kentaroaso.github.io/kentaroaso/boys.jpg'], // 切り替える背景画像
     Interval: 5000, //切り替えの間隔 1000=1秒
     start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
