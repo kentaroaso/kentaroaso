@@ -561,10 +561,10 @@
 jQuery(function($) {
   $('.text-center').bgSwitcher({
     images: [
-      'https://kentaroaso.github.io/kentaroaso/shoes.jpg',
-      'https://kentaroaso.github.io/kentaroaso/run.jpg',
-      'https://kentaroaso.github.io/kentaroaso/javascript.jpg',
-      'https://kentaroaso.github.io/kentaroaso/boys.jpg'], // 切り替える背景画像
+      'https://github.com/kentaroaso/kentaroaso/blob/master/boys.jpg',
+      'https://github.com/kentaroaso/kentaroaso/blob/master/javascript.jpg',
+      'https://github.com/kentaroaso/kentaroaso/blob/master/run.jpg',
+      'https://github.com/kentaroaso/kentaroaso/blob/master/shoes.jpg'], // 切り替える背景画像
     Interval: 5000, //切り替えの間隔 1000=1秒
     start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
     loop: true, //切り替えをループする
