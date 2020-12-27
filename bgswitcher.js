@@ -567,7 +567,6 @@ jQuery(function($) {
       'https://kentaroaso.github.io/kentaroaso/army.jpg',
       'https://kentaroaso.github.io/kentaroaso/wolf.jpg',
       'https://kentaroaso.github.io/kentaroaso/chess.jpg',
-      'https://kentaroaso.github.io/kentaroaso/startup.jpg',
       'https://kentaroaso.github.io/kentaroaso/run.jpg',
       'https://kentaroaso.github.io/kentaroaso/shoes.jpg'], // 切り替える背景画像
     Interval: 5000, //切り替えの間隔 1000=1秒
