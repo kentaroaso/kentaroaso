@@ -1,576 +1,150 @@
-/*!
- * jQuery.BgSwitcher
- *
- * @version  0.4.3
- * @author   rewish <rewish.org@gmail.com>
- * @license  MIT License (https://github.com/rewish/jquery-bgswitcher/blob/master/LICENSE.md)
- * @link     https://github.com/rewish/jquery-bgswitcher
- */
-(function($) {
-  'use strict';
-
-  var loadedImages = {},
-
-      slice = Array.prototype.slice,
-      toString = Object.prototype.toString,
-
-      corners = ['Top', 'Right', 'Bottom', 'Left'],
-      backgroundProperties = [
-        'Attachment', 'Color', 'Image', 'Repeat',
-        'Position', 'Size', 'Clip', 'Origin'
-      ];
-
-  $.fn.bgswitcher = function() {
-    var args = arguments,
-        instanceKey = BgSwitcher.keys.instance;
-
-    return this.each(function() {
-      var instance = $.data(this, instanceKey);
-
-      if (!instance) {
-        instance = new BgSwitcher(this);
-        $.data(this, instanceKey, instance);
-      }
-
-      instance.dispatch.apply(instance, args);
-    });
-  };
-
-  // Backward Compatibility
-  $.fn.bgSwitcher = $.fn.bgswitcher;
-
-  /**
-   * BgSwitcher
-   *
-   * @param {HTMLElement} el
-   * @constructor
-   */
-  function BgSwitcher(el) {
-    this.$el = $(el);
-    this.index = 0;
-    this.config = $.extend({}, BgSwitcher.defaultConfig);
-
-    this._setupBackgroundElement();
-    this._listenToResize();
-  }
-
-  $.extend(BgSwitcher.prototype, {
-    /**
-     * Dispatch
-     *
-     * @param {string|Array} one
-     */
-    dispatch: function(one) {
-      switch (toString.call(one)) {
-        case '[object Object]':
-          this.setConfig(one);
-          break;
-        case '[object String]':
-          this[one].apply(this, slice.call(arguments, 1));
-          break;
-        default:
-          throw new Error('Please specify a Object or String');
-      }
-    },
-
-    /**
-     * Set config
-     *
-     * @param {Object} config
-     */
-    setConfig: function(config) {
-      this.config = $.extend(this.config, config);
-
-      if (typeof this.config.random !== 'undefined') {
-        this.config.shuffle = this.config.random;
-      }
-
-      this.refresh();
-    },
-
-    /**
-     * Set images
-     *
-     * @param {Array} images
-     */
-    setImages: function(images) {
-      this.imageList = new this.constructor.ImageList(images);
-
-      if (this.config.shuffle) {
-        this.imageList.shuffle();
-      }
-    },
-
-    /**
-     * Set switch handler
-     *
-     * @param {Function} fn
-     */
-    setSwitchHandler: function(fn) {
-      this.switchHandler = $.proxy(fn, this);
-    },
-
-    /**
-     * Default switch handler
-     *
-     * @param {string} type
-     * @returns {Function}
-     */
-    getBuiltInSwitchHandler: function(type) {
-      return this.constructor.switchHandlers[type || this.config.effect];
-    },
-
-    /**
-     * Refresh
-     */
-    refresh: function() {
-      this.setImages(this.config.images);
-      this.setSwitchHandler(this.getBuiltInSwitchHandler());
-      this._prepareSwitching();
-
-      if (this.config.start) {
-        this.start();
-      }
-    },
-
-    /**
-     * Start switching
-     */
-    start: function() {
-      if (!this._timerID) {
-        this._timerID = setTimeout($.proxy(this, 'next'), this.config.interval);
-      }
-    },
-
-    /**
-     * Stop switching
-     */
-    stop: function() {
-      if (this._timerID) {
-        clearTimeout(this._timerID);
-        this._timerID = null;
-      }
-    },
-
-    /**
-     * Toggle between start/stop
-     */
-    toggle: function() {
-      if (this._timerID) {
-        this.stop();
-      } else {
-        this.start();
-      }
-    },
-
-    /**
-     * Reset switching
-     */
-    reset: function() {
-      this.index = 0;
-      this._prepareSwitching();
-    },
-
-    /**
-     * Go to next switching
-     */
-    next: function() {
-      var max = this.imageList.count();
-
-      if (!this.config.loop && this.index + 1 === max) {
-        return;
-      }
-
-      if (++this.index === max) {
-        this.index = 0;
-      }
-
-      this.switching();
-    },
-
-    /**
-     * Go to previous switching
-     */
-    prev: function() {
-      if (!this.config.loop && this.index === 0) {
-        return;
-      }
-
-      if (--this.index === -1) {
-        this.index = this.imageList.count() - 1;
-      }
-
-      this.switching();
-    },
-
-    /**
-     * Select the switching at index
-     *
-     * @param {number} index
-     */
-    select: function(index) {
-      if (index === -1) {
-        index = this.imageList.count() - 1;
-      }
-
-      this.index = index;
-      this.switching();
-    },
-
-    /**
-     * Switching the background image
-     */
-    switching: function() {
-      var started = !!this._timerID;
-
-      if (started) {
-        this.stop();
-      }
-
-      this._createSwitchableElement();
-      this._prepareSwitching();
-      this.switchHandler(this.$switchable);
-
-      if (started) {
-        this.start();
-      }
-    },
-
-    /**
-     * Destroy...
-     */
-    destroy: function() {
-      this.stop();
-      this._stopListeningToResize();
-
-      if (this.$switchable) {
-        this.$switchable.stop();
-        this.$switchable.remove();
-        this.$switchable = null;
-      }
-
-      if (this.$bg) {
-        this.$bg.remove();
-        this.$bg = null;
-      }
-
-      this.$el.removeAttr('style');
-      this.$el.removeData(this.constructor.keys.instance);
-      this.$el = null;
-    },
-
-    /**
-     * Adjust rectangle
-     */
-    _adjustRectangle: function() {
-      var corner,
-          i = 0,
-          length = corners.length,
-          offset = this.$el.position(),
-          copiedStyles = {
-            top: offset.top,
-            left: offset.left,
-            width: this.$el.innerWidth(),
-            height: this.$el.innerHeight()
-          };
-
-      for (; i < length; i++) {
-        corner = corners[i];
-        copiedStyles['margin' + corner] = this.$el.css('margin' + corner);
-        copiedStyles['border' + corner] = this.$el.css('border' + corner);
-      }
-
-      this.$bg.css(copiedStyles);
-    },
-
-    /**
-     * Setup background element
-     */
-    _setupBackgroundElement: function() {
-      this.$bg = $(document.createElement('div'));
-      this.$bg.css({
-        position: 'absolute',
-        zIndex: (parseInt(this.$el.css('zIndex'), 10) || 0) - 1,
-        overflow: 'hidden'
-      });
-
-      this._copyBackgroundStyles();
-      this._adjustRectangle();
-
-      if (this.$el[0].tagName === 'BODY') {
-        this.$el.prepend(this.$bg);
-      } else {
-        this.$el.before(this.$bg);
-        this.$el.css('background', 'none');
-      }
-    },
-
-    /**
-     * Create switchable element
-     */
-    _createSwitchableElement: function() {
-      if (this.$switchable) {
-        this.$switchable.remove();
-      }
-
-      this.$switchable = this.$bg.clone();
-      this.$switchable.css({top: 0, left: 0, margin: 0, border: 'none'});
-      this.$switchable.appendTo(this.$bg);
-    },
-
-    /**
-     * Copy background styles
-     */
-    _copyBackgroundStyles: function () {
-      var prop,
-          copiedStyle = {},
-          i = 0,
-          length = backgroundProperties.length,
-          backgroundPosition = 'backgroundPosition';
-
-      for (; i < length; i++) {
-        prop = 'background' + backgroundProperties[i];
-        copiedStyle[prop] = this.$el.css(prop);
-      }
-
-      // For IE<=9
-      if (copiedStyle[backgroundPosition] === undefined) {
-        copiedStyle[backgroundPosition] = [
-          this.$el.css(backgroundPosition + 'X'),
-          this.$el.css(backgroundPosition + 'Y')
-        ].join(' ');
-      }
-
-      this.$bg.css(copiedStyle);
-    },
-
-    /**
-     * Listen to the resize event
-     */
-    _listenToResize: function() {
-      var that = this;
-      this._resizeHandler = function() {
-        that._adjustRectangle();
-      };
-      $(window).on('resize', this._resizeHandler);
-    },
-
-    /**
-     * Stop listening to the resize event
-     */
-    _stopListeningToResize: function() {
-      $(window).off('resize', this._resizeHandler);
-      this._resizeHandler = null;
-    },
-
-    /**
-     * Prepare the Switching
-     */
-    _prepareSwitching: function() {
-      this.$bg.css('backgroundImage', this.imageList.url(this.index));
-    }
-  });
-
-  /**
-   * Data Keys
-   * @type {Object}
-   */
-  BgSwitcher.keys = {
-    instance: 'bgSwitcher'
-  };
-
-  /**
-   * Default Config
-   * @type {Object}
-   */
-  BgSwitcher.defaultConfig = {
-    images: [],
-    interval: 5000,
-    start: true,
-    loop: true,
-    shuffle: false,
-    effect: 'fade',
-    duration: 1000,
-    easing: 'swing'
-  };
-
-  /**
-   * Built-In switch handlers (effects)
-   * @type {Object}
-   */
-  BgSwitcher.switchHandlers = {
-    fade: function($el) {
-      $el.animate({opacity: 0}, this.config.duration, this.config.easing);
-    },
-
-    blind: function($el) {
-      $el.animate({height: 0}, this.config.duration, this.config.easing);
-    },
-
-    clip: function($el) {
-      $el.animate({
-        top: parseInt($el.css('top'), 10) + $el.height() / 2,
-        height: 0
-      }, this.config.duration, this.config.easing);
-    },
-
-    slide: function($el) {
-      $el.animate({top: -$el.height()}, this.config.duration, this.config.easing);
-    },
-
-    drop: function($el) {
-      $el.animate({
-        left: -$el.width(),
-        opacity: 0
-      }, this.config.duration, this.config.easing);
-    },
-
-    hide: function($el) {
-      $el.hide();
-    }
-  };
-
-  /**
-   * Define effect
-   *
-   * @param {String} name
-   * @param {Function} fn
-   */
-  BgSwitcher.defineEffect = function(name, fn) {
-    this.switchHandlers[name] = fn;
-  };
-
-  /**
-   * BgSwitcher.ImageList
-   *
-   * @param {Array} images
-   * @constructor
-   */
-  BgSwitcher.ImageList = function(images) {
-    this.images = images;
-    this.createImagesBySequence();
-    this.preload();
-  };
-
-  $.extend(BgSwitcher.ImageList.prototype, {
-    /**
-     * Images is sequenceable
-     *
-     * @returns {boolean}
-     */
-    isSequenceable: function() {
-      return typeof this.images[0] === 'string' &&
-          typeof this.images[1] === 'number' &&
-          typeof this.images[2] === 'number';
-    },
-
-    /**
-     * Create an images by sequence
-     */
-    createImagesBySequence: function() {
-      if (!this.isSequenceable()) {
-        return;
-      }
-
-      var images = [],
-          base = this.images[0],
-          min = this.images[1],
-          max = this.images[2];
-
-      do {
-        images.push(base.replace(/\.\w+$/, min + '$&'));
-      } while (++min <= max);
-
-      this.images = images;
-    },
-
-    /**
-     * Preload an images
-     */
-    preload: function() {
-      var path,
-          length = this.images.length,
-          i = 0;
-
-      for (; i < length; i++) {
-        path = this.images[i];
-        if (!loadedImages[path]) {
-          loadedImages[path] = new Image();
-          loadedImages[path].src = path;
-        }
-      }
-    },
-
-    /**
-     * Shuffle an images
-     */
-    shuffle: function() {
-      var j, t,
-          i = this.images.length,
-          original = this.images.join();
-
-      if (!i) {
-        return;
-      }
-
-      while (i) {
-        j = Math.floor(Math.random() * i);
-        t = this.images[--i];
-        this.images[i] = this.images[j];
-        this.images[j] = t;
-      }
-
-      if (this.images.join() === original) {
-        this.shuffle();
-      }
-    },
-
-    /**
-     * Get the image from index
-     *
-     * @param {number} index
-     * @returns {string}
-     */
-    get: function(index) {
-      return this.images[index];
-    },
-
-    /**
-     * Get the URL with function of CSS
-     *
-     * @param {number} index
-     * @returns {string}
-     */
-    url: function(index) {
-      return 'url(' + this.get(index) + ')';
-    },
-
-    /**
-     * Count of images
-     *
-     * @returns {number}
-     */
-    count: function() {
-      return this.images.length;
-    }
-  });
-
-  $.BgSwitcher = BgSwitcher;
-}(jQuery));
-
-jQuery(function($) {
-  $('.text-center').bgSwitcher({
-    images: [
-      'https://github.com/kentaroaso/kentaroaso/blob/master/boys.jpg',
-      'https://github.com/kentaroaso/kentaroaso/blob/master/javascript.jpg',
-      'https://github.com/kentaroaso/kentaroaso/blob/master/run.jpg',
-      'https://github.com/kentaroaso/kentaroaso/blob/master/shoes.jpg'], // 切り替える背景画像
-    Interval: 5000, //切り替えの間隔 1000=1秒
-    start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
-    loop: true, //切り替えをループする
-    shuffle: true, //背景画像の順番をシャッフルする
-    effect: "fade", //エフェクトの種類 (fade / blind / clip / slide / drop / hide)
-    duration: 1000, //エフェクトの時間 1000=1秒
-    easing: "swing", //エフェクトのイージング
-  });
-});
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google-site-verification" content="YjCfhsKCAannrojGnKeqNKdzT4NU6ZM3___8cfVpP7w" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>イシューで生きる</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://kentaroaso.github.io/kentaroaso/watashi.JPG">
+    <meta name="keywords" content="イシューで生きる">
+    <meta name="description" content="〜後悔しない人生〜「イシューで生きる」は、安宅和人さんの著書『イシューからはじめよ』の影響を受けた考え方です。">
+    <link rel="canonical" rel="https://kentaroaso.github.io/kentaroaso/">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="https://youtu.be/fUaRrlH4J_k">「イシュー」って何？</a>
+            <a class="nav-link" href="https://youtu.be/a9oo87V50OI">〜後悔しない人生〜</a>
+            <a class="nav-link" href="https://youtu.be/coYw-eVU0Ks">今日のニュース</a>
+            <a class="nav-link" href="https://kentaroaso.github.io/kentaroaso/wolf.html">K-1ジム・ウルフ</a>
+            <!--<a class="nav-link" href="https://kentaroaso.github.io/kentaroaso/quiz.html">英語のクイズ</a>-->
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="py-5 text-center">
+      <h1>イシューで生きる</h1>
+      <p class="type-lead">〜後悔しない人生〜<br>「イシューで生きる」は、安宅和人さんの著書『イシューからはじめよ』の影響を受けた考え方です。</p>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">自分を生きる</h2>
+          <p class="lead">生命が終わる瞬間まで、<br>自分の手で自分の口から食べ、<br>自分の足で好きなところへ行き、<br>そして他人と自分を比べない。<br>
+          そんな「幸せ」を目指したい。</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/AjJm9UhHlrk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">あいさつ</h2>
+          <p class="lead">みなさまに楽しんでいただける<br>ページを目指して運営してゆきます。<br>ご意見はこちら↓↓↓
+            <li><a class="text-muted" href="mailto:kentaroaso30@icloud.com">kentaroaso30@icloud.com</a></li>
+            <li><a class="text-muted" href="tel:09070193266">09070193266</a></li>
+        　</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3207.714313320915!2d139.8659083152812!3d36.48861568001399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xda5ea0e5936719be!2zV0VC44K144Kk44OI5Yi25L2c!5e0!3m2!1sja!2sjp!4v1608289748506!5m2!1sja!2sjp" width="100%" height="315" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+      </div>
+    </div>
+    
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">唯一にして最高の発明</h2>
+          <p class="lead">〜生命の終わり〜<br>
+            それは、人生で一度しか訪れません。<br>その時、あなたは何を感じますか？<br>後悔せず、安らかに眠りたいですよね。<br>先人たちの知恵から学びましょう。
+        　</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/NPD4Iu2x7T4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">闘う前に勝つ</h2>
+          <p class="lead">わるい人は、時間、自信、財産など、<br>かけがえのないものを奪ってゆきます。<br>闘わないことが大切です。<br>
+            ①わるい人と接する時間は最小限にする。<br>②わるい人との間に遮蔽物を置く。<br>③わるい人と距離を多くとる。
+        　</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/5dF0Wjd3GoY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    </div>
+
+
+    <div>
+      <h2 id="news">WEBサイト製作 作品<br>短編動画集です。</h2>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">Fighting in low light <br>〜光と闇を制する者〜</h3>
+          <p class="lead">ほとんどの犯罪は低照明下で起きます。<br>懐中電灯は未然防止の助けになります。</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"><iframe width="100%" height="315" src="https://www.youtube.com/embed/d9WQg8dsPCs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h3 class="display-5">王子様の物語<br>〜夢と創造、そして未来〜</h3>
+          <p class="lead">夢は叶えるためにあるんだ！<br>未来は、ぼくの手で創る！！</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"><iframe width="100%" height="315" src="https://www.youtube.com/embed/P7XtqGEj784" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h3 class="display-5">ムエタイに挑戦</h3>
+          <p class="lead">いつだって、チャンスはそこにある！</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"><iframe width="100%" height="315" src="https://www.youtube.com/embed/hfxvHdcH9DY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 py-3">
+          <h3 class="display-5">イシューで生きる</h3>
+          <p class="lead">強い者が支配するこの世界・・・</p>
+        </div>
+        <div class="bg-light shadow-sm mx-auto"><iframe width="100%" height="315" src="https://www.youtube.com/embed/jxz2p0icfPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      </div>
+    </div>
+    
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <small class="d-block mb-3 ">&copy; 2020</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>ご意見・ご連絡先</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="mailto:kentaroaso30@icloud.com">kentaroaso30@icloud.com</a></li>
+            <li><a class="text-muted" href="tel:09070193266">09070193266</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="watashi"><img width="60" height="60" src="https://kentaroaso.github.io/kentaroaso/watashi.JPG"></div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="fadein.js"></script>
+    <script src="bgswitcher.js"></script>
+
+  </body>
+</html>
