@@ -559,7 +559,7 @@
 }(jQuery));
 
 jQuery(function($) {
-  $('.text-center').bgSwitcher({
+  $('#top-picture').bgSwitcher({
     images: [
       'https://kentaroaso.github.io/kentaroaso/boys.jpg',
       'https://kentaroaso.github.io/kentaroaso/javascript.jpg',
