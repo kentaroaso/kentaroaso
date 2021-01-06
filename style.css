@@ -67,10 +67,9 @@ body {
   outline: 0 !important;
 }
 
-#news {
-  text-align: center;
-  padding-top :30px;
-  padding-bottom: 30px;
+#top-picture {
+  height: 450px;
+  background-size: cover;
 }
 
 hr {
@@ -8410,7 +8409,6 @@ button.bg-dark:focus {
 .pt-5,
 .py-5 {
   padding-top: 3rem !important;
-  height: 600px;
 }
 
 .pr-5,
