@@ -25,7 +25,6 @@ a:hover {
 
 html,
 body {
-  height: 100%;
   background-color: rgba(5, 5, 5, 0.5);
 }
 
@@ -103,4 +102,6 @@ body {
   height: 100%;
   width: 100%;
   background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
