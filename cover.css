@@ -25,6 +25,8 @@ a:hover {
 
 html,
 body {
+  height: 100%;
+  width: 100%;
   background-color: rgba(5, 5, 5, 0.5);
 }
 
