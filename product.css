@@ -12,27 +12,27 @@
 }
 
 @media (min-width: 768px) {
-  .bd-placeholder-img-lg
-  {
-  font-size: 3.5rem;
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
-  }
+}
 
-  img {border-radius: 10px;}
-
+img {
+  border-radius: 10px;
+}
 
 /*
  * Custom translucent site header
  */
 
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
   color: #999;
-  transition: ease-in-out color .15s;
+  transition: ease-in-out color 0.15s;
 }
 .site-header a:hover {
   color: #fff;
@@ -42,8 +42,6 @@
 /*
  * Dummy devices (replace them with your own or something else entirely!)
  */
-
-
 
 /*
  * Extra utilities
@@ -60,11 +58,17 @@
   }
 }
 
-.overflow-hidden { overflow: hidden; }
+.overflow-hidden {
+  overflow: hidden;
+}
 
 #watashi {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 10;
+}
+
+.top-margin {
+  margin-top: 100px;
 }
