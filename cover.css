@@ -88,17 +88,25 @@ body {
 /*
  * Cover
  */
-.cover {
+
+/*.cover {
   padding: 0 1.5rem;
-}
+}*/
+
 .cover .btn-lg {
   padding: 0.75rem 1.25rem;
   font-weight: 700;
 }
 
-/*
- * Footer
- */
+.cover-heading {
+  margin-bottom: 20px;
+}
+
+.lead {
+  line-height: 40px;
+}
+
+/*main*/
 
 #top-picture {
   height: 100%;
@@ -107,3 +115,7 @@ body {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
+/*
+ * Footer
+ */
