@@ -281,31 +281,164 @@ const questions = [
     ],
   },
   {
-    question: "",
+    question: "注目しろ",
     answers: [
-      { text: "", correct: true },
-      { text: "", correct: false },
+      { text: "attention", correct: true },
+      { text: "look me", correct: false },
     ],
   },
   {
-    question: "",
+    question: "道をあけろ",
     answers: [
-      { text: "", correct: true },
-      { text: "", correct: false },
+      { text: "clear the way", correct: true },
+      { text: "open the way", correct: false },
     ],
   },
   {
-    question: "",
+    question: "直ちに解散しろ",
     answers: [
-      { text: "", correct: true },
-      { text: "", correct: false },
+      { text: "disperse now", correct: true },
+      { text: "good bye", correct: false },
     ],
   },
   {
-    question: "",
+    question: "大丈夫か",
     answers: [
-      { text: "", correct: true },
-      { text: "", correct: false },
+      { text: "are you all right", correct: true },
+      { text: "are you okay", correct: false },
+    ],
+  },
+  {
+    question: "ついてきてください",
+    answers: [
+      { text: "follow me", correct: true },
+      { text: "this way", correct: false },
+    ],
+  },
+  {
+    question: "足を骨折しました",
+    answers: [
+      { text: "I broke my leg", correct: true },
+      { text: "my leg is broken", correct: false },
+    ],
+  },
+  {
+    question: "意識がありません",
+    answers: [
+      { text: "he is unconscious", correct: true },
+      { text: "that is unconsious", correct: false },
+    ],
+  },
+  {
+    question: "大量に出血しています",
+    answers: [
+      { text: "she is massive bleeding", correct: true },
+      { text: "he lost blood", correct: false },
+    ],
+  },
+  {
+    question: "AEDを持ってきてください",
+    answers: [
+      { text: "bring an AED please", correct: true },
+      { text: "please bring", correct: false },
+    ],
+  },
+  {
+    question: "救急車をよんでください",
+    answers: [
+      { text: "please call an ambulance", correct: true },
+      { text: "call car", correct: false },
+    ],
+  },
+  {
+    question: "私は日本隊のASOです。お会いできてうれしいです",
+    answers: [
+      { text: "I am sergeant aso of japanese unit nice to meet you", correct: true },
+      { text: "I am E-5 aso of japanese unit nice to meet you", correct: false },
+    ],
+  },
+  {
+    question: "お名前を伺ってもいいですか",
+    answers: [
+      { text: "may I have your name", correct: true },
+      { text: "tell me your name", correct: false },
+    ],
+  },
+  {
+    question: "もう一度おっしゃってください",
+    answers: [
+      { text: "please say that again", correct: true },
+      { text: "one more please", correct: false },
+    ],
+  },
+  {
+    question: "少しお待ちください",
+    answers: [
+      { text: "please wait a minute", correct: true },
+      { text: "just moment", correct: false },
+    ],
+  },
+  {
+    question: "私たちに協力してください",
+    answers: [
+      { text: "please cooperate with us", correct: true },
+      { text: "cooperate me", correct: false },
+    ],
+  },
+  {
+    question: "もっとゆっくり話していただけませんか",
+    answers: [
+      { text: "please speak more slowly", correct: true },
+      { text: "slow down please", correct: false },
+    ],
+  },
+  {
+    question: "通訳を連れてきます",
+    answers: [
+      { text: "I will bring an interpreter", correct: true },
+      { text: "come on interpreter", correct: false },
+    ],
+  },
+  {
+    question: "理解できません",
+    answers: [
+      { text: "I couldn't understand", correct: true },
+      { text: "I don't understand", correct: false },
+    ],
+  },
+  {
+    question: "ここに書いていただけますか",
+    answers: [
+      { text: "please write it down", correct: true },
+      { text: "write this paper", correct: false },
+    ],
+  },
+  {
+    question: "名前を書いていただけますか",
+    answers: [
+      { text: "please write down your name", correct: true },
+      { text: "write this your name", correct: false },
+    ],
+  },
+  {
+    question: "彼を呼びます",
+    answers: [
+      { text: "I will call him", correct: true },
+      { text: "call to him", correct: false },
+    ],
+  },
+  {
+    question: "お手洗いはどこですか",
+    answers: [
+      { text: "where is a rest room", correct: true },
+      { text: "it is a water closet", correct: false },
+    ],
+  },
+  {
+    question: "キャンプFUJIへの行き方を教えてください",
+    answers: [
+      { text: "please tell me how to get to camp FUJI", correct: true },
+      { text: "please tell me how to get to road", correct: false },
     ],
   },
 
