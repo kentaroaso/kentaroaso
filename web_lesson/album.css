@@ -1,0 +1,40 @@
+img {
+    border-radius: 10px;
+}
+
+#top-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+header {
+    margin-top: 10px;
+}
+
+
+#k1 {
+    background-image: url(https://kentaroaso.github.io/kentaroaso/images/k1gymwolf.jpeg);
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+#k-1 {
+    background-color: rgba(255,255,255,0.9);
+    height: 50rem;
+}
+
+h1, #btns, .lead {
+    margin-top: 4rem;
+}
+
+h1, .lead {
+    font-family: serif;
+    text-shadow: 0.5px 0.5px 0 rgb(43, 163, 211), -0.5px 0.5px 0 rgb(223, 59, 214), 0.5px -0.5px 0 rgb(41, 162, 218),
+    -0.5px -0.5px 0 rgb(218, 74, 175);
+}
+
