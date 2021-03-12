@@ -1047,7 +1047,7 @@ img {
 }
 
 .purple {
-  color: #904669;
+  color: #234296;
 }
 
 #main-content {
@@ -1254,12 +1254,12 @@ main {
   height: 3rem;
 }
 
-.logo__stay {
-  color: #ce3fbb;
+.logo__world {
+  color: #751b0d;
 }
 
-.logo__world {
-  color: #15886f;
+.logo__stay {
+  color: black;
 }
 
 .footer {
