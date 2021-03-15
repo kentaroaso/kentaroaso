@@ -837,7 +837,7 @@
 
 .mobile-menu .logo {
   padding: 0 40px;
-  font-size: 38px;
+  font-size: 27px;
 }
 
 .mobile-menu__btn {
@@ -1119,7 +1119,7 @@ main {
 }
 
 .header .logo {
-  font-size: 38px;
+  font-size: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1251,7 +1251,7 @@ main {
 
 .logo__img {
   width: 1.5em;
-  height: 3rem;
+  height: 2.5rem;
 }
 
 .logo__world {
@@ -1292,7 +1292,7 @@ main {
 }
 
 .footer .logo {
-  font-size: 38px;
+  font-size: 30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
