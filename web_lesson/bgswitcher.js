@@ -564,7 +564,7 @@ jQuery(function($) {
       'https://kentaroaso.github.io/kentaroaso/images/gloves.jpeg',
       'https://kentaroaso.github.io/kentaroaso/images/wolf.jpg',
       'https://kentaroaso.github.io/kentaroaso/images/boys.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/k1gymwolf.jpeg',
+      'https://kentaroaso.github.io/kentaroaso/images/k1wolf.jpeg',
       'https://kentaroaso.github.io/kentaroaso/images/ultra.jpeg',
       'https://kentaroaso.github.io/kentaroaso/images/army.jpg',
       'https://kentaroaso.github.io/kentaroaso/images/tulips.jpg',
