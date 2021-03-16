@@ -561,15 +561,15 @@
 jQuery(function($) {
   $('#top-picture').bgSwitcher({
     images: [
-      'https://kentaroaso.github.io/kentaroaso/images/gloves.jpeg',
-      'https://kentaroaso.github.io/kentaroaso/images/wolf.jpg',
+      'https://kentaroaso.github.io/kentaroaso/images/takagi2.jpeg',
+      'https://kentaroaso.github.io/kentaroaso/images/everyone2.jpg',
       'https://kentaroaso.github.io/kentaroaso/images/boys.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/k1wolf.jpeg',
-      'https://kentaroaso.github.io/kentaroaso/images/ultra.jpeg',
-      'https://kentaroaso.github.io/kentaroaso/images/army.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/tulips.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/run.jpg',      
-      'https://kentaroaso.github.io/kentaroaso/images/shoes.jpg'], // 切り替える背景画像
+      'https://kentaroaso.github.io/kentaroaso/images/rui2.jpeg',
+      'https://kentaroaso.github.io/kentaroaso/images/woman.jpg',
+      'https://kentaroaso.github.io/kentaroaso/images/everyone.jpg',
+      'https://kentaroaso.github.io/kentaroaso/images/yamato.jpeg',
+      'https://kentaroaso.github.io/kentaroaso/images/k-1.jpeg',      
+      'https://kentaroaso.github.io/kentaroaso/images/kids.jpeg'], // 切り替える背景画像
     Interval: 8000, //切り替えの間隔 1000=1秒
     start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
     loop: true, //切り替えをループする
