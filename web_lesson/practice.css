@@ -25,7 +25,7 @@ h2, h3, .lead {
 h2, h3, .lead {
   font-family: serif;
   font-weight: bold;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: orange;
   -webkit-text-fill-color: black;
 }
