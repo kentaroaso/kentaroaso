@@ -32,6 +32,7 @@
     transform-origin: left;
     transform: scaleX(0);
   }
+  /*
   50% {
     transform-origin: left;
     transform: scaleX(1);
@@ -40,6 +41,7 @@
     transform-origin: right;
     transform: scaleX(1);
   }
+  */
   100% {
     transform-origin: right;
     transform: scaleX(0);
@@ -69,6 +71,7 @@
   0% {
     opacity: 0;
   }
+  /*
   50% {
     opacity: 0;
   }
@@ -76,6 +79,7 @@
     opacity: 1;
     transform: scale(1.5);
   }
+  */
   100% {
     opacity: 1;
   }

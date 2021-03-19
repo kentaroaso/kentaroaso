@@ -182,11 +182,13 @@ main {
   &__texts {
     @extend .pb-sm;
 
+    /*
     &.inview {
       & .travel__title::before {
         transform: translateY(-50%);
       }
     }
+    */
   }
 }
 
