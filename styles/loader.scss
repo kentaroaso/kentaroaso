@@ -42,8 +42,9 @@
 
 .pace-progress-inner {
   width: 40px;
-  height: 40px;
-  background-color: rgb(0, 255, 85);
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgb(0, 17, 255);
 
   margin: 0 auto;
   @include animation(
@@ -58,9 +59,11 @@
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
+  /*
   50% {
     transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
   }
+  */
   100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
   }

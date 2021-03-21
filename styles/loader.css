@@ -41,8 +41,9 @@
 
 .pace-progress-inner {
   width: 40px;
-  height: 40px;
-  background-color: #00ff55;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #0011ff;
   margin: 0 auto;
   -webkit-animation-name: sk-rotateplane;
           animation-name: sk-rotateplane;
@@ -65,10 +66,11 @@
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
+  /*
   50% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
   }
+  */
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
@@ -80,10 +82,11 @@
     -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
             transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
+  /*
   50% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
   }
+  */
   100% {
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
             transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
