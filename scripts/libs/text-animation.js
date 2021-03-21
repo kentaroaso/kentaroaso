@@ -26,7 +26,7 @@ class TweenTextAnimation extends TextAnimation {
         this.DOM.chars.forEach((c, i) => {
             TweenMax.to(c, .6, {
                 ease: Back.easeOut,
-                delay: i * .05,
+                delay: i * .01,
                 startAt: { y: '-50%', opacity: 0},
                 y: '0%',
                 opacity: 1
