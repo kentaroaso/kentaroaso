@@ -133,7 +133,7 @@ main {
     @extend .flex;
     justify-content: space-between;
     padding: 15px;
-    background-color: $cBgGray;
+    background-color: rgb(206, 232, 215);
     position: relative;
     z-index: 0;
   }
@@ -217,7 +217,7 @@ main {
   &__inner {
     position: relative;
     @include p-base($top: 10%, $height: 90%) {
-      background: $cBgGray;
+      background: rgb(206, 232, 215);
     }
     // &::before {
     //   content: '';

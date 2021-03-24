@@ -1140,7 +1140,7 @@ main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px;
-  background-color: #eaebe6;
+  background-color: #cee8d7;
   position: relative;
   z-index: 0;
 }
@@ -1219,7 +1219,7 @@ main {
   left: 0;
   width: 100%;
   height: 90%;
-  background: #eaebe6;
+  background: #cee8d7;
 }
 
 .popular__container {
