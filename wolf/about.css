@@ -35,6 +35,11 @@ h2, .lead {
     z-index: 10;
 }
 
+.btn.btn-info.btn-lg {
+  margin: 30px;
+  color: #fff;
+}
+
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
