@@ -22,6 +22,17 @@ h2,
   line-height: 40px;
 }
 
+#top-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+header {
+  margin-top: 10px;
+}
+
 #top-picture {
   height: 100%;
   width: 100%;
