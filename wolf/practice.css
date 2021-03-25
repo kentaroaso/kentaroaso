@@ -15,14 +15,18 @@
 }
 
 #k-1 {
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-h2, h3, .lead {
+h2,
+h3,
+.lead {
   margin-top: 4rem;
 }
 
-h2, h3, .lead {
+h2,
+h3,
+.lead {
   font-family: serif;
   font-weight: bold;
   -webkit-text-stroke-width: 0.2px;
@@ -31,7 +35,12 @@ h2, h3, .lead {
 }
 
 h2 {
-    margin-top: 100px;
+  margin-top: 100px;
+}
+
+.btn.btn-info.btn-lg {
+  margin: 30px;
+  color: #fff;
 }
 
 .bd-placeholder-img {
@@ -72,7 +81,7 @@ h2 {
 
 @media (min-width: 768px) {
   .flex-md-equal > * {
-  -ms-flex: 1;
+    -ms-flex: 1;
     flex: 1;
   }
 }
