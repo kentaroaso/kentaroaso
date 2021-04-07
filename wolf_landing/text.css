@@ -407,7 +407,6 @@ header {
 
 /*--aboutisara--*/
 .about {
-  padding: 0 0 40px 0;
   background-color: #fef5e0;
   text-align: center;
 }
@@ -1200,9 +1199,13 @@ header {
   .title {
     position: relative;
     padding: 0;
-    height: 62px;
+    height: 60px;
     max-width: 100%;
   }
+  footer .title {
+    margin-bottom: 30px;
+  }
+
   .subtitle {
     position: absolute;
     top: 35%;
