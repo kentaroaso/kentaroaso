@@ -1071,7 +1071,7 @@ header {
 /*--footer--*/
 .footerwrap {
   position: relative;
-  padding: 40px 15px 20px 15px;
+  padding: 20px 15px;
   background-color: #ececec;
   text-align: center;
 }
@@ -1233,7 +1233,7 @@ header {
     position: absolute;
     right: 0px;
     top: 0;
-    padding: 9px 11px;
+    padding: 10px 10px;
     background-color: rgb(206, 232, 215);
   }
   .contactsp img,
@@ -1604,7 +1604,7 @@ header {
   }
   /*--footer--*/
   .footerwrap {
-    padding: 20px 15px 0 0;
+    padding: 20px 15px;
   }
   /*
 	.sns {
