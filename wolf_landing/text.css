@@ -1766,7 +1766,6 @@ header {
   }
   .answer .client.voice {
     max-width: calc(100% - 40px);
-    margin: 0 auto;
   }
   .merit p.yellowtxt {
     text-align: center !important;
