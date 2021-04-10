@@ -328,6 +328,7 @@ header {
 
 #backimg {
   background-color: rgba(255, 255, 255, 0.9);
+  padding-top: 10px;
 }
 
 .mainlogo {
@@ -378,7 +379,6 @@ header {
   background-image: url(img/introbottom.jpg);
   background-size: cover;
   background-position: center;
-  height: 587px;
   text-align: center;
   padding: 40px 0;
   text-align: center;
@@ -1221,7 +1221,7 @@ header {
     margin-top: 0;
   }
   .logo img {
-    width: 65px;
+    width: 63px;
   }
   /*--蝠上＞蜷医ｏ縺帙�繧ｿ繝ｳ--*/
   .contactpc {
