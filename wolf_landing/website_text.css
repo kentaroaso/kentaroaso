@@ -183,15 +183,15 @@ ul {
 .yellowbracketsnarrow::before {
   top: 0;
   left: 0;
-  border-top: 5px solid #FEF5E0;
-  border-left: 5px solid #FEF5E0;
+  border-top: 5px solid rgb(254, 245, 224);
+  border-left: 5px solid rgb(254, 245, 224);
 }
 
 .yellowbracketsnarrow::after {
   bottom: 0;
   right: 0;
-  border-bottom: 5px solid #FEF5E0;
-  border-right: 5px solid #FEF5E0;
+  border-bottom: 5px solid rgb(254, 245, 224);
+  border-right: 5px solid rgb(254, 245, 224);
 }
 
 /*--逋ｽ諡ｬ蠑ｧ迢ｭ繧�--*/
@@ -218,15 +218,15 @@ ul {
 .whitebrackets::before {
   top: 0;
   left: 0;
-  border-top: 5px solid #EBBA4D;
-  border-left: 5px solid #EBBA4D;
+  border-top: 5px solid rgb(235, 186, 77);
+  border-left: 5px solid rgb(235, 186, 77);
 }
 
 .whitebrackets::after {
   bottom: 0;
   right: 0;
-  border-bottom: 5px solid #EBBA4D;
-  border-right: 5px solid #EBBA4D;
+  border-bottom: 5px solid rgb(235, 186, 77);
+  border-right: 5px solid rgb(235, 186, 77);
 }
 
 /*--heading--*/
@@ -256,7 +256,7 @@ header {
 }
 
 .logo img {
-  width: 70px;
+  width: 50px;
 }
 
 .subtitle {
@@ -308,17 +308,17 @@ header {
 }
 
 /*.headsns {
-	position: absolute;
-	top: 0;
-	right: 10px;
-}*/
+      position: absolute;
+      top: 0;
+      right: 10px;
+  }*/
 /*--main--*/
 .main {
   padding-top: 75px;
 }
 
 .cover-img {
-  background-image: url("https://kentaroaso.github.io/kentaroaso/images/woman.jpg");
+  background-image: url("https://kentaroaso.github.io/kentaroaso/img/tulips.jpg");
   background-position: center;
   height: 500px;
   display: table;
@@ -327,7 +327,7 @@ header {
 }
 
 #backimg {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 10px;
 }
 
@@ -713,23 +713,23 @@ header {
   }
 }
 /*.answerbox {
-	padding: 15px;
-}
-
-.answerdetail {
-	text-align: left;
-	padding: 25px;
-	border-top: 70px solid #ebb94d;
-	border-left: 2px solid #ebb94d;
-	border-right: 2px solid #ebb94d;
-	border-bottom: 2px solid #ebb94d;
-	border-radius: 5px;
-}
-
-.answerdetail .txts {
-	margin: 0;
-}
-*/
+      padding: 15px;
+  }
+  
+  .answerdetail {
+      text-align: left;
+      padding: 25px;
+      border-top: 70px solid #ebb94d;
+      border-left: 2px solid #ebb94d;
+      border-right: 2px solid #ebb94d;
+      border-bottom: 2px solid #ebb94d;
+      border-radius: 5px;
+  }
+  
+  .answerdetail .txts {
+      margin: 0;
+  }
+  */
 /*--class--*/
 .class {
   color: #fff;
@@ -1084,12 +1084,12 @@ header {
 }
 
 /*.sns {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background-color: #fff;
-	padding: 10px;
-}*/
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      padding: 10px;
+  }*/
 .twitterbtn {
   display: inline-block;
 }
@@ -1114,6 +1114,10 @@ header {
 
 .fa-question-circle-o:before {
   color: #016ea9;
+}
+
+.cover-text p {
+  margin-bottom: 10px;
 }
 
 /*-------------------------------------------*/
@@ -1209,7 +1213,7 @@ header {
   .subtitle {
     position: absolute;
     top: 35%;
-    left: 70px;
+    left: 40px;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0px;
@@ -1221,7 +1225,7 @@ header {
     margin-top: 0;
   }
   .logo img {
-    width: 63px;
+    width: 40px;
   }
   /*--蝠上＞蜷医ｏ縺帙�繧ｿ繝ｳ--*/
   .contactpc {
@@ -1253,11 +1257,11 @@ header {
     padding-top: 60px;
   }
   .cover-img {
-    background-image: url("https://kentaroaso.github.io/kentaroaso/images/woman.jpg");
+    background-image: url("https://kentaroaso.github.io/kentaroaso/img/tulips.jpg");
     height: 312px;
   }
   .cover-text p {
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
   .mainlogo {
     max-width: 250px;
@@ -1607,11 +1611,11 @@ header {
     padding: 20px 15px;
   }
   /*
-	.sns {
-		position: relative;
-		width: 35%;
-	}
-*/
+      .sns {
+          position: relative;
+          width: 35%;
+      }
+  */
   /*--pagetop--*/
   .pagetop {
     bottom: 20px;
