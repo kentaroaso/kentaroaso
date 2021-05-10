@@ -123,6 +123,22 @@ main {
     align-items: center;
     @extend .content-width;
   }
+
+  & h1 {
+    font-size: 12px;
+    color: #555555;
+    padding-top: 5px;
+    line-height: 1;
+    height: 49px;
+
+    & span {
+      font-size: 28px;
+      color: #734339;
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  }
 }
 
 .travel {
@@ -153,8 +169,6 @@ main {
       transition: transform 0.3s ease 1.6s;
       transform-origin: right;
     }
-
-    
   }
 
   &__sub {
@@ -268,16 +282,8 @@ main {
   display: flex;
 
   &__img {
-    width: 1.5em;
-    height: 2.5rem;
-  }
-
-  &__world {
-    color: rgb(117, 27, 13);
-  }
-
-  &__stay {
-    color: $cBlack;
+    width: 2em;
+    height: 4rem;
   }
 }
 
@@ -312,6 +318,22 @@ main {
     font-size: 30px;
     justify-content: center;
   }
+
+  & h1 {
+    font-size: 12px;
+    color: #555555;
+    padding-top: 5px;
+    line-height: 1;
+    height: 49px;
+  }
+
+  & span {
+    font-size: 28px;
+    color: #734339;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
 }
 
 .side {
@@ -319,7 +341,7 @@ main {
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 
   & .tween-animate-title {
     color: $cBlack;
@@ -365,12 +387,12 @@ main {
     background-size: contain;
   }
 
-  &.twitter{
+  &.twitter {
     &::before {
       background-image: url(../images/twitter.svg);
     }
   }
-  &.fb{
+  &.fb {
     &::before {
       background-image: url(../images/facebook.svg);
     }

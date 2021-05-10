@@ -835,7 +835,7 @@
 
 .mobile-menu .logo {
   padding: 0 40px;
-  font-size: 27px;
+  font-size: 25px;
 }
 
 .mobile-menu__btn {
@@ -1135,6 +1135,22 @@ main {
           align-items: center;
 }
 
+.header h1 {
+  font-size: 12px;
+  color: #555555;
+  padding-top: 5px;
+  line-height: 1;
+  height: 49px;
+}
+
+.header h1 span {
+  font-size: 28px;
+  color: #734339;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
 .travel__inner {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1253,16 +1269,8 @@ main {
 }
 
 .logo__img {
-  width: 1.5em;
-  height: 2.5rem;
-}
-
-.logo__world {
-  color: #751b0d;
-}
-
-.logo__stay {
-  color: black;
+  width: 2em;
+  height: 4rem;
 }
 
 .footer {
@@ -1301,14 +1309,30 @@ main {
           justify-content: center;
 }
 
+.footer h1 {
+  font-size: 12px;
+  color: #555555;
+  padding-top: 5px;
+  line-height: 1;
+  height: 49px;
+}
+
+.footer span {
+  font-size: 28px;
+  color: #734339;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
 .side {
   display: none;
   position: fixed;
   top: 70%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .side .tween-animate-title {
@@ -1390,6 +1414,20 @@ Stylesheet: 480px以上(スマホの横向き)のモニタで適用
 Stylesheet: 600px以上のタブレットやモニタで適用
 
 ******************************************************************/
+  .header h1 {
+    font-size: 12px;
+    color: #555555;
+    padding-top: 5px;
+    line-height: 1;
+    height: 49px;
+  }
+  .header h1 span {
+    font-size: 33px;
+    color: #734339;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+  }
   .flex, .travel__inner, .houses__inner, .popular__container, .footer__nav, .footer__ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1435,6 +1473,20 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   .footer__li {
     margin-left: 0;
     margin-right: 30px;
+  }
+  .footer h1 {
+    font-size: 12px;
+    color: #555555;
+    padding-top: 5px;
+    line-height: 1;
+    height: 49px;
+  }
+  .footer h1 span {
+    font-size: 33px;
+    color: #734339;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
   }
 }
 
