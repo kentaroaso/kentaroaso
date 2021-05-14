@@ -1112,9 +1112,13 @@ a:focus {
 figure {
   margin: 0;
 }
+
+/*初期設定値
 img {
   vertical-align: middle;
 }
+*/
+
 .carousel-inner > .item > a > img,
 .carousel-inner > .item > img,
 .img-responsive,

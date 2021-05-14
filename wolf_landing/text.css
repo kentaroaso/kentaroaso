@@ -183,15 +183,15 @@ ul {
 .yellowbracketsnarrow::before {
   top: 0;
   left: 0;
-  border-top: 5px solid #FEF5E0;
-  border-left: 5px solid #FEF5E0;
+  border-top: 5px solid #fef5e0;
+  border-left: 5px solid #fef5e0;
 }
 
 .yellowbracketsnarrow::after {
   bottom: 0;
   right: 0;
-  border-bottom: 5px solid #FEF5E0;
-  border-right: 5px solid #FEF5E0;
+  border-bottom: 5px solid #fef5e0;
+  border-right: 5px solid #fef5e0;
 }
 
 /*--逋ｽ諡ｬ蠑ｧ迢ｭ繧�--*/
@@ -218,15 +218,15 @@ ul {
 .whitebrackets::before {
   top: 0;
   left: 0;
-  border-top: 5px solid #EBBA4D;
-  border-left: 5px solid #EBBA4D;
+  border-top: 5px solid #ebba4d;
+  border-left: 5px solid #ebba4d;
 }
 
 .whitebrackets::after {
   bottom: 0;
   right: 0;
-  border-bottom: 5px solid #EBBA4D;
-  border-right: 5px solid #EBBA4D;
+  border-bottom: 5px solid #ebba4d;
+  border-right: 5px solid #ebba4d;
 }
 
 /*--heading--*/
@@ -256,7 +256,8 @@ header {
 }
 
 .logo img {
-  width: 70px;
+  width: 75px;
+  height: 75px;
 }
 
 .subtitle {
@@ -265,8 +266,19 @@ header {
 }
 
 .subtitle p {
-  font-weight: 600;
-  margin-bottom: 0;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1;
+  height: 55px;
+  float: left;
+}
+
+.subtitle p span {
+  font-size: 33px;
+  color: #555;
+  font-weight: bold;
+  margin-top: 7px;
+  display: inline-block;
 }
 
 /*蝠上＞蜷医ｏ縺帙�繧ｿ繝ｳ*/
@@ -328,7 +340,8 @@ header {
 
 #backimg {
   background-color: rgba(255, 255, 255, 0.9);
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .mainlogo {
@@ -459,8 +472,8 @@ header {
 }
 
 .boximg {
-  width: 70px;
-  height: 70px;
+  width: 160px;
+  height: 160px;
 }
 
 /*--aboutsecond--*/
@@ -1076,6 +1089,10 @@ header {
   text-align: center;
 }
 
+footer div.title {
+  margin-bottom: 30px;
+}
+
 .copyright {
   font-size: 10px;
   font-weight: 300;
@@ -1202,18 +1219,23 @@ header {
     height: 60px;
     max-width: 100%;
   }
-  footer .title {
-    margin-bottom: 30px;
+  footer div.title {
+    margin-bottom: 45px;
   }
 
   .subtitle {
     position: absolute;
-    top: 35%;
-    left: 70px;
+    top: 7px;
+    left: 65px;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0px;
   }
+
+  .subtitle p span {
+    font-size: 25px;
+  }
+
   .logo {
     position: absolute;
     top: 0px;
@@ -1221,7 +1243,8 @@ header {
     margin-top: 0;
   }
   .logo img {
-    width: 63px;
+    width: 60px;
+    height: 60px;
   }
   /*--蝠上＞蜷医ｏ縺帙�繧ｿ繝ｳ--*/
   .contactpc {
@@ -1256,6 +1279,12 @@ header {
     background-image: url("https://kentaroaso.github.io/kentaroaso/images/woman.jpg");
     height: 312px;
   }
+
+  #backimg {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
   .cover-text p {
     margin-bottom: 0;
   }
