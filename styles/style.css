@@ -1313,7 +1313,8 @@ main {
 .footer h1 {
   font-size: 12px;
   color: #555555;
-  padding-top: 5px;
+  padding-top: 9px;
+  margin-left: 9px;
   line-height: 1;
   height: 49px;
 }
@@ -1479,7 +1480,8 @@ Stylesheet: 600px以上のタブレットやモニタで適用
   .footer h1 {
     font-size: 12px;
     color: #555555;
-    padding-top: 5px;
+    padding-top: 9px;
+    margin-left: 9px;
     line-height: 1;
     height: 49px;
   }
