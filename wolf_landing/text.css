@@ -330,7 +330,7 @@ header {
 }
 
 .cover-img {
-  background-image: url("https://kentaroaso.github.io/kentaroaso/images/woman.jpg");
+  background-image: url("images/woman.jpg");
   background-position: center;
   height: 500px;
   display: table;
@@ -1276,7 +1276,7 @@ footer div.title {
     padding-top: 60px;
   }
   .cover-img {
-    background-image: url("https://kentaroaso.github.io/kentaroaso/images/woman.jpg");
+    background-image: url("images/woman.jpg");
     height: 312px;
   }
 
