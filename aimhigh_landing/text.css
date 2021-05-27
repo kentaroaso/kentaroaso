@@ -266,7 +266,7 @@ header {
 }
 
 .subtitle p {
-  font-size: 15px;
+  font-size: 14px;
   color: #555555;
   line-height: 1;
   height: 55px;
@@ -274,7 +274,7 @@ header {
 }
 
 .subtitle p span {
-  font-size: 33px;
+  font-size: 40px;
   color: #555;
   font-weight: bold;
   margin-top: 7px;
@@ -330,7 +330,7 @@ header {
 }
 
 .cover-img {
-  background-image: url("https://kentaroaso.github.io/kentaroaso/img/design.jpeg");
+  background-image: url("images/cover-img.JPG");
   background-position: center;
   height: 500px;
   display: table;
@@ -339,7 +339,7 @@ header {
 }
 
 #backimg {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   padding-top: 10px;
 }
 
@@ -1238,8 +1238,12 @@ footer div.title {
     letter-spacing: 0px;
   }
 
+  .subtitle p {
+    font-size: 11px;
+  }
+
   .subtitle p span {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .logo {
@@ -1282,7 +1286,7 @@ footer div.title {
     padding-top: 60px;
   }
   .cover-img {
-    background-image: url("https://kentaroaso.github.io/kentaroaso/img/design.jpeg");
+    background-image: url("images/cover-img.JPG");
     height: 312px;
   }
 
