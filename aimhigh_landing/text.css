@@ -218,15 +218,15 @@ ul {
 .whitebrackets::before {
   top: 0;
   left: 0;
-  border-top: 5px solid #ebba4d;
-  border-left: 5px solid #ebba4d;
+  border-top: 5px solid #b4b233;
+  border-left: 5px solid #b4b233;
 }
 
 .whitebrackets::after {
   bottom: 0;
   right: 0;
-  border-bottom: 5px solid #ebba4d;
-  border-right: 5px solid #ebba4d;
+  border-bottom: 5px solid #b4b233;
+  border-right: 5px solid #b4b233;
 }
 
 /*--heading--*/
@@ -287,15 +287,17 @@ header {
   position: absolute;
   right: 0px;
   top: 16px;
-  color: black;
+  color: #fff;
   padding: 11px 40px;
-  background-color: rgb(206, 232, 215);
+  background-color: #e4925d;
   border-radius: 25px;
+  font-weight: bold;
 }
 
 .contactpc:hover {
-  background-color: rgb(180, 233, 198);
+  background-color: #d9a501;
   text-decoration: none;
+  color: #fff;
 }
 
 .contactpc p {
@@ -308,15 +310,17 @@ header {
 
 .contact {
   cursor: pointer;
-  color: black;
+  color: #fff;
   padding: 11px 40px;
-  background-color: rgb(206, 232, 215);
+  background-color: #e4925d;
   border-radius: 25px;
+  font-weight: bold;
 }
 
 .contact:hover {
-  background-color: rgb(180, 233, 198);
+  background-color: #d9a501;
   text-decoration: none;
+  color: #fff;
 }
 
 /*.headsns {
@@ -364,7 +368,7 @@ header {
 
 /*--conversion--*/
 .conversion {
-  background-color: rgb(206, 232, 215);
+  background-color: #f0f3f8;
   padding: 30px 0;
   text-align: center;
 }
@@ -426,7 +430,7 @@ header {
 
 /*--aboutisara--*/
 .about {
-  background-color: #fef5e0;
+  background-color: #f0f3f8;
   text-align: center;
 }
 
@@ -663,7 +667,7 @@ header {
 
 /*--why--*/
 .circle2 {
-  color: #ebb94d;
+  color: #b4b233;
   background-color: #fff;
   padding: 0;
   margin: 0;
@@ -679,7 +683,7 @@ header {
   position: relative;
   padding: 40px 0;
   text-align: center;
-  background-color: #ebb94d;
+  background-color: #b4b233;
   color: #fff;
 }
 
@@ -689,7 +693,7 @@ header {
   position: absolute;
   width: 0;
   border: 25px solid transparent;
-  border-top-color: #ebb94d;
+  border-top-color: #b4b233;
   top: 100%;
   left: 50%;
   margin-left: -25px;
@@ -1267,8 +1271,17 @@ footer div.title {
     right: 0px;
     top: 0;
     padding: 10px 10px;
-    background-color: rgb(206, 232, 215);
+    background-color: #e4925d;
+    font-weight: bold;
+    color: #fff;
   }
+  
+  .contactsp:hover {
+    background-color: #d9a501;
+    text-decoration: none;
+    color: #fff;
+  }
+  
   .contactsp img,
   .contactsp a {
     margin: auto;
@@ -1492,7 +1505,7 @@ footer div.title {
     position: absolute;
     width: 0;
     border: 15px solid transparent;
-    border-top-color: #ebb94d;
+    border-top-color: #b4b233;
     top: 100%;
     left: 50%;
     margin-left: -15px;
