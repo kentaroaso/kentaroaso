@@ -462,7 +462,7 @@ header {
   margin: 30px auto;
   padding: 30px;
   background-color: #fff;
-  border: 2px solid #ebb94d;
+  border: 2px solid #b4b233;
   border-radius: 5px;
 }
 
@@ -1706,7 +1706,7 @@ footer div.title {
 }
 .answer img {
   border: solid;
-  border-color: #ebb94d;
+  border-color: #b4b233;
 }
 
 /*-------------------------------------------*/
