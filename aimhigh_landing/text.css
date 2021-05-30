@@ -88,6 +88,7 @@ iframe.twitter-share-button {
 .txtm {
   font-size: 20px;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .txts {
@@ -243,7 +244,7 @@ header {
   margin: 0 auto;
   position: relative;
   padding: 5px 0;
-  height: 75px;
+  height: 65px;
 }
 
 .title .logo,
@@ -311,7 +312,7 @@ header {
 .contact {
   cursor: pointer;
   color: #fff;
-  padding: 11px 40px;
+  padding: 15px 40px;
   background-color: #e4925d;
   border-radius: 25px;
   font-weight: bold;
@@ -1100,7 +1101,7 @@ header {
 }
 
 footer div.title {
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 .copyright {
@@ -1154,6 +1155,7 @@ footer div.title {
   .txtm {
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 30px;
   }
   .txts {
     font-size: 12px;
@@ -1230,7 +1232,7 @@ footer div.title {
     max-width: 100%;
   }
   footer div.title {
-    margin-bottom: 45px;
+    margin-bottom: 90px;
   }
 
   .subtitle {
