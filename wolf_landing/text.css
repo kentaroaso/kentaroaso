@@ -309,9 +309,11 @@ header {
 .contact {
   cursor: pointer;
   color: black;
-  padding: 11px 40px;
+  padding: 15px 40px;
   background-color: rgb(206, 232, 215);
   border-radius: 25px;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .contact:hover {
@@ -339,7 +341,7 @@ header {
 }
 
 #backimg {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -717,7 +719,6 @@ header {
 }
 
 .answer .client.voice p {
-  margin-top: 15px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -1090,7 +1091,7 @@ header {
 }
 
 footer div.title {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .copyright {
@@ -1220,7 +1221,7 @@ footer div.title {
     max-width: 100%;
   }
   footer div.title {
-    margin-bottom: 45px;
+    margin-bottom: 75px;
   }
 
   .subtitle {
