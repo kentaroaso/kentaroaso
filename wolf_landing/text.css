@@ -314,6 +314,7 @@ header {
   border-radius: 25px;
   display: inline-block;
   font-weight: bold;
+  box-shadow: 0 1px 1px #555555;
 }
 
 .contact:hover {
