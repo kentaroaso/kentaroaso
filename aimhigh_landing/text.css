@@ -88,7 +88,6 @@ iframe.twitter-share-button {
 .txtm {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 30px;
 }
 
 .txts {
@@ -316,6 +315,7 @@ header {
   background-color: #e4925d;
   border-radius: 25px;
   font-weight: bold;
+  display: inline-block;
 }
 
 .contact:hover {
@@ -728,7 +728,6 @@ header {
 }
 
 .answer .client.voice p {
-  margin-top: 15px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -1101,7 +1100,7 @@ header {
 }
 
 footer div.title {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .copyright {
@@ -1155,7 +1154,6 @@ footer div.title {
   .txtm {
     font-size: 15px;
     font-weight: 600;
-    margin-bottom: 30px;
   }
   .txts {
     font-size: 12px;
@@ -1232,7 +1230,7 @@ footer div.title {
     max-width: 100%;
   }
   footer div.title {
-    margin-bottom: 90px;
+    margin-bottom: 75px;
   }
 
   .subtitle {
