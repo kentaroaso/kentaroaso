@@ -1,0 +1,43 @@
+#top-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+header {
+  margin-top: 10px;
+}
+
+#k1 {
+  background-image: url(https://kentaroaso.github.io/kentaroaso/images/k1wolf.jpeg);
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+#k-1 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+h2,
+#btns,
+.lead {
+  margin-top: 4rem;
+}
+
+h2,
+.lead {
+  font-family: serif;
+  font-weight: bold;
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: orange;
+  -webkit-text-fill-color: black;
+}
+
+.btn.btn-info.btn-lg {
+  margin: 30px;
+  color: #fff;
+}
