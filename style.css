@@ -385,3 +385,45 @@ dd a.product_words {
   text-decoration: none;
   display: inline-block;
 }
+
+/* ========================================
+	skill.html特有css
+========================================= */
+div#skill_right {
+  width: 650px;
+  height: auto;
+  float: left;
+}
+
+div#skill_right h2 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+div#skill_right dt {
+  font-size: 12px;
+  color: #555;
+  float: left;
+  width: 79px;
+  line-height: 40px;
+  padding-left: 15px;
+}
+
+div#skill_right dd {
+  font-size: 13px;
+  color: #555;
+  float: left;
+  width: 556px;
+  line-height: 40px;
+}
+
+div#skill_right dt:nth-of-type(odd) {
+  background-color: #f0f3f8;
+}
+
+div#skill_right dd:nth-of-type(odd) {
+  background-color: #f0f3f8;
+}
+
