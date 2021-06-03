@@ -561,17 +561,17 @@
 jQuery(function($) {
   $('#top-picture').bgSwitcher({
     images: [
-      'https://kentaroaso.github.io/kentaroaso/images/takagi2.jpeg',
-      'https://kentaroaso.github.io/kentaroaso/images/everyone2.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/rui2.jpeg',
-      'https://kentaroaso.github.io/kentaroaso/images/woman.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/everyone.jpg',
-      'https://kentaroaso.github.io/kentaroaso/images/yamato.jpeg',
-      'https://kentaroaso.github.io/kentaroaso/images/k-1.jpeg',      
-      'https://kentaroaso.github.io/kentaroaso/images/kids.jpeg'], // 切り替える背景画像
+      '../images/takagi2.jpeg',
+      '../images/everyone2.jpg',
+      '../images/rui2.jpeg',
+      '../images/woman.jpg',
+      '../images/everyone.jpg',
+      '../images/yamato.jpeg',
+      '../images/k-1.jpeg',      
+      '../images/kids.jpeg'], // 切り替える背景画像
     Interval: 8000, //切り替えの間隔 1000=1秒
     start: true, //$.fn.bgswitcher(config)をコールした時に切り替えを開始
-    loop: true, //切り替えをループする
+    loop: false, //切り替えをループする
     shuffle: false, //背景画像の順番をシャッフルする
     effect: "fade", //エフェクトの種類 (fade / blind / clip / slide / drop / hide)
     duration: 4000, //エフェクトの時間 1000=1秒
