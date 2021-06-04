@@ -140,6 +140,14 @@ a:focus {
   outline: none;
 }
 
+/* Hides from IE Mac \*/
+* html .cf {
+  height: 1%;
+}
+.cf {
+  display: block;
+}
+
 /* ========================================
 	フロートの解除
 ========================================= */
@@ -150,6 +158,19 @@ a:focus {
   height: 0;
   clear: both;
   visibility: hidden;
+}
+
+.cf:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.cf {
+  display: inline-block;
 }
 
 /* ========================================
@@ -166,29 +187,36 @@ body {
 }
 
 /* ========================================
-  ラッパーここから
-========================================= */
-div#wrapper {
-  width: 960px;
-  height: auto;
-  margin: 0 auto;
-}
-/* ========================================
-	ヘッダーここから
+	ヘッダー
 ========================================= */
 header {
-  width: 960px;
-  height: 99px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 30px 0;
 }
 
 header h1 {
-  margin-top: 30px;
   float: left;
 }
 
-nav {
+header nav {
   float: right;
-  margin-top: 56px;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 960px) {
+  header h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  header nav li {
+    float: none;
+    margin-left: 0;
+  }
 }
 
 header nav li {
@@ -203,29 +231,138 @@ header nav li a {
   font-weight: bold;
 }
 /* ========================================
-	メインイメージここから
+	メインイメージ
 ========================================= */
 div#main_image {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   height: 300px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
-/* =====================　　===================
-	レフトここから
+
+@media screen and (max-width: 960px) {
+  div#main_image {
+    height: 180px;
+    overflow: hidden;
+  }
+}
+
+div#main_image img {
+  width: 100%;
+  min-width: 600px;
+}
+
+/* ========================================
+	ラッパー
+========================================= */
+div#wrapper {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+}
+/* ========================================
+	コンテナー
+========================================= */
+#container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+/* ========================================
+	アバウト
+========================================= */
+#about {
+  width: 100%;
+  margin-top: 45px;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+#about p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+/* ========================================
+	サービス
+========================================= */
+#service {
+  width: 100%;
+  margin: 45px auto;
+}
+
+#service li {
+  float: left;
+  margin-right: 1.5625%;
+  width: 32.29166666%;
+  /* 310px / 全体の横幅 * 100 */
+}
+
+#service li img {
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  #service li {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    float: none;
+  }
+}
+
+#service li:last-child {
+  margin-right: 0;
+}
+
+#service li a {
+  text-decoration: none;
+  color: #555555;
+  display: block;
+}
+#service li a:hover {
+  opacity: 0.7;
+}
+#service .title {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 10px 0;
+  text-align: center;
+}
+#service .text {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.8;
+}
+/* ========================================
+	コンテンツボトム
+========================================= */
+#content-bottom {
+  width: 100%;
+  margin: 0 auto;
+}
+/* ========================================
+	レフト
 ========================================= */
 div#left {
-  width: 280px;
-  height: auto;
+  width: 29.166666666667%;
   float: left;
-  margin-right: 30px;
 }
 
 div#left ul li {
-  width: 278px;
-  height: 48px;
   background-color: #f0f3f8;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   border: 1px solid #63abd4;
+}
+
+div#left ul li:hover {
+  opacity: 0.7;
 }
 
 div#left ul li a {
@@ -250,36 +387,37 @@ a#icon_blog {
   background: url(images/icon_blog.png) no-repeat 14px center;
 }
 
+
 /* ========================================
-	ライトここから
+ライト
 ========================================= */
 div#right {
-  width: 650px;
+  float: right;
+  width: 67.708333333333%;
   height: auto;
-  float: left;
 }
 
 div#right h2 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
   color: #555;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 div#right dt {
   font-size: 12px;
   color: #555;
   float: left;
-  width: 79px;
+  width: 12.15384615%;
   line-height: 40px;
-  padding-left: 15px;
+  padding-left: 2.307692307%;
 }
 
 div#right dd {
   font-size: 13px;
   color: #555;
   float: left;
-  width: 556px;
+  width: 82.76923076%;
   line-height: 40px;
 }
 
@@ -291,24 +429,35 @@ div#right dd:nth-of-type(odd) {
   background-color: #f0f3f8;
 }
 
+@media screen and (max-width: 640px) {
+  div#left,
+  div#right {
+    float: none;
+    width: 100%;
+  }
+
+  div#left {
+    margin-bottom: 30px;
+  }
+}
 /* ========================================
-	クリアーフィックス
+クリアーフィックス
 ========================================= */
 div.clearfix {
   clear: both;
 }
 /* ========================================
-	フッターここから
+	フッター
 ========================================= */
 footer {
-  width: 100%;
   height: auto;
   background-color: #bee2df;
   margin-top: 50px;
 }
 
 div#footer_inner {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
   padding: 20px 0;
@@ -337,11 +486,6 @@ footer ul {
   margin-top: 24px;
 }
 
-footer ul li {
-  float: left;
-  margin-left: 20px;
-}
-
 footer ul li a {
   font-size: 16px;
   font-weight: bold;
@@ -349,6 +493,35 @@ footer ul li a {
   text-decoration: none;
 }
 
+footer ul li {
+  float: left;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  p#footer_logo,
+  footer ul {
+    float: none;
+    width: 100%;
+  }
+
+  p#footer_logo {
+    text-align: center;
+  }
+
+  footer ul li {
+    float: none;
+    margin: 0;
+    text-align: center;
+    border-bottom: 1px solid #96bebb;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  footer ul li:first-child {
+    border-top: 1px solid #96bebb;
+  }
+}
 /* ========================================
 	greeting.html特有css
 ========================================= */
@@ -385,45 +558,3 @@ dd a.product_words {
   text-decoration: none;
   display: inline-block;
 }
-
-/* ========================================
-	skill.html特有css
-========================================= */
-div#skill_right {
-  width: 650px;
-  height: auto;
-  float: left;
-}
-
-div#skill_right h2 {
-  font-size: 16px;
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-div#skill_right dt {
-  font-size: 12px;
-  color: #555;
-  float: left;
-  width: 79px;
-  line-height: 40px;
-  padding-left: 15px;
-}
-
-div#skill_right dd {
-  font-size: 13px;
-  color: #555;
-  float: left;
-  width: 556px;
-  line-height: 40px;
-}
-
-div#skill_right dt:nth-of-type(odd) {
-  background-color: #f0f3f8;
-}
-
-div#skill_right dd:nth-of-type(odd) {
-  background-color: #f0f3f8;
-}
-
