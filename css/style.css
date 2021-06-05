@@ -515,10 +515,20 @@ footer ul li {
     border-bottom: 1px solid #96bebb;
     height: 45px;
     line-height: 45px;
+    display: block;
   }
 
   footer ul li:first-child {
     border-top: 1px solid #96bebb;
+  }
+
+  footer ul li:hover {
+    background: #252525;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  footer ul li a {
+    display: block;
   }
 }
 /* ========================================
@@ -555,4 +565,5 @@ p#blog_words a {
 dd a.product_words {
   color: #0000ff;
   text-decoration: none;
+  display: block;
 }
