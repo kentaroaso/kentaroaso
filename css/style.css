@@ -149,8 +149,11 @@ a:focus {
 }
 
 /* ========================================
-	フロートの解除
+フロートの解除
 ========================================= */
+div.clearfix {
+  clear: both;
+}
 
 .clearfix:after {
   content: ".";
@@ -172,7 +175,6 @@ a:focus {
 .cf {
   display: inline-block;
 }
-
 /* ========================================
 	全体設計
 ========================================= */
@@ -368,17 +370,16 @@ div#left ul li a {
 }
 
 a#icon_tel {
-  background: url(images/icon_tel.png) no-repeat 14px center;
+  background: url(../images/icon_tel.png) no-repeat 14px center;
 }
 
 a#icon_mail {
-  background: url(images/icon_mail.png) no-repeat 14px center;
+  background: url(../images/icon_mail.png) no-repeat 14px center;
 }
 
 a#icon_blog {
-  background: url(images/icon_blog.png) no-repeat 14px center;
+  background: url(../images/icon_blog.png) no-repeat 14px center;
 }
-
 
 /* ========================================
 ライト
@@ -433,10 +434,16 @@ div#right dd:nth-of-type(odd) {
   }
 }
 /* ========================================
-クリアーフィックス
+　ウインドゥ幅に合わせた改行
 ========================================= */
-div.clearfix {
-  clear: both;
+.brsp {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .brsp {
+    display: block;
+  }
 }
 /* ========================================
 	フッター
