@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="google-site-verification" content="YjCfhsKCAannrojGnKeqNKdzT4NU6ZM3___8cfVpP7w" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>WEBサイト制作｜大切な人に大切なことを</title>
 	<meta mame="description" content="ホームページの制作は、効果が期待できる反面、相当の費用がかかってしまいます。そこで我々は、ご依頼の目的を第一に、最高の品質を実現し、貢献いたします。">
@@ -12,88 +12,100 @@
 	<link rel="shortcut icon" type="image/x-icon" href="https://kentaroaso.github.io/kentaroaso/images/logo.jpeg">
 	<link rel="icon" href="https://kentaroaso.github.io/kentaroaso/images/logo.jpeg">
 	<link rel="canonical" href="https://kentaroaso.github.io/kentaroaso/">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/meanmenu.css" />
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/jquery.meanmenu.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('nav').meanmenu({
+				meanScreenWidth: "960", // 表示させるウィンドウサイズ(ブレイクポイント)
+			});
+		});
+	</script>
+
 </head>
 
 <body>
 
-	<!--ラッパーここから-->
-	<div id="wrapper">
-
-		<!--ヘッダーここから-->
-		<header>
-			<h1>
-				<img src="images/transparent_logo.png" alt="WEBサイト制作｜大切な人に大切なことを">
-			</h1>
-			<nav>
-				<ul>
-					<li><a href="greeting.html">ごあいさつ</a></li>
-					<li><a href="skill.html">私にできること</a></li>
-					<li><a href="product.html">制作のご紹介</a></li>
-					<li><a
-							href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#101;&#110;&#116;&#97;&#114;&#111;&#97;&#115;&#111;&#51;&#48;&#64;&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;
+	<!--ヘッダーここから-->
+	<header>
+		<h1>
+			<img src="images/transparent_logo.png" alt="WEBサイト制作｜大切な人に大切なことを">
+		</h1>
+		<nav>
+			<ul>
+				<li><a href="greeting.html">ごあいさつ</a></li>
+				<li><a href="product.html">制作のご紹介</a></li>
+				<li><a
+						href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#101;&#110;&#116;&#97;&#114;&#111;&#97;&#115;&#111;&#51;&#48;&#64;&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;
 								?subject=%E3%80%90WEB%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%88%B6%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%91
 								&body=%EF%BC%88%EF%BC%91%EF%BC%89%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%EF%BC%88%EF%BC%92%EF%BC%89%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%EF%BC%88%EF%BC%93%EF%BC%89%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A">
-							お問い合わせ
-						</a>
-					</li>
-					<div class="clearfix"></div>
-				</ul>
-			</nav>
-			<div class="clearfix"></div>
-		</header>
-		<!--ヘッダーここまで-->
-
-		<!--メインイメージここから-->
-		<div id="main_image">
-			<img src="images/cg.jpeg" alt="メイン画像">
-		</div>
-		<!--メインイメージここまで-->
-
-		<!--レフトここから-->
-		<div id="left">
-			<ul>
-				<li><a id="icon_tel" href="tel:09070193266">お問い合わせはこちら</a></li>
-				<li><a id="icon_mail"
-						href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#101;&#110;&#116;&#97;&#114;&#111;&#97;&#115;&#111;&#51;&#48;&#64;&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;
-							?subject=%E3%80%90WEB%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%88%B6%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%91
-							&body=%EF%BC%88%EF%BC%91%EF%BC%89%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%EF%BC%88%EF%BC%92%EF%BC%89%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%EF%BC%88%EF%BC%93%EF%BC%89%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A">
-						ご相談はお気軽にどうぞ
+						お問い合わせ
 					</a>
 				</li>
+				<div class="clearfix"></div>
 			</ul>
-		</div>
-		<!--レフトここまで-->
-
-		<!--ライトここから-->
-		<div id="right">
-			<h2>イシューで生きる</h2>
-			<p id="blog_words">
-				イシューで生きるとは、安宅和人さんの著書「イシューから始めよ」から影響を受けた考え方です。<br>
-				ものすごく簡単に表現しますね。「いつ死んじゃうか分かんないし、大切なことだけやろうよ。」<br>
-				ってことです。反論がたくさん寄せられそうですが、そこは、私の主観ですからご勘弁を。<br>
-				じゃあ、大切なことって、なに！？<br>
-				大切&efDot;	幸せ&efDot;	家庭・仕事&efDot;	・・・真剣に考えた結果が今の私です。<br>
-				具体的には、死ぬまで自分の足で好きなところへ行き、自分の手で美味しく食べて、<br>
-				昨日よりも今日の自分を好きになることです。<br>
-				そのために必要なものは、知恵と知識そして経験・・・<br>
-				では、そのためのイシューとは何か？<br>
-				ズバリ、<br>
-				「死ぬときに笑顔でいられるためには、やらずに後悔するより、<br>
-				やって後悔した方が良いのではないか？」です。<br>
-				え！？&nbsp;間違ったって、いいんですよ。だって、<br>
-				やって後悔した方が良いのですから（笑）<br>
-				最後に、YouTubeも投稿していますので、ぜひ観てください！
-				<a href="https://youtube.com/channel/UCef4nt30t_6hy-PXDPHkfww">
-					コチラから</a>
-			</p>
-		</div>
-		<!--ライトここまで-->
-
+		</nav>
 		<div class="clearfix"></div>
+	</header>
+	<!--ヘッダーここまで-->
+
+	<!--メインイメージここから-->
+	<div id="main_image">
+		<img src="images/cg.jpg" alt="メイン画像">
+	</div>
+	<!--メインイメージここまで-->
+
+	<div id="container">
+
+		<div class="cf" id="content-bottom">
+
+			<!--レフトここから-->
+			<div id="left">
+				<ul>
+					<li><a id="icon_tel" href="tel:09070193266">お問い合わせはこちら</a></li>
+					<li><a id="icon_mail"
+							href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#101;&#110;&#116;&#97;&#114;&#111;&#97;&#115;&#111;&#51;&#48;&#64;&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;
+									?subject=%E3%80%90WEB%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E5%88%B6%E4%BD%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%80%91
+									&body=%EF%BC%88%EF%BC%91%EF%BC%89%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%EF%BC%88%EF%BC%92%EF%BC%89%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%EF%BC%88%EF%BC%93%EF%BC%89%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%9A">
+							ご相談はお気軽にどうぞ
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--レフトここまで-->
+
+			<!--ライトここから-->
+			<div id="right">
+				<h2>イシューで生きる</h2>
+				<p id="blog_words">
+					イシューで生きるとは、安宅和人さんの著書「イシューから始めよ」から影響を受けた考え方です。<br>
+					ものすごく簡単に表現しますね。「いつ死んじゃうか分かんないし、大切なことだけやろうよ。」<br>
+					ってことです。反論がたくさん寄せられそうですが、そこは、私の主観ですからご勘弁を。<br>
+					じゃあ、大切なことって、なに！？<br>
+					大切&efDot; 幸せ&efDot; 家庭・仕事&efDot; ・・・真剣に考えた結果が今の私です。<br>
+					具体的には、死ぬまで自分の足で好きなところへ行き、自分の手で美味しく食べて、<br>
+					昨日よりも今日の自分を好きになることです。<br>
+					そのために必要なものは、知恵と知識そして経験・・・<br>
+					では、そのためのイシューとは何か？<br>
+					ズバリ、<br>
+					「死ぬときに笑顔でいられるためには、やらずに後悔するより、<br>
+					やって後悔した方が良いのではないか？」です。<br>
+					え！？&nbsp;間違ったって、いいんですよ。だって、<br>
+					やって後悔した方が良いのですから（笑）<br>
+					最後に、YouTubeも投稿していますので、ぜひ観てください！
+					<a href="https://youtube.com/channel/UCef4nt30t_6hy-PXDPHkfww">
+						コチラから</a>
+				</p>
+			</div>
+			<!--ライトここまで-->
+
+			<div class="clearfix"></div>
+
+		</div>
 
 	</div>
-	<!--ラッパーここまで-->
 
 	<!--フッターここから-->
 	<footer>
@@ -109,7 +121,6 @@
 			</p>
 			<ul>
 				<li><a href="greeting.html">ごあいさつ</a></li>
-				<li><a href="skill.html">私にできること</a></li>
 				<li><a href="product.html">制作のご紹介</a></li>
 				<li><a
 						href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#107;&#101;&#110;&#116;&#97;&#114;&#111;&#97;&#115;&#111;&#51;&#48;&#64;&#105;&#99;&#108;&#111;&#117;&#100;&#46;&#99;&#111;&#109;
