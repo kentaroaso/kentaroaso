@@ -299,6 +299,10 @@ div#wrapper {
   margin: 45px auto;
 }
 
+#service ul {
+  width: 100%;
+}
+
 #service li {
   float: left;
   margin-right: 1.5625%;
@@ -495,6 +499,12 @@ footer ul li a {
 footer ul li {
   float: left;
   margin-left: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  div#footer_inner {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 640px) {
