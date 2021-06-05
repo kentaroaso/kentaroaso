@@ -321,14 +321,6 @@ div#wrapper {
   margin-right: 0;
 }
 
-#service li a {
-  text-decoration: none;
-  color: #555555;
-  display: block;
-}
-#service li a:hover {
-  opacity: 0.7;
-}
 #service .title {
   font-size: 20px;
   font-weight: 900;
@@ -556,5 +548,4 @@ p#blog_words a {
 dd a.product_words {
   color: #0000ff;
   text-decoration: none;
-  display: inline-block;
 }
