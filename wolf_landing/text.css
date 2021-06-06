@@ -256,7 +256,6 @@ header {
 }
 
 .logo img {
-  width: 75px;
   height: 75px;
 }
 
@@ -332,20 +331,27 @@ header {
   padding-top: 75px;
 }
 
-.cover-img {
-  background-image: url("images/woman.jpg");
-  background-position: center;
-  height: 500px;
-  display: table;
+/* ========================================
+	メインイメージ
+========================================= */
+div#main_image {
   width: 100%;
-  background-size: cover;
+  max-width: 1170px;
+  height: auto;
+  margin: 0 auto;
 }
 
-#backimg {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding-top: 20px;
-  padding-bottom: 20px;
+div#main_image img {
+  width: 100%;
+  min-width: 320px;
 }
+
+@media screen and (max-width: 640px) {
+  div#main_image {
+    overflow: hidden;
+  }
+}
+
 
 .mainlogo {
   width: 300px;
@@ -1245,7 +1251,6 @@ footer div.title {
     margin-top: 0;
   }
   .logo img {
-    width: 60px;
     height: 60px;
   }
   /*--蝠上＞蜷医ｏ縺帙�繧ｿ繝ｳ--*/
@@ -1285,6 +1290,14 @@ footer div.title {
   #backimg {
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+
+  #backimg h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40px;
+    margin: 30px auto;
+    display: inline-block;
   }
 
   .cover-text p {
