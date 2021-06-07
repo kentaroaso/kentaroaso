@@ -294,7 +294,7 @@ div#wrapper {
 ========================================= */
 #service {
   width: 100%;
-  margin: 45px auto;
+  margin: 45px auto 0 auto;
 }
 
 #service ul {
@@ -341,7 +341,7 @@ div#wrapper {
 ========================================= */
 #content-bottom {
   width: 100%;
-  margin: 0 auto;
+  margin: 45px auto 0 auto;
 }
 /* ========================================
 	レフト
@@ -400,20 +400,21 @@ div#right h2 {
 }
 
 div#right dt {
-  font-size: 12px;
+  font-size: 13px;
   color: #555;
   float: left;
-  width: 12.15384615%;
+  width: 98%;
   line-height: 40px;
-  padding-left: 2.307692307%;
+  padding-left: 2%;
 }
 
 div#right dd {
   font-size: 13px;
   color: #555;
   float: left;
-  width: 82.76923076%;
+  width: 98%;
   line-height: 40px;
+  padding-left: 2%;
 }
 
 div#right dt:nth-of-type(odd) {
