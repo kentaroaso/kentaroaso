@@ -1,0 +1,432 @@
+@charset "utf-8";
+
+/* ========================================
+    リセットcss
+========================================= */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+html {
+  overflow-y: scroll;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption,
+th {
+  text-align: left;
+}
+a:focus {
+  outline: none;
+}
+
+/* Hides from IE Mac \*/
+* html .cf {
+  height: 1%;
+}
+.cf {
+  display: block;
+}
+
+/* ========================================
+フロートの解除
+========================================= */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.cf:after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.cf {
+  display: inline-block;
+}
+/* ========================================
+	全体設計
+========================================= */
+body {
+  color: #fff;
+  line-height: 1;
+  font-family: sans-serif;
+  background-color: rgb(136, 150, 174);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* ========================================
+　ウインドゥ幅に合わせた改行
+========================================= */
+.brsp {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .brsp {
+    display: block;
+  }
+}
+
+/* ========================================
+	背景設定（background-attachment: fixed;
+  スマホでsafariで不具合）
+========================================= */
+
+div#main_back {
+  width: 100%;
+  height: 100%;
+  background-image: url(images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* ========================================
+	ヘッダーイメージ
+  クロージングイメージ
+========================================= */
+header h1,
+div#close_image {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  margin: 0 auto;
+}
+
+div#close_image {
+  margin-top: 100px;
+}
+
+header h1 img,
+div#close_image img {
+  width: 100%;
+}
+
+/* ========================================
+	コンテナー
+========================================= */
+#container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+}
+/* ========================================
+	アバウト
+========================================= */
+#about {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#about h2,
+#about h4 {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 50px auto;
+}
+
+#about h4 {
+  max-width: 960px;
+  margin-top: 10px;
+}
+
+#about h2 img,
+#about h4 img {
+  width: 100%;
+}
+
+#about p {
+  width: 80%;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#about #center_supporter {
+  font-size: 24px;
+  text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+  #about p {
+    width: 100%;
+  }
+}
+/* ========================================
+	サービス
+========================================= */
+#service {
+  width: 100%;
+  margin: 25px auto 0 auto;
+}
+
+#service .service_items {
+  margin: 80px 0;
+}
+
+#service .service_items h3 img {
+  width: 100%;
+  max-width: 500px;
+  margin: 30px auto;
+  display: block;
+}
+
+#service ul {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#service li {
+  float: left;
+  margin-right: 4%;
+  width: 48%;
+  /* 310px / 全体の横幅 * 100 */
+}
+
+#service li img {
+  width: 100%;
+}
+
+#service li:last-child {
+  margin-right: 0;
+}
+
+#service .thumb {
+  margin: -2px 0;
+}
+
+#service .title,
+#service .price,
+#service .shop {
+  font-size: 20px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#service .price {
+  background-color: #000;
+  height: 50px;
+  line-height: 2.4;
+  margin-top: 0;
+}
+
+#service .text {
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* ========================================
+	フッター
+========================================= */
+footer {
+  height: auto;
+  margin-top: 50px;
+}
+
+div#footer_inner {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+}
+
+p#footer_logo {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  margin-top: 42.5px;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 1000px) {
+  div#footer_inner {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  p#footer_logo,
+  footer ul {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 42.5px;
+  }
+
+  p#footer_logo {
+    text-align: center;
+  }
+
+  footer ul li {
+    float: none;
+    margin: 0 5%;
+    display: inline-block;
+  }
+
+  footer ul li a {
+    display: inline-block;
+  }
+
+  #footer_logo img {
+    width: 80%;
+  }
+}
+
+/* ========================================
+	ボタン用css
+========================================= */
+.contact {
+  cursor: pointer;
+  color: #fff;
+  padding: 10px 10px;
+  border: 3px solid #f0f3f8;
+  display: inline-block;
+  text-decoration: none;
+}
