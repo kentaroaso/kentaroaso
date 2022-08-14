@@ -377,16 +377,12 @@ div#left ul li a {
   padding-left: 50px;
 }
 
-a#icon_tel {
-  background: url(../images/icon_tel.png) no-repeat 14px center;
-}
-
-a#icon_mail {
-  background: url(../images/icon_mail.png) no-repeat 14px center;
-}
-
 a#icon_blog {
   background: url(../images/icon_blog.png) no-repeat 14px center;
+}
+
+a#icon_youtube {
+  background: url(../images/icon_youtube.png) no-repeat 14px center;
 }
 
 a#icon_facebook {
