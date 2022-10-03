@@ -12,8 +12,10 @@ def screenshot_full(url, save_file):
 
 
 def get_page_size(url):
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
     driver = webdriver.Chrome(
-        '/Users/kentaroaso/opt/anaconda3/bin/chromedriver')
+        '/Users/kentaroaso/opt/anaconda3/bin/chromedriver', options=options)
     driver.get(url)
     w = driver.execute_script("return document.body.scrollWidth;")
     h = driver.execute_script("return document.body.scrollHeight;")
