@@ -484,7 +484,7 @@ dd a.product_words {
 ========================================= */
 footer {
   height: auto;
-  background-color: #bee2df;
+  background-color: #e9f5ed;
   margin-top: 50px;
 }
 
@@ -499,7 +499,7 @@ div#footer_inner {
 p#page_top a {
   width: 120px;
   height: 20px;
-  background-color: #bee2df;
+  background-color: #e9f5ed;
   color: #000;
   text-align: center;
   display: block;
