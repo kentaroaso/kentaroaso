@@ -404,6 +404,7 @@ div#right h2 {
   font-weight: bold;
   color: #555;
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 div#right dt {
