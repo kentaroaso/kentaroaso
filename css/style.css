@@ -289,58 +289,12 @@ div#main_image img {
 #about h2 {
   font-size: 22px;
   font-weight: 900;
+  margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.5;
 }
 #about p {
-  font-size: 15px;
-  line-height: 1.8;
-}
-/* ========================================
-	サービス
-========================================= */
-#service {
-  width: 100%;
-  margin: 45px auto 0 auto;
-}
-
-#service ul {
-  width: 100%;
-}
-
-#service li {
-  float: left;
-  margin-right: 1.5625%;
-  width: 32.29166666%;
-  /* 310px / 全体の横幅 * 100 */
-}
-
-#service li img {
-  width: 100%;
-}
-
-@media screen and (max-width: 640px) {
-  #service li {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 30px;
-    float: none;
-  }
-}
-
-#service li:last-child {
-  margin-right: 0;
-}
-
-#service .title {
-  font-size: 20px;
-  font-weight: 900;
-  margin: 10px 0;
-  text-align: center;
-}
-#service .text {
-  font-size: 15px;
-  text-align: left;
+  font-size: 17px;
   line-height: 1.8;
 }
 /* ========================================
@@ -378,9 +332,6 @@ div#left ul li a {
   padding-left: 50px;
 }
 
-a#icon_blog {
-  background: url(../images/icon_blog.png) no-repeat 14px center;
-}
 
 a#icon_youtube {
   background: url(../images/icon_youtube.png) no-repeat 14px center;
@@ -433,43 +384,6 @@ div#right dd:nth-of-type(odd) {
   background-color: #f0f3f8;
 }
 
-/* ========================================
-	greeting.html特有css
-========================================= */
-
-p#greeting_words {
-  color: #555;
-  line-height: 40px;
-  padding-left: 15px;
-  font-size: 15px;
-}
-
-/* ========================================
-	blog.html特有css
-========================================= */
-
-p#blog_words {
-  color: #000;
-  line-height: 35px;
-  padding-left: 15px;
-  font-size: 15px;
-}
-
-p#blog_words a {
-  color: #0000ff;
-  text-decoration: none;
-}
-
-/* ========================================
-	product.html特有css
-========================================= */
-
-dd a.product_words {
-  color: #0000ff;
-  text-decoration: none;
-  display: block;
-}
-
 @media screen and (max-width: 640px) {
   div#left,
   div#right {
@@ -481,6 +395,18 @@ dd a.product_words {
     margin-bottom: 30px;
   }
 }
+
+/* ========================================
+	greeting.html特有css
+========================================= */
+
+p#greeting_words {
+  color: #555;
+  line-height: 40px;
+  padding-left: 15px;
+  font-size: 15px;
+}
+
 /* ========================================
 	フッター
 ========================================= */
