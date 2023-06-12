@@ -286,13 +286,14 @@ div#main_image img {
   text-align: left;
 }
 
-#about h2 {
+#about h2, h3 {
   font-size: 22px;
   font-weight: 900;
   margin-top: 15px;
   margin-bottom: 15px;
   line-height: 1.5;
 }
+
 #about p {
   font-size: 17px;
   line-height: 1.8;
@@ -342,7 +343,7 @@ a#icon_facebook {
 }
 
 /* ========================================
-ライト
+  ライト
 ========================================= */
 div#right {
   float: right;
@@ -404,7 +405,7 @@ p#greeting_words {
   color: #555;
   line-height: 40px;
   padding-left: 15px;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 /* ========================================
