@@ -422,6 +422,10 @@ a#icon_issue {
   background: url(images/icon_issue.png) no-repeat 14px center;
 }
 
+a#icon_mail {
+  background: url(images/icon_mail.png) no-repeat 14px center;
+}
+
 /* ========================================
   ライト
 ========================================= */
