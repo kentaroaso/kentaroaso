@@ -346,7 +346,7 @@ div#secondary_image img {
   position: relative
 }
 
-.youtube-wrapper iframe {
+.youtube-wrapper iframe, video {
   width: 100%;
   min-width: 320px;
   height: 100%;
@@ -366,7 +366,7 @@ div#secondary_image img {
     padding-bottom: 56.25%;
   }
 
-  .youtube-wrapper iframe {
+  .youtube-wrapper iframe, video {
     overflow: hidden;
   }
 }
