@@ -461,8 +461,20 @@ a#icon_facebook {
   background: url(images/icon_facebook.png) no-repeat 14px center;
 }
 
+a#icon_greeting {
+  background: url(images/icon_greeting.png) no-repeat 14px center;
+}
+
 a#icon_issue {
   background: url(images/icon_issue.png) no-repeat 14px center;
+}
+
+a#icon_blog {
+  background: url(images/icon_blog.png) no-repeat 14px center;
+}
+
+a#icon_yscustom {
+  background: url(images/icon_yscustom.png) no-repeat 14px center;
 }
 
 a#icon_mail {
