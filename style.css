@@ -218,7 +218,6 @@ body {
 ========================================= */
 header {
   height: auto;
-  background-color: #e9f5ed;
 }
 
 div#header_inner {
@@ -233,23 +232,6 @@ header h1 {
   float: left;
 }
 
-header ul {
-  float: right;
-  margin-top: 24px;
-}
-
-header ul li a {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-}
-
-header ul li {
-  float: left;
-  margin-left: 20px;
-}
-
 @media screen and (max-width: 1000px) {
   div#header_inner {
     width: 95%;
@@ -257,38 +239,10 @@ header ul li {
 }
 
 @media screen and (max-width: 640px) {
-
-  header h1,
-  header ul {
+  header h1 {
     float: none;
     width: 100%;
-  }
-
-  header h1 {
     text-align: center;
-  }
-
-  header ul li {
-    float: none;
-    margin: 0;
-    text-align: center;
-    border-bottom: 1px solid #96bebb;
-    height: 45px;
-    line-height: 45px;
-    display: block;
-  }
-
-  header ul li:first-child {
-    border-top: 1px solid #96bebb;
-  }
-
-  header ul li:hover {
-    background: #252525;
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  header ul li a {
-    display: block;
   }
 }
 
@@ -428,8 +382,7 @@ h3 {
 	レフト
 ========================================= */
 div#left {
-  width: 29.166666666667%;
-  float: left;
+  width: 100%;
 }
 
 div#left ul li {
@@ -452,12 +405,11 @@ div#left ul li a {
   padding-left: 50px;
 }
 
-
 a#icon_youtube {
   background: url(images/icon_youtube.png) no-repeat 14px center;
 }
 
-a#icon_facebook {
+a#icon_facebook { 
   background: url(images/icon_facebook.png) no-repeat 14px center;
 }
 
@@ -482,74 +434,10 @@ a#icon_mail {
 }
 
 /* ========================================
-  ライト
-========================================= */
-div#right {
-  float: right;
-  width: 67.708333333333%;
-  height: auto;
-}
-
-div#right h2,
-h3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-#right p {
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-
-div#right dt {
-  font-size: 15px;
-  color: #555;
-  float: left;
-  width: 98%;
-  line-height: 40px;
-  padding-left: 2%;
-}
-
-div#right dd {
-  font-size: 15px;
-  color: #555;
-  float: left;
-  width: 98%;
-  line-height: 40px;
-  padding-left: 2%;
-}
-
-div#right dt:nth-of-type(odd) {
-  background-color: #f0f3f8;
-}
-
-div#right dd:nth-of-type(odd) {
-  background-color: #f0f3f8;
-}
-
-@media screen and (max-width: 640px) {
-
-  div#left,
-  div#right {
-    float: none;
-    width: 100%;
-  }
-
-  div#left {
-    margin-bottom: 30px;
-  }
-}
-
-/* ========================================
 	フッター
 ========================================= */
 footer {
   height: auto;
-  background-color: #e9f5ed;
   margin-top: 50px;
 }
 
@@ -561,25 +449,8 @@ div#footer_inner {
   padding: 20px 0;
 }
 
-a#footer_logo {
+footer h2 {
   float: left;
-}
-
-footer ul {
-  float: right;
-  margin-top: 24px;
-}
-
-footer ul li a {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  text-decoration: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -589,37 +460,9 @@ footer ul li {
 }
 
 @media screen and (max-width: 640px) {
-
-  a#footer_logo,
-  footer ul {
-    width: 100%;
-  }
-
-  a#footer_logo {
-    text-align: center;
-  }
-
-
-  footer ul li {
+  footer h2 {
     float: none;
-    margin: 0;
+    width: 100%;
     text-align: center;
-    border-bottom: 1px solid #96bebb;
-    height: 45px;
-    line-height: 45px;
-    display: block;
-  }
-
-  footer ul li:first-child {
-    border-top: 1px solid #96bebb;
-  }
-
-  footer ul li:hover {
-    background: #252525;
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  footer ul li a {
-    display: block;
   }
 }
