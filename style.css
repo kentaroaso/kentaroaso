@@ -200,6 +200,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 /* ========================================
 　ウインドゥ幅に合わせた改行
 ========================================= */
