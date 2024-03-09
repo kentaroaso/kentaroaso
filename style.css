@@ -298,43 +298,6 @@ div#secondary_image img {
 }
 
 /* ========================================
-	youtubeラッパー
-========================================= */
-.youtube-wrapper {
-  width: 100%;
-  max-width: 960px;
-  height: 0;
-  margin: 100px auto 0 auto;
-  padding-bottom: 37.25%;
-  position: relative
-}
-
-.youtube-wrapper iframe {
-  width: 100%;
-  min-width: 320px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 1400px) {
-  .youtube-wrapper {
-    padding-bottom: 45.25%;
-  }
-}
-
-@media screen and (max-width: 960px) {
-  .youtube-wrapper {
-    padding-bottom: 56.25%;
-  }
-
-  .youtube-wrapper iframe {
-    overflow: hidden;
-  }
-}
-
-/* ========================================
 	コンテナー
 ========================================= */
 #container {
@@ -432,10 +395,6 @@ a#icon_issue {
 
 a#icon_clock {
   background: url(images/icon_clock.png) no-repeat 14px center;
-}
-
-a#icon_yscustom {
-  background: url(images/icon_yscustom.png) no-repeat 14px center;
 }
 
 a#icon_mail {
