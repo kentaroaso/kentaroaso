@@ -313,7 +313,7 @@ div#secondary_image img {
 ========================================= */
 #about {
   width: 100%;
-  margin-top: 45px;
+  margin-top: 30px;
   text-align: left;
 }
 
@@ -326,15 +326,15 @@ h3 {
 }
 
 #about h2 {
-  font-size: 22px;
+  font-size: 27px;
 }
 
 #about h3 {
-  font-size: 19px;
+  font-size:22px;
 }
 
 #about p {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
   margin-top: 15px;
   margin-bottom: 15px;
