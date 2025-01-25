@@ -283,7 +283,7 @@ div#secondary_image {
   width: 100%;
   max-width: 960px;
   height: auto;
-  margin: 100px auto 0 auto;
+  margin: 600px auto 0 auto;
 }
 
 div#secondary_image img {
@@ -326,11 +326,11 @@ h3 {
 }
 
 #about h2 {
-  font-size: 27px;
+  font-size: 30px;
 }
 
 #about h3 {
-  font-size:22px;
+  font-size:23px;
 }
 
 #about p {
