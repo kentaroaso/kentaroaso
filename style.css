@@ -87,7 +87,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-style: Sans-serif;
+  font-style: normal;
   font-weight: normal;
   font-size: 100%;
   vertical-align: baseline;
@@ -323,6 +323,8 @@ h3 {
   margin-top: 20px;
   margin-bottom: 15px;
   line-height: 1.4;
+  font-family: Inter, Noto Sans JP, var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  font-style: Sans-serif;
 }
 
 #about h2 {
@@ -338,6 +340,8 @@ h3 {
   line-height: 1.4;
   margin-top: 15px;
   margin-bottom: 15px;
+  font-family: Inter, Noto Sans JP, var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  font-style: Sans-serif;
 }
 
 #about img {
