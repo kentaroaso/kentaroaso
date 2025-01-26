@@ -87,7 +87,8 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-style: normal;
+  font-family: Inter, Noto Sans JP, var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  font-style: Sans-serif;
   font-weight: normal;
   font-size: 100%;
   vertical-align: baseline;
@@ -195,6 +196,7 @@ body {
   font-size: 15px;
   line-height: 1;
   font-family: Inter, Noto Sans JP, var(--font-inter), var(--font-noto-sans-jp), sans-serif;
+  font-style: Sans-serif;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
