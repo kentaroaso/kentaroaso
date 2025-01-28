@@ -194,7 +194,7 @@ body {
   color: #555;
   font-size: 15px;
   line-height: 1;
-  font-family: 'Inter', 'Noto Sans JP', var(--font-inter), var(--font-noto-sans-jp), 'sans-serif';
+  font-family: sans-serif;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
