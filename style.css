@@ -276,27 +276,6 @@ div#main_image img {
 }
 
 /* ========================================
-	セカンダリーイメージ
-========================================= */
-div#secondary_image {
-  width: 100%;
-  max-width: 960px;
-  height: auto;
-  margin: 600px auto 0 auto;
-}
-
-div#secondary_image img {
-  width: 100%;
-  min-width: 320px;
-}
-
-@media screen and (max-width: 640px) {
-  div#secondary_image {
-    overflow: hidden;
-  }
-}
-
-/* ========================================
 	コンテナー
 ========================================= */
 #container {
