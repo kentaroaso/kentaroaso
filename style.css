@@ -74,17 +74,12 @@ nav a:hover {
     color: var(--accent-color);
 }
 
-/* ヒーローエリア（キャッチ画像・レスポンシブ対応） */
-/* ヒーローエリア（キャッチ画像全体表示） */
-/* ヒーローエリア（余白ゼロ＋画像ピッタリ表示） */
+/* ヒーローエリア */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.jpg') no-repeat center center / cover;
     color: #ffffff;
     width: 100%;
-    
-    /* ★ここがポイント：画像の縦横比に合わせて枠自体を伸縮させます（一般的な横長画像なら 16 / 9） */
     aspect-ratio: 16 / 9;
-    
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -117,7 +112,7 @@ section {
     margin-bottom: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-    scroll-margin-top: 80px; /* リンク移動時のヘッダー被り防止 */
+    scroll-margin-top: 80px;
 }
 
 section h2 {
@@ -135,7 +130,7 @@ section h2 {
     color: var(--primary-color);
 }
 
-/* サービス内容（カード型レイアウト） */
+/* サービス内容 */
 .grid-container {
     display: flex;
     gap: 20px;
@@ -155,13 +150,96 @@ section h2 {
     font-size: 1.15rem;
 }
 
-/* お問い合わせセクション */
+/* お問い合わせ */
 #contact {
     text-align: center;
 }
 
-#contact p {
-    margin-bottom: 25px;
+/* 電話番号枠 */
+.contact-phone {
+    margin: 25px auto;
+    padding: 20px;
+    background: #eef7fc;
+    border-radius: 8px;
+    max-width: 450px;
+}
+
+.phone-label {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.phone-btn {
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+    transition: transform 0.2s;
+}
+
+.phone-btn:hover {
+    transform: scale(1.03);
+}
+
+.phone-note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* SNSボタン */
+.sns-links {
+    margin: 30px 0;
+}
+
+.sns-label {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.sns-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.sns-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+.sns-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* 各SNSの公式ブランドカラー */
+.sns-btn.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.sns-btn.facebook {
+    background: #1877f2;
+}
+
+.sns-btn.line {
+    background: #06c755;
+}
+
+.contact-email {
+    margin-top: 25px;
 }
 
 /* ボタン */
@@ -190,7 +268,7 @@ footer {
 }
 
 /* =========================================
-   4. レスポンシブ対応（スマホ向け設定）
+   4. レスポンシブ対応（スマホ向け）
    ========================================= */
 @media (max-width: 768px) {
     header {
@@ -204,16 +282,11 @@ footer {
         font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-    /* ...他の設定... */
-
     .hero {
-        /* スマホでも余白なしで画像を見せたい場合は 16 / 9 のままにします */
-        aspect-ratio: 16 / 9; 
+        aspect-ratio: 16 / 9;
         padding: 10px;
     }
 
-    /* 画面が小さくなっても文字が綺麗に収まるよう微調整 */
     .hero h1 {
         font-size: 1.2rem;
         margin-bottom: 5px;
@@ -222,20 +295,16 @@ footer {
     .hero p {
         font-size: 0.85rem;
     }
-}
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero p {
-        font-size: 0.95rem;
-    }
 
     .grid-container {
-        flex-direction: column; /* スマホでは縦並びに切り替え */
+        flex-direction: column;
     }
 
     section {
         padding: 25px 20px;
+    }
+
+    .phone-btn {
+        font-size: 1.5rem;
     }
 }
