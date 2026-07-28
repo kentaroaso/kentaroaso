@@ -76,23 +76,21 @@ nav a:hover {
 
 /* ヒーローエリア（キャッチ画像・レスポンシブ対応） */
 /* ヒーローエリア（キャッチ画像全体表示） */
+/* ヒーローエリア（余白ゼロ＋画像ピッタリ表示） */
 .hero {
-    /* / cover を / contain に変更して画像が切れないように修正 */
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero.jpg') no-repeat center center / contain;
-    
-    /* 画像の比率によって左右や上下にできる余白の背景色（ヘッダーと同じ濃い青） */
-    background-color: var(--primary-color); 
-    
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.jpg') no-repeat center center / cover;
     color: #ffffff;
-    padding: 100px 20px;
-    text-align: center;
+    width: 100%;
     
-    /* 文字を上下中央に配置する設定 */
+    /* ★ここがポイント：画像の縦横比に合わせて枠自体を伸縮させます（一般的な横長画像なら 16 / 9） */
+    aspect-ratio: 16 / 9;
+    
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 300px; /* 画像が表示される最低限の高さを確保 */
+    padding: 20px;
 }
 
 .hero h1 {
@@ -206,10 +204,25 @@ footer {
         font-size: 0.9rem;
     }
 
+    @media (max-width: 768px) {
+    /* ...他の設定... */
+
     .hero {
-        padding: 80px 15px;
+        /* スマホでも余白なしで画像を見せたい場合は 16 / 9 のままにします */
+        aspect-ratio: 16 / 9; 
+        padding: 10px;
     }
 
+    /* 画面が小さくなっても文字が綺麗に収まるよう微調整 */
+    .hero h1 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+}
     .hero h1 {
         font-size: 1.5rem;
     }
