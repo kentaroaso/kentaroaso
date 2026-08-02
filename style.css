@@ -1,356 +1,419 @@
 /* =========================================
-   1. 設定（カラー・変数の一括管理）
-   ========================================= */
+1. 設定（カラー・変数の一括管理）
+========================================= */
 :root {
-    --primary-color: #2c3e50; /* メインカラー（濃い青） */
-    --accent-color: #3498db;  /* アクセントカラー（明るい青） */
-    --text-color: #333333;    /* 基本の文字色 */
-    --bg-color: #f4f7f6;      /* 全体の背景色 */
-    --section-bg: #ffffff;    /* セクションの背景色 */
+	--primary-color: #2c3e50; /* メインカラー（濃い青） */
+	--accent-color: #3498db;  /* アクセントカラー（明るい青） */
+	--text-color: #333333;    /* 基本の文字色 */
+	--bg-color: #f4f7f6;      /* 全体の背景色 */
+	--section-bg: #ffffff;    /* セクションの背景色 */
 }
 
 /* =========================================
-   2. 基本リセット＆ベーススタイル
-   ========================================= */
+2. 基本リセット＆ベーススタイル
+========================================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    line-height: 1.6;
+	font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+	color: var(--text-color);
+	background-color: var(--bg-color);
+	line-height: 1.6;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 /* =========================================
-   3. レイアウト（共通・PC表示）
-   ========================================= */
+3. レイアウト（共通・PC表示）
+========================================= */
 
 /* ヘッダー */
 header {
-    background: var(--section-bg);
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+	background: var(--section-bg);
+	padding: 20px 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
 
 .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: var(--primary-color);
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: var(--primary-color);
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+	display: flex;
+	list-style: none;
+	gap: 20px;
 }
 
 nav a {
-    font-weight: bold;
-    color: var(--primary-color);
-    transition: color 0.3s;
+	font-weight: bold;
+	color: var(--primary-color);
+	transition: color 0.3s;
 }
 
 nav a:hover {
-    color: var(--accent-color);
+	color: var(--accent-color);
 }
 
 /* ヒーローエリア */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.jpg') no-repeat center center / cover;
-    color: #ffffff;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.jpg') no-repeat center center / cover;
+	color: #ffffff;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+	font-size: 2.2rem;
+	margin-bottom: 10px;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero p {
-    font-size: 1.1rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+	font-size: 1.1rem;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* コンテナ・各セクション */
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 40px 20px;
 }
 
 section {
-    background: var(--section-bg);
-    padding: 40px;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-    scroll-margin-top: 80px;
+	background: var(--section-bg);
+	padding: 40px;
+	margin-bottom: 40px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+	scroll-margin-top: 80px;
 }
 
 section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: var(--primary-color);
-    font-size: 1.8rem;
+	text-align: center;
+	margin-bottom: 30px;
+	color: var(--primary-color);
+	font-size: 1.8rem;
 }
 
 .catchphrase {
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 15px;
-    color: var(--primary-color);
+	font-weight: bold;
+	font-size: 1.1rem;
+	text-align: center;
+	margin-bottom: 15px;
+	color: var(--primary-color);
 }
 
 /* 私たちについて（About） */
 .about-lead {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.15rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.15rem;
+	color: var(--primary-color);
+	margin-bottom: 20px;
 }
 
 .about-desc {
-    margin-bottom: 25px;
-    line-height: 1.8;
+	margin-bottom: 25px;
+	line-height: 1.8;
 }
 
 .about-subtitle {
-    font-size: 1.2rem;
-    color: var(--primary-color);
-    margin-top: 30px;
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 8px;
+	font-size: 1.2rem;
+	color: var(--primary-color);
+	margin-top: 30px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid var(--accent-color);
+	padding-bottom: 8px;
 }
 
 .about-list {
-    list-style: none;
-    padding-left: 0;
-    line-height: 1.8;
+	list-style: none;
+	padding-left: 0;
+	line-height: 1.8;
 }
 
 .about-item {
-    margin-bottom: 20px;
-    background: var(--bg-color);
-    padding: 15px 20px;
-    border-radius: 6px;
-    border-left: 4px solid var(--accent-color);
+	margin-bottom: 20px;
+	background: var(--bg-color);
+	padding: 15px 20px;
+	border-radius: 6px;
+	border-left: 4px solid var(--accent-color);
 }
 
 .about-item:last-child {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .about-item strong {
-    color: var(--primary-color);
-    font-size: 1.05rem;
+	color: var(--primary-color);
+	font-size: 1.05rem;
 }
 
 /* サービス内容 */
 .grid-container {
-    display: flex;
-    gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 .grid-item {
-    flex: 1;
-    background: var(--bg-color);
-    padding: 30px 20px;
-    border-radius: 6px;
-    text-align: center;
+	flex: 1;
+	background: var(--bg-color);
+	padding: 30px 20px;
+	border-radius: 6px;
+	text-align: center;
 }
 
 .grid-item h3 {
-    color: var(--accent-color);
-    margin-bottom: 15px;
-    font-size: 1.15rem;
+	color: var(--accent-color);
+	margin-bottom: 15px;
+	font-size: 1.15rem;
+}
+
+/* --- パスワード保護エリアのスタイル --- */
+.password-box {
+	max-width: 400px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.password-input {
+	width: 80%;
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.password-btn {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007bff; /* ブランドカラーに合わせて変更可能 */
+	color: #ffffff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.password-btn:hover {
+	background-color: #0056b3;
+}
+
+.error-msg {
+	color: #d9534f;
+	font-size: 14px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+/* --- レスポンシブ動画プレイヤーの設定 --- */
+.video-container {
+	position: relative;
+	width: 100%;
+	max-width: 800px; /* 必要に応じて最大幅を調整 */
+	margin: 30px auto 0;
+	padding-top: 56.25%; /* 16:9 の縦横比を保持 */
+	height: 0;
+	overflow: hidden;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 /* お問い合わせ */
 #contact {
-    text-align: center;
+	text-align: center;
 }
 
 /* 電話番号枠 */
 .contact-phone {
-    margin: 25px auto;
-    padding: 20px;
-    background: #eef7fc;
-    border-radius: 8px;
-    max-width: 450px;
+	margin: 25px auto;
+	padding: 20px;
+	background: #eef7fc;
+	border-radius: 8px;
+	max-width: 450px;
 }
 
 .phone-label {
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 5px;
+	font-size: 0.95rem;
+	font-weight: bold;
+	color: var(--primary-color);
+	margin-bottom: 5px;
 }
 
 .phone-btn {
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e74c3c;
-    transition: transform 0.2s;
+	display: inline-block;
+	font-size: 1.8rem;
+	font-weight: bold;
+	color: #e74c3c;
+	transition: transform 0.2s;
 }
 
 .phone-btn:hover {
-    transform: scale(1.03);
+	transform: scale(1.03);
 }
 
 .phone-note {
-    font-size: 0.8rem;
-    color: #666;
-    margin-top: 5px;
+	font-size: 0.8rem;
+	color: #666;
+	margin-top: 5px;
 }
 
 /* SNSボタン */
 .sns-links {
-    margin: 30px 0;
+	margin: 30px 0;
 }
 
 .sns-label {
-    font-size: 0.95rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+	font-size: 0.95rem;
+	font-weight: bold;
+	color: var(--primary-color);
+	margin-bottom: 15px;
 }
 
 .sns-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	flex-wrap: wrap;
 }
 
 .sns-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 24px;
-    border-radius: 25px;
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: opacity 0.3s, transform 0.2s;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 24px;
+	border-radius: 25px;
+	color: #ffffff;
+	font-size: 0.9rem;
+	font-weight: bold;
+	transition: opacity 0.3s, transform 0.2s;
 }
 
 .sns-btn:hover {
-    opacity: 0.85;
-    transform: translateY(-2px);
+	opacity: 0.85;
+	transform: translateY(-2px);
 }
 
 /* 各SNSの公式ブランドカラー */
 .sns-btn.instagram {
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+	background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .sns-btn.facebook {
-    background: #1877f2;
+	background: #1877f2;
 }
 
 .sns-btn.line {
-    background: #06c755;
+	background: #06c755;
 }
 
 .contact-email {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
 /* ボタン */
 .btn {
-    display: inline-block;
-    background: var(--accent-color);
-    color: #ffffff;
-    padding: 14px 35px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+	display: inline-block;
+	background: var(--accent-color);
+	color: #ffffff;
+	padding: 14px 35px;
+	border-radius: 25px;
+	font-weight: bold;
+	transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background: var(--primary-color);
-    transform: translateY(-2px);
+	background: var(--primary-color);
+	transform: translateY(-2px);
 }
 
 /* フッター */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--primary-color);
-    color: #ffffff;
-    font-size: 0.9rem;
+	text-align: center;
+	padding: 20px;
+	background: var(--primary-color);
+	color: #ffffff;
+	font-size: 0.9rem;
 }
 
 /* =========================================
-   4. レスポンシブ対応（スマホ向け）
-   ========================================= */
+4. レスポンシブ対応（スマホ向け）
+========================================= */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
-        padding: 15px 20px;
-    }
+	header {
+		flex-direction: column;
+		gap: 10px;
+		padding: 15px 20px;
+	}
 
-    nav ul {
-        gap: 15px;
-        font-size: 0.9rem;
-    }
+	nav ul {
+		gap: 15px;
+		font-size: 0.9rem;
+	}
 
-    .hero {
-        aspect-ratio: 16 / 9;
-        padding: 10px;
-    }
+	.hero {
+		aspect-ratio: 16 / 9;
+		padding: 10px;
+	}
 
-    .hero h1 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-    }
+	.hero h1 {
+		font-size: 1.2rem;
+		margin-bottom: 5px;
+	}
 
-    .hero p {
-        font-size: 0.85rem;
-    }
+	.hero p {
+		font-size: 0.85rem;
+	}
 
-    .grid-container {
-        flex-direction: column;
-    }
+	.grid-container {
+		flex-direction: column;
+	}
 
-    section {
-        padding: 25px 20px;
-    }
+	section {
+		padding: 25px 20px;
+	}
 
-    .phone-btn {
-        font-size: 1.5rem;
-    }
+	.phone-btn {
+		font-size: 1.5rem;
+	}
 }
