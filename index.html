@@ -79,7 +79,7 @@
 				</div>
 			</section>
 
-			<!-- 元の限定公開動画セクション（レイアウトそのまま） -->
+			<!-- 元の限定公開動画セクション -->
 			<section id="protected-video-section" class="section">
 				<div class="container">
 					<h2>限定公開動画</h2>
@@ -92,7 +92,6 @@
 					</div>
 
 					<div id="secret-video-area" class="video-container" style="display: none;">
-
 						<iframe 
 											    src="https://www.youtube.com/embed/AatQnFXT2fA" 
 											    title="YouTube video player" 
@@ -101,47 +100,42 @@
 											    referrerpolicy="strict-origin-when-cross-origin" 
 											    allowfullscreen>
 						</iframe>
-
 					</div>
 				</div>
-			</section>
 
-			<script>
-				function checkPassword() {
-					// 設定したいパスワード（ここでは「01234567890」としています）
-					const correctPassword = "01234567890";
+				<!-- scriptタグをセクション内に収納 -->
+				<script>
+					function checkPassword() {
+						const correctPassword = "01234567890";
+						const inputPassword = document.getElementById("pass-input").value;
+						const formArea = document.getElementById("password-form-area");
+						const videoArea = document.getElementById("secret-video-area");
+						const errorMsg = document.getElementById("error-message");
 
-					// 入力された値を取得
-					const inputPassword = document.getElementById("pass-input").value;
-					const formArea = document.getElementById("password-form-area");
-					const videoArea = document.getElementById("secret-video-area");
-					const errorMsg = document.getElementById("error-message");
-
-					if (inputPassword === correctPassword) {
-						// パスワード一致時：フォームを消して動画を表示
-						formArea.style.display = "none";
-						videoArea.style.display = "block";
-					} else {
-						// 不一致時：エラーメッセージを表示
-						errorMsg.style.display = "block";
+						if (inputPassword === correctPassword) {
+							formArea.style.display = "none";
+							videoArea.style.display = "block";
+						} else {
+							errorMsg.style.display = "block";
+						}
 					}
-				}
-			</script>
+				</script>
+			</section>
 
 			<!-- 追加：限定公開動画とお問い合わせの間に挿入するセクション -->
 			<section id="security-threat-section">
 				<div class="security-card">
 					<div class="security-image">
-						<img src="TRUST_IS_THE TARGET.png" alt="THREAT VECTOR - TRUST IS THE TARGET 脅威のベクトル">
+						<img src="TRUST_IS_THE_TARGET.png" alt="THREAT VECTOR - TRUST IS THE TARGET 脅威のベクトル">
 					</div>
 					<div class="security-content">
 						<span class="security-badge">デジタル防犯・セキュリティ対策</span>
 						<h3 class="security-title">情報・データ・信頼を守るために</h3>
 						<p class="security-lead">
-							フィッシング詐欺、ランサムウェア、内部不正、AIの悪用など、現代のデジタル環境には見えない脅威が潜んでいます。
+						フィッシング詐欺、ランサムウェア、内部不正、AIの悪用など、現代のデジタル環境には見えない脅威が潜んでいます。
 						</p>
 						<p>
-							元陸上自衛隊での情報管理・海外派遣任務、および探偵調査員としての実務経験を生かし、あなたの大切な情報資産と信頼を徹底してガードします。「怪しいメールが届いた」「乗っ取りが心配」など、どんなお悩みもお気軽にご相談ください。
+						元陸上自衛隊での情報管理・海外派遣任務、および探偵調査員としての実務経験を生かし、あなたの大切な情報資産と信頼を徹底してガードします。「怪しいメールが届いた」「乗っ取りが心配」など、どんなお悩みもお気軽にご相談ください。
 						</p>
 						<div class="security-action">
 							<a href="#contact" class="btn security-btn">防犯・セキュリティのご相談はこちら</a>
