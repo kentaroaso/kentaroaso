@@ -74,6 +74,49 @@ nav a:hover {
 	color: var(--accent-color);
 }
 
+/*
+4 レスポンシブ対応（スマホ向け）
+========================================= */
+@media (max-width: 768px) {
+	header {
+		flex-direction: column;
+		gap: 10px;
+		padding: 15px 20px;
+	}
+
+	nav ul {
+		gap: 15px;
+		font-size: 0.9rem;
+	}
+
+	.hero {
+		aspect-ratio: 16 / 9;
+		padding: 10px;
+	}
+
+	.hero h1 {
+		font-size: 1.2rem;
+		margin-bottom: 5px;
+	}
+
+	.hero p {
+		font-size: 0.85rem;
+	}
+
+	.grid-container {
+		flex-direction: column;
+	}
+
+	section {
+		padding: 25px 20px;
+	}
+
+	.phone-btn {
+		font-size: 1.5rem;
+	}
+}
+
+
 /* ヒーローエリア */
 .hero {
 	background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.jpg') no-repeat center center / cover;
@@ -483,43 +526,3 @@ footer {
 	font-size: 0.9rem;
 }
 
-4. レスポンシブ対応（スマホ向け）
-========================================= */
-@media (max-width: 768px) {
-	header {
-		flex-direction: column;
-		gap: 10px;
-		padding: 15px 20px;
-	}
-
-	nav ul {
-		gap: 15px;
-		font-size: 0.9rem;
-	}
-
-	.hero {
-		aspect-ratio: 16 / 9;
-		padding: 10px;
-	}
-
-	.hero h1 {
-		font-size: 1.2rem;
-		margin-bottom: 5px;
-	}
-
-	.hero p {
-		font-size: 0.85rem;
-	}
-
-	.grid-container {
-		flex-direction: column;
-	}
-
-	section {
-		padding: 25px 20px;
-	}
-
-	.phone-btn {
-		font-size: 1.5rem;
-	}
-}
