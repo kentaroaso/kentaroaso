@@ -259,6 +259,113 @@ section h2 {
 	height: 100%;
 }
 
+
+/* --- TRUST_IS_THE TARGETの挿入用 --- */
+#security-threat-section {
+	background: #1a252f;
+	color: #ffffff;
+	padding: 40px;
+	margin-bottom: 40px;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.security-card {
+	display: flex;
+	align-items: center;
+	gap: 35px;
+}
+
+.security-image {
+	flex: 1;
+	max-width: 360px;
+	text-align: center;
+}
+
+.security-image img {
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.security-content {
+	flex: 1.4;
+}
+
+.security-badge {
+	display: inline-block;
+	background: #e74c3c;
+	color: #ffffff;
+	font-size: 0.8rem;
+	font-weight: bold;
+	padding: 4px 12px;
+	border-radius: 15px;
+	margin-bottom: 12px;
+}
+
+.security-title {
+	color: #ffffff;
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.security-lead {
+	font-weight: bold;
+	color: #3498db;
+	font-size: 1.05rem;
+	margin-bottom: 12px;
+	line-height: 1.6;
+}
+
+.security-content p {
+	font-size: 0.95rem;
+	line-height: 1.8;
+	color: #ecf0f1;
+	margin-bottom: 20px;
+}
+
+.security-action {
+	margin-top: 15px;
+}
+
+.security-btn {
+	background: #3498db;
+	color: #ffffff;
+	padding: 12px 28px;
+	display: inline-block;
+}
+
+.security-btn:hover {
+	background: #2980b9;
+}
+
+@media (max-width: 768px) {
+	.security-card {
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.security-image {
+		max-width: 100%;
+	}
+
+	.security-title {
+		text-align: center;
+		font-size: 1.3rem;
+	}
+
+	.security-badge {
+		display: table;
+		margin: 0 auto 12px auto;
+	}
+
+	.security-content {
+		text-align: center;
+	}
+}
+
 /* お問い合わせ */
 #contact {
 	text-align: center;
@@ -376,7 +483,6 @@ footer {
 	font-size: 0.9rem;
 }
 
-/* =========================================
 4. レスポンシブ対応（スマホ向け）
 ========================================= */
 @media (max-width: 768px) {
